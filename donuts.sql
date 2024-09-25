@@ -1,4 +1,5 @@
 -- DB作成（DB名：donuts）
+-- test comment
 drop database if exists donuts;
 create database donuts default character set utf8 collate utf8_general_ci;
 
