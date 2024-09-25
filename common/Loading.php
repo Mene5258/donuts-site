@@ -12,6 +12,10 @@
 
 <body>
 
+  <!-- ローディング画面 -->
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
   <!-- 画像埋め込み -->
   <div class="content">
     <img src="images/logo.jpg" alt="logo">
@@ -29,6 +33,7 @@
     <p>・</p>
     <p>・</p>
   </div>
+
   <!-- ここまで -->
 
 </body>
