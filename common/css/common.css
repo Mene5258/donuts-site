@@ -74,10 +74,10 @@ header {
 
 /* ナビゲーションメニュー*/
 .menu-container {
-  /* position: fixed; */
-  /* top: 0; */
-  /* right: 0; */
-  /* bottom: 0; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(127, 85, 57, 0.75);
   max-width: 100%;
   transform: translateX(250px);
@@ -85,7 +85,7 @@ header {
 }
 
 .menu-list {
-  /* list-style: none; */
+  list-style: none;
   padding: 20px;
 }
 
