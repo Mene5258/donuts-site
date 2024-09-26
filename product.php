@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php
+require '../donuts-site/includes/header.php';
+// header終了タグまで
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test</title>
-</head>
 
-<body>
+<main>
 
-</body>
+</main>
 
-</html>
+<?php
+//footer開始タグから
+require '../donuts-site/includes/footer.php';
+?>

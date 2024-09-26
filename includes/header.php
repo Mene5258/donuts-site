@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../common/css/reset.css" rel="stylesheet">
-  <link href="../common/css/common.css" rel="stylesheet">
+  <link href="common/css/reset.css" rel="stylesheet">
+  <link href="common/css/common.css" rel="stylesheet">
+
   <title>donuts site</title>
 </head>
 
@@ -18,7 +19,7 @@
     <!-- 上部スタイル-->
     <div classs="upper-header-content">
       <div class="logo">
-        <img src="../common/images/logo.svg" alt="logo">
+        <img src="common/images/logo.svg" alt="logo">
       </div><!-- /logo -->
 
       <div class="drawer">
@@ -29,7 +30,7 @@
         </div><!-- /hamburger-button-container -->
         <nav class="menu-container">
           <div class="menu-logo">
-            <img src="../common/images/logo.svg" alt="logo">
+            <img src="common/images/logo.svg" alt="logo">
           </div>
           <ul class="menu-list">
             <li><a href="#">TOP</a></li>
@@ -44,12 +45,12 @@
       <div class="icons">
         <div class="login">
           <a href="#">
-            <img src="../common/images/icon-login.svg" alt="login">
+            <img src="common/images/icon-login.svg" alt="login">
           </a>
         </div><!-- /login-->
 
         <div class="cart">
-          <a href="#"><img src="../common/images/icon-cart.svg" alt="cart">
+          <a href="#"><img src="common/images/icon-cart.svg" alt="cart">
           </a>
         </div><!-- /cart-->
       </div><!-- /icons-->
@@ -60,24 +61,9 @@
       <input type="search" name="product">
       <input type="submit" value="test" id="submit-btn">
       <label for="submit-btn">
-        <div class="submit-btn"><img src="../common/images/icon-search.svg" alt="検索"></div>
+        <div class="submit-btn"><img src="common/images/icon-search.svg" alt="検索"></div>
       </label>
     </form>
 
 
   </header>
-
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-  <div>test</div>
-</body>
-
-</html>
