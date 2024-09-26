@@ -22,9 +22,21 @@
       </div><!-- /logo -->
 
       <div class="flex-content"> <!-- スタイル用div -->
+
         <div class="drawer">
-          <div class="line"></div>
-        </div> <!-- /drawer -->
+          <button class="hamburger-button">
+            <span class="navicon"></span>
+          </button>
+          <nav class="menu-container">
+            <ul class="menu-list">
+              <li><a href="#">TOP</a></li>
+              <li><a href="#">商品一覧</a></li>
+              <li><a href="#">よくある質問</a></li>
+              <li><a href="#">問い合わせ</a></li>
+              <li><a href="#">当サイトのポリシー</a></li>
+            </ul>
+          </nav>
+        </div><!-- /drawer -->
 
         <div class="icons">
           <div class="login">
