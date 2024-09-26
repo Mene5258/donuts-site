@@ -1,12 +1,19 @@
 /* ローディングアニメーション */
 
-body {
+
+.loading {
   align-items: center;
   /* 垂直方向の中央揃え */
+  width: 100vw;
   height: 100vh;
-  /* ビューポートの高さを100%に */
+  /* ビューポートの幅、高さを100%に */
   margin: 0;
+  transition: all 1s;
   background-color: #EDE0D4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 
@@ -23,7 +30,9 @@ body {
 .content img {
   mix-blend-mode: multiply;
   height: auto;
+  opacity: 0.5;
   animation: rotateY 3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  background-color: #EDE0D4;
 }
 
 
@@ -120,6 +129,12 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+/* JSでclass追加 */
+.loaded {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* ここまで */
