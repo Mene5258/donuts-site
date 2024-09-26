@@ -18,7 +18,7 @@
     <!-- 上部スタイル-->
     <div classs="upper-header-content">
       <div class="logo">
-        <img src="../donuts-site/common/images/logo.svg" alt="logo">
+        <img src="../common/images/logo.svg" alt="logo">
       </div><!-- /logo -->
 
       <div class="flex-content"> <!-- スタイル用div -->
@@ -29,12 +29,12 @@
         <div class="icons">
           <div class="login">
             <a href="#">
-              <img src="../donuts-site/common/images/icon-login.svg" alt="login">
+              <img src="../common/images/icon-login.svg" alt="login">
             </a>
           </div><!-- /login-->
 
           <div class="cart">
-            <a href="#"><img src="../donuts-site/common/images/icon-cart.svg" alt="cart">
+            <a href="#"><img src="../common/images/icon-cart.svg" alt="cart">
             </a>
           </div><!-- /cart-->
         </div><!-- /icons-->
@@ -46,7 +46,7 @@
       <input type="search" name="product">
       <input type="submit" value="test" id="submit-btn">
       <label for="submit-btn">
-        <div class="submit-btn"><img src="../donuts-site/common/images/icon-search.svg" alt="検索"></div>
+        <div class="submit-btn"><img src="../common/images/icon-search.svg" alt="検索"></div>
       </label>
     </form>
 
