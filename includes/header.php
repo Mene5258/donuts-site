@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../donuts-site/common/css/reset.css" rel="stylesheet">
-  <link href="../donuts-site/common/css/common.css" rel="stylesheet">
+  <link href="../common/css/reset.css" rel="stylesheet">
+  <link href="../common/css/common.css" rel="stylesheet">
   <title>donuts site</title>
 </head>
 
