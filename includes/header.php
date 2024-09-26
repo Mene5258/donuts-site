@@ -21,36 +21,38 @@
         <img src="../common/images/logo.svg" alt="logo">
       </div><!-- /logo -->
 
-      <div class="flex-content"> <!-- スタイル用div -->
-
-        <div class="drawer">
+      <div class="drawer">
+        <div class="hamburger-button-container">
           <button class="hamburger-button">
             <span class="navicon"></span>
           </button>
-          <nav class="menu-container">
-            <ul class="menu-list">
-              <li><a href="#">TOP</a></li>
-              <li><a href="#">商品一覧</a></li>
-              <li><a href="#">よくある質問</a></li>
-              <li><a href="#">問い合わせ</a></li>
-              <li><a href="#">当サイトのポリシー</a></li>
-            </ul>
-          </nav>
-        </div><!-- /drawer -->
+        </div><!-- /hamburger-button-container -->
+        <nav class="menu-container">
+          <div class="menu-logo">
+            <img src="../common/images/logo.svg" alt="logo">
+          </div>
+          <ul class="menu-list">
+            <li><a href="#">TOP</a></li>
+            <li><a href="#">商品一覧</a></li>
+            <li><a href="#">よくある質問</a></li>
+            <li><a href="#">問い合わせ</a></li>
+            <li><a href="#">当サイトのポリシー</a></li>
+          </ul>
+        </nav>
+      </div><!-- /drawer -->
 
-        <div class="icons">
-          <div class="login">
-            <a href="#">
-              <img src="../common/images/icon-login.svg" alt="login">
-            </a>
-          </div><!-- /login-->
+      <div class="icons">
+        <div class="login">
+          <a href="#">
+            <img src="../common/images/icon-login.svg" alt="login">
+          </a>
+        </div><!-- /login-->
 
-          <div class="cart">
-            <a href="#"><img src="../common/images/icon-cart.svg" alt="cart">
-            </a>
-          </div><!-- /cart-->
-        </div><!-- /icons-->
-      </div><!-- /flex-content-->
+        <div class="cart">
+          <a href="#"><img src="../common/images/icon-cart.svg" alt="cart">
+          </a>
+        </div><!-- /cart-->
+      </div><!-- /icons-->
     </div><!-- /upper-header-content-->
 
     <!-- 検索 -->
