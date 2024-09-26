@@ -42,31 +42,64 @@ header {
 }
 
 /* ドロワースタイル */
-.line {
-  position: absolute;
-  margin-top: 17px;
-  width: 24px;
-  height: 2px;
-  background-color: var(--brown-color);
-}
-
-.line::before,
-.line::after {
-  content: "";
+/* 線 */
+.navicon {
   position: relative;
-  display: block;
   width: 24px;
-  height: 2px;
+  height: 3px;
   background-color: var(--brown-color);
+  display: block;
+  transition: all 0.3s ease;
 }
 
-.line::after {
-  top: 10px;
+/* 線上下 */
+.navicon::before,
+.navicon::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--brown-color);
+  transition: all 0.3s ease;
 }
 
-.line::before {
-  bottom: 10px;
+.navicon::before {
+  transform: translateY(-10px);
 }
+
+.navicon::after {
+  transform: translateY(10px);
+}
+
+/* ナビゲーションメニュー*/
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(127, 85, 57, 0.75);
+  max-width: 100%;
+  transform: translateX(250px);
+  transition: transform 0.3s ease;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 20px;
+}
+
+.menu-list li {
+  margin-bottom: 15px;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+/* ドロワーここまで */
 
 .icons {
   z-index: 3;
