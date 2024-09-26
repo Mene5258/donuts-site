@@ -17,7 +17,7 @@
   <header>
 
     <!-- 上部スタイル-->
-    <div classs="upper-header-content">
+    <div class="upper-header-content">
       <div class="logo">
         <img src="common/images/logo.svg" alt="logo">
       </div><!-- /logo -->
@@ -60,8 +60,8 @@
     <form action="#" method="post">
       <input type="search" name="product">
       <input type="submit" value="test" id="submit-btn">
-      <label for="submit-btn">
-        <div class="submit-btn"><img src="common/images/icon-search.svg" alt="検索"></div>
+      <label for="submit-btn" class="submit-btn">
+        <img src="common/images/icon-search.svg" alt="検索">
       </label>
     </form>
 
