@@ -14,7 +14,7 @@
   <header>
     <ul class="header-flex">
       <li class="li-left">
-        <img src="common/images/hamburger-icon.svg" alt="hamburger-menu" class="hamburger-btn">
+        <img src="common/images/hamburger-icon.svg" alt="hamburger-menu" class="hamburger-btn hamburger-style">
       </li>
       <li>
         <img src="common/images/logo.svg" alt="logo" class="logo-icon">
