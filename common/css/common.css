@@ -71,17 +71,10 @@ header ul li:first-of-type {
 
 /* メニューここから */
 .menu-container {
-<<<<<<< HEAD
   /* display: none; */
   z-index: 300;
   position: absolute;
   background-color: rgb(127, 85, 57);
-=======
-  display: none;
-  z-index: 90;
-  position: relative;
-  background-color: rgba(127, 85, 57, 0.75);
->>>>>>> b26290f65300c6df9f3f48b807b8ca22fac5aec0
   height: 100vh;
   width: 100%;
   top: 0;
