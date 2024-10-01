@@ -10,41 +10,22 @@
   <title>donuts site</title>
 </head>
 
-<!-- 伊藤さんへ -->
-<!-- ごみくそみたいなheader作ってすみませんでした -->
-
 <body>
   <header>
+    <ul class="header-flex">
+      <li class="li-left">
+        <img src="common/images/hamburger-icon.svg" alt="hamburger-menu" class="hamburger-btn">
+      </li>
+      <li>
+        <img src="common/images/logo.svg" alt="logo" class="logo-icon">
+      </li>
+      <li>
+        <img src="common/images/icon-login.svg" alt="login" class="login-icon">
+        <img src="common/images/icon-cart.svg" alt="cart" class="cart-icon">
+      </li>
+    </ul>
+    </div>
 
-    <!-- 上部スタイル-->
-    <div class="upper-header-content">
-      <div class="logo">
-        <img src="common/images/logo.svg" alt="logo">
-      </div><!-- /logo -->
-
-      <div class="drawer">
-        <div class="hamburger-button-container">
-          <button class="hamburger-button">
-            <span class="navicon"></span>
-          </button>
-        </div><!-- /hamburger-button-container -->
-
-      </div><!-- /drawer -->
-
-      <div class="icons">
-        <div class="login">
-          <a href="#">
-            <img src="common/images/icon-login.svg" alt="login">
-          </a>
-        </div><!-- /login-->
-
-        <div class="cart">
-          <a href="#">
-            <img src="common/images/icon-cart.svg" alt="cart">
-          </a>
-        </div><!-- /cart-->
-      </div><!-- /icons-->
-    </div><!-- /upper-header-content-->
 
     <!-- 検索 -->
     <form action="#" method="post">
