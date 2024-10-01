@@ -50,7 +50,8 @@
         </div><!-- /login-->
 
         <div class="cart">
-          <a href="#"><img src="common/images/icon-cart.svg" alt="cart">
+          <a href="#">
+            <img src="common/images/icon-cart.svg" alt="cart">
           </a>
         </div><!-- /cart-->
       </div><!-- /icons-->
