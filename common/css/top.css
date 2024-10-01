@@ -2,6 +2,7 @@
 
 main {
   background-color: #fff;
+  width: 100%;
 }
 
 /* ランク・itemの左右margin */
@@ -40,19 +41,76 @@ input[type="submit"] {
 .top-item-content {
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
+}
+
+.top-item-content a {
+  color: var(--white-color);
+}
+
+.top-item1,
+.top-item2 {
+  width: 158px;
+  height: 158px;
 }
 
 .top-item1 {
-  background-image: url(../../common/images/product-item05.jpg);
+  background: url(../../common/images/product-item05.jpg) no-repeat center / contain;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-item1 p:first-child {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  background-color: #FF8877;
+}
+
+.top-item1 p:last-child,
+.top-item2 p {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  align-self: flex-end;
 }
 
 .top-item2 {
-  background-image: url(../../common/images/top_icon.jpg);
+  background: url(../../common/images/top_icon.jpg) no-repeat center / contain;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-image {
+  margin: 20px auto 0;
+  max-width: 335px;
+  min-height: 83px;
+  background: url(../../common/images/top01.jpg) no-repeat center / contain;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-image p {
+  align-self: flex-end;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  color: var(--brown-color);
 }
 
 /* philosophy */
+.top-bg {
+  background: url(../../common/images/top02.jpg) no-repeat top / cover;
+  text-align: center;
+  color: var(--white-color);
+}
+
 .top-bg h1 {
   font-size: 24px;
+  padding-top: 100px;
 }
 
 .top-bg p:nth-child(2),
@@ -60,13 +118,31 @@ input[type="submit"] {
   font-size: 16px;
 }
 
+.top-bg p:nth-child(2) {
+  margin-top: 20px;
+}
+
 .top-bg p:nth-child(3) {
   font-size: 20px;
+  margin-top: 60px;
+}
+
+.top-bg p:nth-child(4) {
+  margin-top: 12px;
+  padding-bottom: 300px;
 }
 
 /* ランク */
 .top-rank h2 {
+  display: inline-block;
+  margin: 32px auto 0;
   font-size: 20px;
+  border-bottom: 4px solid var(--yellow-color);
+}
+
+.top-rank-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .top-rank-content li p:nth-child(5) {
