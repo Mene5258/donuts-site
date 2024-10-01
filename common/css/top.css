@@ -1,49 +1,73 @@
 @charset "UTF-8";
 
-/* 文字サイズ */
+main {
+  background-color: #fff;
+}
+
+/* ランク・itemの左右margin */
+.mx {
+  margin: 0 20px;
+}
+
+/* 画像フルード化 */
+.fluid {
+  max-width: 100%;
+}
+
+/* 共通文字サイズ */
 .login-text,
-.top-item,
+.top-item1,
+.top-item2,
 .top-image,
 input[type="submit"] {
   font-size: 12px;
 }
 
-top-page h1 {
+.login-text {
+  color: var(--brown-color);
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.top-hero {
+  text-align: center;
+}
+
+.top-item-container {
+  margin: 20px;
+}
+
+.top-item-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-item1 {
+  background-image: url(../../common/images/product-item05.jpg);
+}
+
+.top-item2 {
+  background-image: url(../../common/images/top_icon.jpg);
+}
+
+/* philosophy */
+.top-bg h1 {
   font-size: 24px;
 }
 
-top-bg p:first-child {
+.top-bg p:nth-child(2),
+.top-bg p:nth-child(4) {
   font-size: 16px;
 }
 
-top-bg p:nth-child(2) {
+.top-bg p:nth-child(3) {
   font-size: 20px;
 }
 
-top-bg p:nth-child(3) {
-  font-size: 20px;
-}
-
-top-bg p:last-child {
-  font-size: 16px;
-}
-
+/* ランク */
 .top-rank h2 {
   font-size: 20px;
 }
-
-.top-rank-content li p:first-child {
-  font-size: 16px;
-}
-
-.top-rank-content li p:nth-child(3) {
-  font-size: 16px;
-}
-
-.top-rank-content li p:nth-child(4) {
-  font-size: 16px;
-}
-
 
 .top-rank-content li p:nth-child(5) {
   font-size: 12px;

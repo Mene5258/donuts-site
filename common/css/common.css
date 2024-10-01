@@ -74,11 +74,23 @@ header ul li:first-of-type {
   left: 0;
 }
 
+.menu-container.open {
+  right: 0px;
+}
+
 .menu-logo {
+  display: flex;
+  justify-content: space-between;
   text-align: left;
   margin-left: 12px;
   padding-top: 12px;
   padding-bottom: 60px;
+}
+
+#close-btn {
+  padding-right: 12px;
+  width: 26px;
+  height: 26px;
 }
 
 .menu-list {
@@ -93,11 +105,14 @@ header ul li:first-of-type {
 .menu-list li {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  font-size: 16px;
 }
 
 .menu-list li a {
   color: #fff;
-
+  padding-left: 1%;
 }
 
 /* メニューここまで */

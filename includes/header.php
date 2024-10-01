@@ -38,6 +38,7 @@
     <nav class="menu-container">
       <div class="menu-logo">
         <img src="common/images/logo.svg" alt="logo">
+        <img src="common/images/close-btn.svg" alt="logo" class="hamburger-btn" id="close-btn">
       </div>
       <ul class="menu-list">
         <li><a href="#">TOP</a></li>
