@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* 文字サイズ */
+.login-text,
+.top-item,
+.top-image,
+input[type="submit"] {
+  font-size: 12px;
+}
+
+top-page h1 {
+  font-size: 24px;
+}
+
+top-bg p:first-child {
+  font-size: 16px;
+}
+
+top-bg p:nth-child(2) {
+  font-size: 20px;
+}
+
+top-bg p:nth-child(3) {
+  font-size: 20px;
+}
+
+top-bg p:last-child {
+  font-size: 16px;
+}
+
+.top-rank h2 {
+  font-size: 20px;
+}
+
+.top-rank-content li p:first-child {
+  font-size: 16px;
+}
+
+.top-rank-content li p:nth-child(3) {
+  font-size: 16px;
+}
+
+.top-rank-content li p:nth-child(4) {
+  font-size: 16px;
+}
+
+
+.top-rank-content li p:nth-child(5) {
+  font-size: 12px;
+}
