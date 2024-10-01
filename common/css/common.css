@@ -35,6 +35,10 @@ header ul li {
   width: 100px;
 }
 
+header ul li:first-of-type {
+  text-align: left;
+}
+
 .hamburger-btn {
   margin-top: 31px;
   margin-left: 12.5px;
