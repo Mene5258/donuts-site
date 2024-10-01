@@ -51,9 +51,14 @@ header ul li:first-of-type {
   margin-top: 16px;
 }
 
-.login-icon,
-.cart-icon {
+.login-icon {
   width: 40px;
+  height: 34px;
+  margin-top: 24px;
+}
+
+.cart-icon {
+  width: 30px;
   height: 34px;
   margin-top: 24px;
 }
@@ -64,7 +69,7 @@ header ul li:first-of-type {
 
 /* メニューここから */
 .menu-container {
-  /* display: none; */
+  display: none;
   z-index: 90;
   position: relative;
   background-color: rgba(127, 85, 57, 0.75);
@@ -252,10 +257,15 @@ footer {
     height: 67px;
   }
 
-  .login-icon,
-  .cart-icon {
+  .login-icon {
     width: 48px;
     height: 60px;
+  }
+
+  .cart-icon {
+    width: 40px;
+    height: 60px;
+    margin-top: 24px;
   }
 
   .navicon {
