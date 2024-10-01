@@ -28,18 +28,7 @@
             <span class="navicon"></span>
           </button>
         </div><!-- /hamburger-button-container -->
-        <nav class="menu-container">
-          <div class="menu-logo">
-            <img src="common/images/logo.svg" alt="logo">
-          </div>
-          <ul class="menu-list">
-            <li><a href="#">TOP</a></li>
-            <li><a href="#">商品一覧</a></li>
-            <li><a href="#">よくある質問</a></li>
-            <li><a href="#">問い合わせ</a></li>
-            <li><a href="#">当サイトのポリシー</a></li>
-          </ul>
-        </nav>
+
       </div><!-- /drawer -->
 
       <div class="icons">
@@ -64,6 +53,18 @@
         <img src="common/images/icon-search.svg" alt="検索">
       </label>
     </form>
+    <nav class="menu-container">
+      <div class="menu-logo">
+        <img src="common/images/logo.svg" alt="logo">
+      </div>
+      <ul class="menu-list">
+        <li><a href="#">TOP</a></li>
+        <li><a href="#">商品一覧</a></li>
+        <li><a href="#">よくある質問</a></li>
+        <li><a href="#">問い合わせ</a></li>
+        <li><a href="#">当サイトのポリシー</a></li>
+      </ul>
+    </nav>
 
 
   </header>
