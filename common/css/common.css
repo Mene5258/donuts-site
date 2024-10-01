@@ -45,7 +45,6 @@ header ul li:first-of-type {
   margin-top: 31px;
   margin-left: 12.5px;
   width: 24px;
-  height: 20px;
 }
 
 .logo-icon {
@@ -241,13 +240,29 @@ footer {
     margin: 0 auto;
   }
 
-  .navicon {
-    width: 48px;
+  header .header-flex li {
+    width: 120px;
   }
 
-  .hamburger-button {
+  .hamburger-style {
     margin-left: 12px;
-    margin-top: 39px;
+    width: 48px;
+    height: 38px;
+  }
+
+  .logo-icon {
+    width: 80px;
+    height: 67px;
+  }
+
+  .login-icon,
+  .cart-icon {
+    width: 48px;
+    height: 60px;
+  }
+
+  .navicon {
+    width: 48px;
   }
 
   /* footer pcここから */
