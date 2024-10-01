@@ -25,17 +25,26 @@ require '../donuts-site/includes/header.php';
 
   <div class="top-item-container">
     <div class="top-item-content">
-      <div class="top-item1">
-        <p>新商品</p>
-        <p>サマーシトラス</p>
+      <a href="#">
+        <div class="top-item1">
+          <p>新商品</p>
+          <p>サマーシトラス</p>
+        </div><!-- top-item1-->
+      </a>
+
+      <a href="#">
+        <div class="top-item2">
+          <p>ドーナツのある生活</p>
+        </div><!-- top-item2-->
+      </a>
+    </div><!-- top-item-content-->
+
+    <a href="#">
+      <div class="top-image">
+        <p>商品一覧</p>
       </div>
-      <div class="top-item2">
-        <p>ドーナツのある生活</p>
-      </div>
-    </div>
-    <div class="top-image">
-      <p>商品一覧</p>
-    </div>
+    </a>
+
   </div>
 
   <div class="top-bg">
