@@ -24,9 +24,6 @@
         <img src="common/images/icon-cart.svg" alt="cart" class="cart-icon">
       </li>
     </ul>
-    </div>
-
-
     <!-- 検索 -->
     <form action="#" method="post">
       <input type="search" name="product">

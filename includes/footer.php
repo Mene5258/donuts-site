@@ -25,7 +25,7 @@
    </div>
 
  </footer>
-
+ <script src="../common/js/drawer.js"></script>
  </body>
 
  </html>
