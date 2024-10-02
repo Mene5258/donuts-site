@@ -7,6 +7,7 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/top.css" rel="stylesheet">
+  <link href="common/css/load.css" rel="stylesheet">
 
   <title>donuts site</title>
 </head>
@@ -15,6 +16,31 @@
 require '../donuts-site/includes/header.php';
 ?>
 <!-- topページ領域 -->
+
+
+<!-- ローディング画面 -->
+<div id="loading" class="loading">
+  <!-- 画像埋め込み -->
+  <div class="content">
+    <img src="common/images/logo.png" alt="logo">
+  </div>
+  <!-- 文字が現れるアニメーション -->
+  <div class="txt">
+    <p>L</p>
+    <p>o</p>
+    <p>a</p>
+    <p>d</p>
+    <p>i</p>
+    <p>n</p>
+    <p>g</p>
+    <p>・</p>
+    <p>・</p>
+    <p>・</p>
+  </div>
+
+</div>
+
+<!-- ここまで -->
 
 <main class=top-page>
   <!-- 下記消す予定 -->
@@ -59,8 +85,6 @@ require '../donuts-site/includes/header.php';
     <div class="top-rank">
       <h2>人気ランキング</h2>
       <ol class="top-rank-content mx">
-
-        <!-- 人気ランキング -->
 
         <li>
           <form action="cart-input.php" method="post">
