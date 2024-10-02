@@ -175,6 +175,7 @@ input[type="submit"] {
 
 li {
   flex-basis: 158px;
+  margin-bottom: 80px;
 }
 
 input[type="submit"]:hover {
@@ -199,18 +200,29 @@ input[type="submit"]:hover {
 }
 
 .product-name {
+  text-align: left;
   line-height: 1.6;
   margin: 20px 0 22px;
   color: var(--brown-color);
-  font-weight: bold;
+  /* medium */
+  font-weight: 500;
+}
+
+.price-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22.3px;
 }
 
 .price {
+  text-align: left;
   color: var(--red-color);
 }
 
-.inputcart {
+input[type="submit"] {
   width: 100%;
   text-align: center;
   background-color: var(--brown-color);
+  color: var(--white-color);
+  padding: 12px 37px;
 }
