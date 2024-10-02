@@ -24,7 +24,8 @@ create table product (
 	id int auto_increment primary key unique not null, 
 	name varchar(200) not null, 
 	price int not null,
-	description varchar(1000) not null
+	description varchar(1000) not null,
+	ranking int,
 );
 
 -- テーブル作成（テーブル名：card）
@@ -57,7 +58,6 @@ create table purchase_detail (
 );
 
 -- レコード作成（productテーブル）
--- 畠山さんへ。説明の中に文章入れていただけると助かります・・・・！川口
 insert into product values(null, 'CCドーナツ 当店オリジナル（5個入り）', 1500,'当店のオリジナル商品、CCドーナツは、サクサクの食感が特徴のプレーンタイプのドーナツです。素材にこだわり、丁寧に揚げた生地は軽やかでサクッとした食感が楽しめます。一口食べれば、口の中に広がる甘くて香ばしい香りと、口どけの良い食感が感じられます。');
 insert into product values(null, 'チョコレートデライト（5個入り）', 1600,'この商品は、上品なホワイトストライプが施されたチョコレートドーナツです。しっとりとしたチョコレート生地と甘さ控えめなホワイトストライプの組み合わせが絶妙で、見た目にも美しい一品です。おやつやティータイムにぴったりの贅沢なスイーツです。');
 insert into product values(null, 'キャラメルクリーム（5個入り）', 1600,'白いアイシングとキャラメルのストライプが施された美しいデザインが特徴です。甘さとほろ苦さが絶妙に調和し、見た目にも楽しませてくれます。おやつやデザートにぴったりの一品です。');
@@ -73,3 +73,17 @@ insert into product values(null, 'クリームボックス（9個入り）', 280
 
 
 -- ユーザアカウントはhtml側で作成するため記述してません
+
+-- ★productテーブルにランキング入れてなかった人はカラム以下の「カラム追加」を行ってからフィールドを追加してください。
+-- ほかの方はカラム追加を飛ばしてフィールド追加を行ってください。
+
+-- カラム追加
+ALTER TABLE product ADD ranking int;
+
+-- フィールド追加
+update product set ranking=1 where id=1;
+update product set ranking=2 where id=7;
+update product set ranking=3 where id=8;
+update product set ranking=4 where id=2;
+update product set ranking=5 where id=9;
+update product set ranking=6 where id=6;

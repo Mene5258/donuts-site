@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -6,45 +7,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
-  <link href="common/css/input.css" rel="stylesheet">
+  <link href="common/css/login-input.css" rel="stylesheet">
 
   <title>login-input</title>
 
 
 </head>
-<?php
-require '../donuts-site/includes/header.php';
-// header終了タグまで
-?>
-<main>
 
-  <body>
+<body>
 
+  <?php
+  require '../donuts-site/includes/header.php';
+  // header終了タグまで
+  ?>
+  <main>
+    <?php
+
+    ?>
 
     <h2>ログイン</h2>
-    <div class="login-container">
 
-      <form action="#" method="POST">
-        <label for="email">メールアドレス</label>
-        <input type="email" id="email" name="email" required>
+    <form action="#" method="post">
+      <p>メールアドレス</p>
+      <p><input type="email" id="email" name="email" required></p>
+      <p>パスワード</p>
+      <p><input type="password" id="password" name="password" required></p>
+      <button class="login" type="submit">ログインする</button>
+    </form>
 
-        <label for="password">パスワード</label>
-        <input type="password" id="password" name="password" required>
-
-        <button class="login" type="submit">ログインする</button>
-      </form>
-
-    </div>
-    <p class="customar_reg">
-      <a href="#">会員登録がお済みでない方はこちら</a>
+    <p class="customer_reg">
+      <a href="customer-input.php">会員登録がお済みでない方はこちら</a>
     </p>
-  </body>
 
-</main>
-
+  </main>
 
 
-<?php
-//footer開始タグから
-require '../donuts-site/includes/footer.php';
-?>
+
+  <?php
+  //footer開始タグから
+  require '../donuts-site/includes/footer.php';
+  ?>
