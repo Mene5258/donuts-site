@@ -18,27 +18,7 @@ require '../donuts-site/includes/header.php';
 <!-- topページ領域 -->
 
 
-<!-- ローディング画面 -->
-<div id="loading" class="loading">
-  <!-- 画像埋め込み -->
-  <div class="content">
-    <img src="common/images/logo.png" alt="logo">
-  </div>
-  <!-- 文字が現れるアニメーション -->
-  <div class="txt">
-    <p>L</p>
-    <p>o</p>
-    <p>a</p>
-    <p>d</p>
-    <p>i</p>
-    <p>n</p>
-    <p>g</p>
-    <p>・</p>
-    <p>・</p>
-    <p>・</p>
-  </div>
 
-</div>
 
 <!-- ここまで -->
 
@@ -52,11 +32,29 @@ require '../donuts-site/includes/header.php';
 
   <div class="top-item-container">
     <div class="top-item-content">
-      <a href="#">
-        <div class="top-item1">
-          <p>新商品</p>
-          <p>サマーシトラス</p>
-        </div><!-- top-item1-->
+
+      <?php
+
+      // データベース接続
+      require '../donuts-site/includes/database.php';
+
+
+      //productテーブル情報持ってくる
+      $sql = $pdo->prepare('select * from  where id=?');
+
+      // SQL文の実行
+      $sql->execute([5]);
+
+      echo <<<END
+    <a href="product.php?id={$sql}">
+    ?>
+    END;
+      ?>
+
+      <div class="top-item1">
+        <p>新商品</p>
+        <p>サマーシトラス</p>
+      </div><!-- top-item1-->
       </a>
 
       <a href="#">
@@ -91,13 +89,16 @@ require '../donuts-site/includes/header.php';
             <p class="rank">1</p>
             <p><img src="../donuts-site/common/images/product-item01.jpg" alt="" class="fluid"></p>
             <p class="product-name">CCドーナツ 当店オリジナル（5個入り）</p>
-            <p class="price">税込 ￥1,500</p>
+            <div class="price-content">
+              <p class="price">税込 ￥1,500</p>
+              <a href="">ハート</a>
+            </div>
             <input type="hidden" name="id" value="1">
             <input type="hidden" name="name" value="CCドーナツ">
             <input type="hidden" name="price" value="1500">
-            <p class="inputcart"><input type="submit" value="カートに入れる"></p>
+            <input type="submit" value="カートに入れる">
           </form>
-          <p><a href="">ハート</a></p>
+
         </li>
 
         <li>
