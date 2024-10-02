@@ -11,7 +11,6 @@ session_start();
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/index.css" rel="stylesheet">
-
   <title>donuts site</title>
 </head>
 
@@ -19,6 +18,7 @@ session_start();
 require '../donuts-site/includes/header.php';
 ?>
 <!-- topページ領域 -->
+
 
 <!-- ローディング画面 -->
 <div id="loading" class="loading">
@@ -42,7 +42,6 @@ require '../donuts-site/includes/header.php';
 
 </div>
 <!-- ここまで -->
-
 
 <main class=top-page>
   <!-- 下記消す予定 -->
@@ -98,27 +97,34 @@ require '../donuts-site/includes/header.php';
         <?php
         require '../donuts-site/includes/database.php';
         // SQL文準備
-        $sql = $pdo->query('select * from product where ranking is not null');
+        $sql = $pdo->query('select * from product where ranking is not null and ranking != 0 order by ranking asc');
 
         foreach ($sql as $row) {
           echo <<<END
         <li>
           <form action="cart-input.php" method="post">
-            <p class="rank"> <a href="detail.php?id=1">1</a>
+            <p class="rank">
+            <a href="detail.php?id={$row['id']}">{$row['ranking']}</a>
             </p>
             <p>
-            <a href="detail.php?id=1"><img src="../donuts-site/common/images/product-item01.jpg" alt="image" class="fluid"></a>
+            <a href="detail.php?id={$row['id']}">
+            <img src="../donuts-site/common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
+            </a>
             </p>
             <p class="product-name">
-            <a href="detail.php?id=1"></a></p>
+            <a href="detail.php?id={$row['id']}">
+        {$row['name']}
+            </a>
+            </p>
             <div class="price-content">
-              <p class="price"> <a href="detail.php?id=1">税込 ￥1,500</a></p>
+              <p class="price">
+              <a href="detail.php?id={$row['id']}">税込 ￥{$row['price']}</a></p>
               <a href="">ハート</a>
             </div>
 
-            <input type="hidden" name="id" value="1">
-            <input type="hidden" name="name" value="CCドーナツ">
-            <input type="hidden" name="price" value="1500">
+            <input type="hidden" name="id" value="{$row['id']}">
+            <input type="hidden" name="name" value="{$row['name']}">
+            <input type="hidden" name="price" value="{$row['id']}">
             <input type="submit" value="カートに入れる">
           </form>
         </li>
