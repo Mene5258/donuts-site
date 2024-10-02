@@ -17,6 +17,7 @@ require '../donuts-site/includes/header.php';
 <!-- topページ領域 -->
 
 <main class=top-page>
+  <!-- 下記消す予定 -->
   <p class="login-text mx">ようこそ　ゲスト様</p>
 
   <div class="top-hero">
@@ -54,98 +55,95 @@ require '../donuts-site/includes/header.php';
     <p>ドーナツでつながる</p>
   </div>
 
-  <div class="top-rank">
-    <h2>人気ランキング</h2>
+  <section>
+    <div class="top-rank">
+      <h2>人気ランキング</h2>
+      <ol class="top-rank-content mx">
 
-    <ol class="top-rank-content mx">
-      <li>
-        <form action="#" method="post">
-          <p>1</p>
-          <p><img src="../donuts-site/common/images/product-item01.jpg" alt="" class="fluid"></p>
-          <p>CCドーナツ 当店オリジナル（5個入り）</p>
-          <p>税込 ￥1,500</p>
-          <input type="hidden" name="id" value="1">
-          <input type="hidden" name="name" value="CCドーナツ">
-          <input type="hidden" name="price" value="1500">
-          <p><input type="submit" value="カートに入れる"></p>
-        </form>
-        <p><a href="">ハート</a></p>
-      </li>
+        <li>
+          <form action="cart-input.php" method="post">
+            <p class="rank">1</p>
+            <p><img src="../donuts-site/common/images/product-item01.jpg" alt="" class="fluid"></p>
+            <p class="product-name">CCドーナツ 当店オリジナル（5個入り）</p>
+            <p class="price">税込 ￥1,500</p>
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="name" value="CCドーナツ">
+            <input type="hidden" name="price" value="1500">
+            <p class="inputcart"><input type="submit" value="カートに入れる"></p>
+          </form>
+          <p><a href="">ハート</a></p>
+        </li>
 
-      <li>
-        <form action="#" method="post">
-          <p>2</p>
-          <p><img src="../donuts-site/common/images/product-item02.jpg" alt="" class="fluid"></p>
-          <p>フルーツドーナツセット（12個入り））</p>
-          <p>税込 ￥3,500</p>
-          <input type="hidden" name="id" value="1">
-          <input type="hidden" name="name" value="フルーツドーナツセット（12個入り））">
-          <input type="hidden" name="price" value="3500">
-          <p><input type="submit" value="カートに入れる"></p>
-        </form>
-        <p><a href="">ハート</a></p>
-      </li>
-
-      <li>
-        <form action="#" method="post">
-          <p>3</p>
-          <p><img src="../donuts-site/common/images/product-item03.jpg" alt="" class="fluid"></p>
-          <p>フルーツドーナツセット（14個入り）</p>
-          <p>税込 ￥4,000</p>
-          <input type="hidden" name="id" value="1">
-          <input type="hidden" name="name" value="フルーツドーナツセット（14個入り）">
-          <input type="hidden" name="price" value="4000">
-          <p><input type="submit" value="カートに入れる"></p>
-        </form>
-        <p><a href="">ハート</a></p>
-      </li>
-
-      <li>
-        <form action="#" method="post">
-          <p>4</p>
-          <p><img src="../donuts-site/common/images/product-item04.jpg" alt="" class="fluid"></p>
-          <p>チョコレートデライト（5個入り）</p>
-          <p>税込 ￥1,600</p>
-          <input type="hidden" name="id" value="1">
-          <input type="hidden" name="name" value="チョコレートデライト（5個入り）">
-          <input type="hidden" name="price" value="1600">
-          <p><input type="submit" value="カートに入れる"></p>
-        </form>
-        <p><a href="">ハート</a></p>
-      </li>
-
-      <li>
-        <form action="#" method="post">
-          <p>5</p>
-          <p><img src="../donuts-site/common/images/product-item05.jpg" alt="" class="fluid"></p>
-          <p>ベストセレクションボックス（4個入り）</p>
-          <p>税込 ￥1,200</p>
-          <input type="hidden" name="id" value="1">
-          <input type="hidden" name="name" value="ベストセレクションボックス（4個入り）">
-          <input type="hidden" name="price" value="1200">
-          <p><input type="submit" value="カートに入れる"></p>
-        </form>
-        <p><a href="">ハート</a></p>
-      </li>
-
-      <li>
-        <form action="#" method="post">
-          <p>6</p>
-          <p><img src="../donuts-site/common/images/product-item06.jpg" alt="" class="fluid"></p>
-          <p>ストロベ リークラッ
-            シュ（5個入り）</p>
-          <p>税込 ￥1,800</p>
-          <input type="hidden" name="id" value="1">
-          <input type="hidden" name="name" value="ストロベ リークラッ
-シュ（5個入り）">
-          <input type="hidden" name="price" value="1800">
-          <p><input type="submit" value="カートに入れる"></p>
-        </form>
-        <p><a href="">ハート</a></p>
-      </li>
-
-    </ol>
-  </div>
+        <li>
+          <form action="#" method="post">
+            <p>2</p>
+            <p><img src="../donuts-site/common/images/product-item02.jpg" alt="" class="fluid"></p>
+            <p>フルーツドーナツセット（12個入り））</p>
+            <p>税込 ￥3,500</p>
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="name" value="フルーツドーナツセット（12個入り））">
+            <input type="hidden" name="price" value="3500">
+            <p><input type="submit" value="カートに入れる"></p>
+          </form>
+          <p><a href="">ハート</a></p>
+        </li>
+        <li>
+          <form action="#" method="post">
+            <p>3</p>
+            <p><img src="../donuts-site/common/images/product-item03.jpg" alt="" class="fluid"></p>
+            <p>フルーツドーナツセット（14個入り）</p>
+            <p>税込 ￥4,000</p>
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="name" value="フルーツドーナツセット（14個入り）">
+            <input type="hidden" name="price" value="4000">
+            <p><input type="submit" value="カートに入れる"></p>
+          </form>
+          <p><a href="">ハート</a></p>
+        </li>
+        <li>
+          <form action="#" method="post">
+            <p>4</p>
+            <p><img src="../donuts-site/common/images/product-item04.jpg" alt="" class="fluid"></p>
+            <p>チョコレートデライト（5個入り）</p>
+            <p>税込 ￥1,600</p>
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="name" value="チョコレートデライト（5個入り）">
+            <input type="hidden" name="price" value="1600">
+            <p><input type="submit" value="カートに入れる"></p>
+          </form>
+          <p><a href="">ハート</a></p>
+        </li>
+        <li>
+          <form action="#" method="post">
+            <p>5</p>
+            <p><img src="../donuts-site/common/images/product-item05.jpg" alt="" class="fluid"></p>
+            <p>ベストセレクションボックス（4個入り）</p>
+            <p>税込 ￥1,200</p>
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="name" value="ベストセレクションボックス（4個入り）">
+            <input type="hidden" name="price" value="1200">
+            <p><input type="submit" value="カートに入れる"></p>
+          </form>
+          <p><a href="">ハート</a></p>
+        </li>
+        <li>
+          <form action="#" method="post">
+            <p>6</p>
+            <p><img src="../donuts-site/common/images/product-item06.jpg" alt="" class="fluid"></p>
+            <p>ストロベ リークラッ
+              シュ（5個入り）</p>
+            <p>税込 ￥1,800</p>
+            <input type="hidden" name="id" value="1">
+            <input type="hidden" name="name" value="ストロベ リークラッ
+    シュ（5個入り）">
+            <input type="hidden" name="price" value="1800">
+            <p><input type="submit" value="カートに入れる"></p>
+          </form>
+          <p><a href="">ハート</a></p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
 </main>
 
