@@ -20,28 +20,7 @@ require '../donuts-site/includes/header.php';
 ?>
 <!-- topページ領域 -->
 
-<!-- ローディング画面 -->
-<div id="loading" class="loading">
-  <!-- 画像埋め込み -->
-  <div class="content">
-    <img src="common/images/logo.png" alt="logo">
-  </div>
-  <!-- 文字が現れるアニメーション -->
-  <div class="txt">
-    <p>L</p>
-    <p>o</p>
-    <p>a</p>
-    <p>d</p>
-    <p>i</p>
-    <p>n</p>
-    <p>g</p>
-    <p>・</p>
-    <p>・</p>
-    <p>・</p>
-  </div>
 
-</div>
-<!-- ここまで -->
 
 <main class=top-page>
   <!-- 下記消す予定 -->
@@ -92,38 +71,38 @@ require '../donuts-site/includes/header.php';
     <div class="top-rank">
       <h2>人気ランキング</h2>
       <ol class="top-rank-content mx">
+
+
+        <?php
+        require '../donuts-site/includes/database.php';
+        // SQL文準備
+        $sql = $pdo->query('select * from product where ranking is not null');
+
+        foreach ($sql as $row) {
+          echo <<<END
         <li>
           <form action="cart-input.php" method="post">
-
-            <p class="rank"> <a href="detail.php?id=1">1 </a></p>
-
-            <p> <a href="detail.php?id=1"><img src="../donuts-site/common/images/product-item01.jpg" alt="image" class="fluid"></a></p>
-            <p class="product-name"> <a href="detail.php?id=1">CCドーナツ 当店オリジナル（5個入り）</a></p>
+            <p class="rank"> <a href="detail.php?id=1">1</a>
+            </p>
+            <p>
+            <a href="detail.php?id=1"><img src="../donuts-site/common/images/product-item01.jpg" alt="image" class="fluid"></a>
+            </p>
+            <p class="product-name">
+            <a href="detail.php?id=1"></a></p>
             <div class="price-content">
               <p class="price"> <a href="detail.php?id=1">税込 ￥1,500</a></p>
               <a href="">ハート</a>
             </div>
+
             <input type="hidden" name="id" value="1">
             <input type="hidden" name="name" value="CCドーナツ">
             <input type="hidden" name="price" value="1500">
             <input type="submit" value="カートに入れる">
           </form>
         </li>
-
-        <li>
-          <form action="cart-input.php" method="post">
-            <p class="rank"> <a href="detail.php?id=7">2 </a></p>
-            <p> <a href="detail.php?id=1"><img src="../donuts-site/common/images/product-variety01.jpg" alt="image" class="fluid"></a></p>
-            <p class="product-name"> <a href="detail.php?id=71">フルーツドーナツセット（12個入り）</a></p>
-            <div class="price-content">
-              <p class="price"> <a href="detail.php?id=7">税込 ￥3,500</a></p>
-              <a href="">ハート</a>
-            </div>
-            <input type="hidden" name="id" value="7">
-            <input type="hidden" name="name" value="CCドーナツ">
-            <input type="hidden" name="price" value="1500">
-            <input type="submit" value="カートに入れる">
-          </form>
+        END;
+        }
+        ?>
         </li>
 
       </ol>
