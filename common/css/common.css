@@ -150,6 +150,13 @@ header form input[type="submit"] {
   margin-right: 12px;
 }
 
+.hamburger-btn show {
+  width: 26px;
+  height: 26px;
+  margin-right: 12px;
+  right: 100%;
+}
+
 .menu-list {
   text-align: start;
   margin: 0 12px;
