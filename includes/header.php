@@ -10,7 +10,15 @@
         <a href="index.php"><img src="common/images/logo.svg" alt="logo" class="logo-icon"></a>
       </li>
       <li>
-        <a href="login-input.php"><img src="common/images/icon-login.svg" alt="login" class="login-icon"></a>
+        <a href="login-input.php">
+          <?php
+          if (isset($_SESSION['customer'])) {
+            echo '<img src="common/images/icon-logout.svg" alt="logout" class="login-icon">';
+          } else {
+            echo '<img src="common/images/icon-login.svg" alt="login" class="login-icon">';
+          }
+          ?>
+        </a>
         <a href="cart.php"><img src="common/images/icon-cart.svg" alt="cart" class="cart-icon"></a>
       </li>
     </ul>

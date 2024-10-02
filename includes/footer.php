@@ -13,12 +13,14 @@
      </ul>
 
      <div class="footer-icons">
-       <a href="#"><img src="common/images/instagram.png" alt="instagram"></a>
-       <a href="#"><img src="common/images/facebook.png" alt="facecook"></a>
-       <a href="#"><img src="common/images/x.png" alt="x"></a>
+       <a href="https://www.misterdonut.jp/"><img src="common/images/instagram.png" alt="instagram"></a>
+       <a href="https://krispykreme.jp/"><img src="common/images/facebook.png" alt="facecook"></a>
+       <a href="http://jack-donuts.jp/"><img src="common/images/x.png" alt="x"></a>
      </div>
 
-     <div class="footer-logo"><img src="common/images/logo.svg" alt="logo"></div>
+     <div class="footer-logo">
+       <a href="index.php"><img src="common/images/logo.svg" alt="logo"></a>
+     </div>
 
 
      <p class="copyright">Copyright (C) c.c.donuts All Rights Reserved</p>

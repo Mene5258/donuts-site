@@ -42,6 +42,8 @@ input[type="submit"] {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  margin: 0 auto;
+  max-width: 335px;
 }
 
 .top-item-content a {
@@ -104,9 +106,23 @@ input[type="submit"] {
 /* philosophy */
 .top-bg {
   background: url(../../common/images/top02.jpg) no-repeat top / cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
   text-align: center;
   color: var(--white-color);
+  position: relative;
 }
+
+.top-bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* top-bgの文字どうしようかな～ */
 
 .top-bg h1 {
   font-size: 24px;
@@ -147,4 +163,54 @@ input[type="submit"] {
 
 .top-rank-content li p:nth-child(5) {
   font-size: 12px;
+}
+
+/* 人気ランキング */
+.top-rank-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+li {
+  flex-basis: 158px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* 各ランクのスタイル */
+.top-rank {
+  text-align: center;
+}
+
+.rank {
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  color: var(--white-color);
+  text-align: center;
+  line-height: 35px;
+  margin-bottom: 20px;
+  /* 下記後で変更 */
+  background-color: var(--yellow-color)
+}
+
+.product-name {
+  line-height: 1.6;
+  margin: 20px 0 22px;
+  color: var(--brown-color);
+  font-weight: bold;
+}
+
+.price {
+  color: var(--red-color);
+}
+
+.inputcart {
+  width: 100%;
+  text-align: center;
+  background-color: var(--brown-color);
 }
