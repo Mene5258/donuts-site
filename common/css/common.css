@@ -237,6 +237,9 @@ footer {
 @media screen and (min-width:768px) {
 
   /* header pc ｺｺｶﾗ */
+  header {
+    height: 165px;
+  }
 
   .inner {
     max-width: 1200px;
@@ -259,15 +262,23 @@ footer {
     height: 67px;
   }
 
+  .align-right {
+    text-align: right;
+  }
+
   .login-icon {
     width: 48px;
     height: 60px;
+    margin-top: 24px;
+    margin-bottom: 29px;
   }
 
   .cart-icon {
     width: 40px;
     height: 60px;
     margin-top: 24px;
+    margin-right: 12px;
+    margin-bottom: 29px;
   }
 
   .max-inner {
@@ -277,9 +288,20 @@ footer {
 
   header form {
     justify-content: right;
-    padding-right: 40px;
+    padding-right: 12.5px;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  header form input[type="search"] {
+    width: 320px;
+    height: 40px;
+  }
+
+  .submit-btn {
+    width: 40px;
+    height: 40px;
+
   }
 
   .navicon {
