@@ -60,6 +60,8 @@ require '../donuts-site/includes/header.php';
       <h2>人気ランキング</h2>
       <ol class="top-rank-content mx">
 
+        <!-- 人気ランキング -->
+
         <li>
           <form action="cart-input.php" method="post">
             <p class="rank">1</p>
