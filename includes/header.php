@@ -1,10 +1,10 @@
 <!-- header部 ｺｺｶﾗ -->
 
 <header>
-  <div class="inner">
+  <div id="inner">
     <ul class="header-flex">
       <li class="li-left">
-        <img src="common/images/hamburger-icon.svg" alt="hamburger-menu" class="hamburger-btn hamburger-style">
+        <img src="common/images/hamburger-icon.svg" alt="hamburger-menu" class="hamburger-btn" id="hamburger-style">
       </li>
       <li>
         <a href="index.php"><img src="common/images/logo.svg" alt="logo" class="logo-icon"></a>
@@ -38,10 +38,10 @@
 
 
   <!-- メニュー部 -->
-  <nav class="menu-container">
+  <nav id="menu-container">
     <div class="menu-logo">
       <a href="index.php"><img src="common/images/logo.svg" alt="logo"></a>
-      <img src="common/images/close-btn.svg" alt="logo" class="hamburger-btn" id="close-btn">
+      <img src="common/images/close-btn.svg" alt="logo" id="close-btn" class="hamburger-btn">
     </div>
     <ul class="menu-list">
       <li><a href="index.php">TOP</a></li>

@@ -1,6 +1,10 @@
 
 // ドロワーメニュー
-document.getElementsByClassName('hamburger-btn').addEventListener('click', function () {
-  var menu_container = document.querySelector('.menu-container ');
-  menu_container.classList.toggle('open');
-})
+'use strict';
+document.querySelector('.hamburger-btn').addEventListener('click', function () {
+  document.querySelector('#menu-container').classList.toggle('show');
+});
+
+document.querySelector('.hamburger-btn').addEventListener('click', function () {
+  document.querySelector('#close-btn').classList.toggle('show');
+});
