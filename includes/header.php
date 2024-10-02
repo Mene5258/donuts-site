@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="common/css/reset.css" rel="stylesheet">
+  <link href="common/css/common.css" rel="stylesheet">
+
+  <title>donuts site</title>
+</head>
+
+<body>
   <header>
     <div class="inner">
       <ul class="header-flex">
@@ -5,13 +18,11 @@
           <img src="common/images/hamburger-icon.svg" alt="hamburger-menu" class="hamburger-btn hamburger-style">
         </li>
         <li>
-          <a href="index.php"><img src="common/images/logo.svg" alt="logo" class="logo-icon"></a>
+          <img src="common/images/logo.svg" alt="logo" class="logo-icon">
         </li>
-        <li class="align-right">
-          <a href="login-input.php"><img src="common/images/icon-login.svg" alt="login" class="login-icon">
-          </a>
-          <a href="cart.php"><img src="common/images/icon-cart.svg" alt="cart" class="cart-icon">
-          </a>
+        <li>
+          <img src="common/images/icon-login.svg" alt="login" class="login-icon">
+          <img src="common/images/icon-cart.svg" alt="cart" class="cart-icon">
         </li>
       </ul>
     </div>
