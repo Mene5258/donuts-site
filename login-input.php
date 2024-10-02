@@ -17,23 +17,26 @@ require '../donuts-site/includes/header.php';
 // header終了タグまで
 ?>
 
-<h2>ログイン</h2>
-<div class="login-container">
+<body>
 
-  <form action="#" method="POST">
-    <label for="email">メールアドレス</label>
-    <input type="email" id="email" name="email" required>
 
-    <label for="password">パスワード</label>
-    <input type="password" id="password" name="password" required>
+  <h2>ログイン</h2>
+  <div class="login-container">
 
-    <button class="login" type="submit">ログインする</button>
-  </form>
+    <form action="#" method="POST">
+      <label for="email">メールアドレス</label>
+      <input type="email" id="email" name="email" required>
 
-</div>
-<p class="customar_reg">
-  <a href="#">会員登録がお済みでない方はこちら</a>
-</p>
+      <label for="password">パスワード</label>
+      <input type="password" id="password" name="password" required>
+
+      <button class="login" type="submit">ログインする</button>
+    </form>
+
+  </div>
+  <p class="customar_reg">
+    <a href="#">会員登録がお済みでない方はこちら</a>
+  </p>
 </body>
 
 
