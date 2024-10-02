@@ -25,7 +25,8 @@
    </div>
 
  </footer>
-
+ <script src="common/js/loading.js"></script>
+ <script src="common/js/drawer.js"></script>
  </body>
 
  </html>
