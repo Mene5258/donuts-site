@@ -195,7 +195,7 @@ input[type="submit"] {
 }
 
 .top-item1 {
-  background: url(../../common/images/product-item05.jpg) no-repeat center / contain;
+  background: url(../../common/images/product-item5.jpg) no-repeat center / contain;
   display: flex;
   justify-content: space-between;
 }
