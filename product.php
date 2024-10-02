@@ -26,6 +26,3 @@
   //footer開始タグから
   require '../donuts-site/includes/footer.php';
   ?>
-</body>
-
-</html>
