@@ -7,11 +7,11 @@
         <img src="common/images/hamburger-icon.svg" alt="hamburger-menu" class="hamburger-btn hamburger-style">
       </li>
       <li>
-        <img src="common/images/logo.svg" alt="logo" class="logo-icon">
+        <a href="index.php"><img src="common/images/logo.svg" alt="logo" class="logo-icon"></a>
       </li>
       <li>
-        <img src="common/images/icon-login.svg" alt="login" class="login-icon">
-        <img src="common/images/icon-cart.svg" alt="cart" class="cart-icon">
+        <a href="login-input.php"><img src="common/images/icon-login.svg" alt="login" class="login-icon"></a>
+        <a href="cart.php"><img src="common/images/icon-cart.svg" alt="cart" class="cart-icon"></a>
       </li>
     </ul>
   </div>
