@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+main {
+  background-color: #fff;
+}
+
+.user {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7F5539;
+  background-color: #fff;
+  padding: 12px 20px;
+  border-bottom: 1px solid #7F5539;
+  border-top: 1px solid #7F5539;
+}
+
+.breadcrumb {
+  padding: 12px 20px;
+  display: flex;
+}
+
+.breadcrumb-item {
+  font-size: 12px;
+}
+
+a {
+  font-size: 12px;
+}
+
+.breadcrumb-item {
+  margin-right: 0.5em;
+
+}
+
+.breadcrumb-item::after {
+  content: ">";
+  margin-left: 0.5em;
+}
+
+.breadcrumb-item:last-child::after {
+  content: "";
+  /* 最後の項目には区切りを表示しない */
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.explanation {
+  border-bottom: 1px solid #7F5539;
+  border-top: 1px solid #7F5539;
+}
+
+.price {
+  color: #BF0000;
+}
+
+@media screen and (min-width:768px) {
+
+  .cart-page {
+    max-width: 1200px;
+  }
+}
