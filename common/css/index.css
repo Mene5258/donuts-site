@@ -319,7 +319,6 @@ input[type="submit"] {
 }
 
 /* 人気ランキング */
-
 .top-rank-content a {
   display: block;
 }
@@ -344,7 +343,6 @@ input[type="submit"]:hover {
 .top-rank {
   text-align: center;
 }
-
 
 .top-rank-content>li>form>.rank {
   margin: 0 auto;
@@ -495,6 +493,66 @@ input[type="submit"] {
   }
 
   .top-rank-content {
+    margin: 0 auto;
     max-width: 1080px;
+    padding-bottom: 160px;
   }
+
+  /* 各ランク */
+  .top-rank-content>li>form>.rank {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+  }
+
+
+  .rank a {
+    color: var(--white-color);
+    font-size: 24px;
+  }
+
+  .product-name {
+    text-align: left;
+    line-height: 1.6;
+    margin: 20px 0 22px;
+    /* medium */
+    font-weight: 500;
+  }
+
+  /* 微調整 */
+  .product-name a {
+    color: var(--brown-color);
+  }
+
+  .price-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22.3px;
+  }
+
+  .price {
+    text-align: left;
+  }
+
+  .price a {
+    color: var(--red-color);
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    text-align: center;
+    background-color: var(--brown-color);
+    color: var(--white-color);
+    padding: 12px 37px;
+  }
+
+  /* ハートスタイル */
+  .hearts-btn {
+    background: transparent;
+    color: var(--red-color);
+    font-size: 20px;
+  }
+
 }
