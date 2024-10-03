@@ -18,7 +18,7 @@ session_start();
 </head>
 
 <?php
-require '../donuts-site/includes/header.php';
+require 'includes/header.php';
 ?>
 
 <!-- topページ領域 -->
@@ -53,7 +53,7 @@ require '../donuts-site/includes/header.php';
   unset($_SESSION['customer']);
 
   // DB接続
-  require '../donuts-site/includes/database.php';
+  require 'includes/database.php';
 
   // ログインとパスワード両方を合致させる
   $sql = $pdo->prepare('select * from customer where id=? and password=?');
@@ -84,7 +84,7 @@ require '../donuts-site/includes/header.php';
   ?>
 
   <div class="top-hero">
-    <img src="../donuts-site/common/images/hero-sp.jpg" alt="hero" class="fluid">
+    <img src="common/images/hero-sp.jpg" alt="hero" class="fluid">
   </div>
 
   <div class="top-item-container">
@@ -92,7 +92,7 @@ require '../donuts-site/includes/header.php';
 
 
       <?php
-      require '../donuts-site/includes/database.php';
+      require 'includes/database.php';
       echo <<<END
       <a href="product.php?id=5"
       END;
@@ -128,9 +128,8 @@ require '../donuts-site/includes/header.php';
       <h2>人気ランキング</h2>
       <ol class="top-rank-content mx">
 
-
         <?php
-        require '../donuts-site/includes/database.php';
+        require 'includes/database.php';
         // SQL文準備
         $sql = $pdo->query('select * from product where ranking >= 1 and ranking <= 6 order by ranking asc');
 
@@ -143,7 +142,7 @@ require '../donuts-site/includes/header.php';
             </p>
             <p>
             <a href="detail.php?id={$row['id']}">
-            <img src="../donuts-site/common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
+            <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
             </a>
             </p>
             <p class="product-name">
@@ -183,5 +182,5 @@ END;
 </main>
 
 <?php
-require '../donuts-site/includes/footer.php';
+require 'includes/footer.php';
 ?>
