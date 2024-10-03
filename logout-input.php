@@ -20,7 +20,7 @@ require 'includes/header.php';
   <?php
   if (isset($_SESSION['customer'])) {
     echo <<<END
-    <p class="user">ようこそ {$_REQUEST['customer']['name']}様</p>
+    <p class="user">ようこそ {$_SESSION['customer']['name']}様</p>
     <p class="border"></p>
     <h2>ログアウト</h2>
     <form action="logout-complete.php" method="post">
