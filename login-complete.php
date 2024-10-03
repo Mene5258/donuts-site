@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="common/css/login-complete.css">
   <title>login-complete</title>
 </head>
 <?php

@@ -25,7 +25,6 @@ h2 {
 
 
 main form {
-  font-size: 12px;
   border: 2px solid #E8C2CA;
   width: 295px;
   color: #a56d55;
@@ -64,7 +63,7 @@ button {
 }
 
 button:hover {
-  background-color: #7f5539;
+  transform: translateY(-10px);
 }
 
 .not-input {
@@ -91,20 +90,49 @@ button:hover {
 
   h2 {
     font-size: 32px;
-    margin: 80px auto;
+    margin: 80px 0;
   }
 
+  main form {
+    font-size: 24px;
+    width: 600px;
+    padding: 0;
+  }
 
+  main form p {
+    font-size: 24px;
+  }
 
+  main form p:nth-of-type(2n-1) {
+    margin: 40px 0 0 103px;
+  }
 
+  main form p:nth-of-type(2n) {
+    margin-left: 100px;
+  }
 
+  main input {
+    width: 400px;
+    height: 32px;
+  }
 
-
-
-
+  button {
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 38px;
+  }
 
   .not-input {
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding-bottom: 378px;
     text-decoration: none;
+  }
+
+  .not-input a {
+    font-size: 20px;
   }
 
   .not-input a:hover {
