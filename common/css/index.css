@@ -30,7 +30,7 @@
 .content img {
   mix-blend-mode: multiply;
   height: auto;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   animation: rotateY 3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
 }
 
