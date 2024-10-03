@@ -244,7 +244,7 @@ input[type="submit"] {
 /* philosophy */
 .top-bg {
   background: url(../../common/images/top02.jpg) no-repeat top / cover;
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
   background-blend-mode: lighten;
   text-align: center;
   color: var(--white-color);
@@ -257,7 +257,7 @@ input[type="submit"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 /* top-bgの文字どうしようかな～ */
@@ -344,9 +344,6 @@ input[type="submit"]:hover {
   color: var(--white-color);
 }
 
-.rank:first-child {
-  background-color: var(--yellow-color);
-}
 
 .product-name {
   text-align: left;
@@ -380,4 +377,15 @@ input[type="submit"] {
   background-color: var(--brown-color);
   color: var(--white-color);
   padding: 12px 37px;
+}
+
+/* ハートスタイル */
+.hearts-btn {
+  background: transparent;
+  color: var(--red-color);
+  font-size: 20px;
+}
+
+.hearts-btn:hover {
+  cursor: pointer;
 }
