@@ -18,55 +18,23 @@ main {
 
 h2 {
   font-size: 20px;
+  font-weight: 400;
   color: #a56d55;
   text-align: center;
   margin: 32px 0 60px;
 }
 
-
-main form {
+.login-box {
+  font-size: 12px;
+  text-align: center;
   border: 2px solid #E8C2CA;
   width: 295px;
   color: #a56d55;
-  padding: 20px 10px;
+  padding: 36px 72px;
   margin: 0 auto;
 }
 
-main form p {
-  font-size: 12px;
-}
-
-main form p:nth-of-type(2n-1) {
-  margin-bottom: 8px;
-}
-
-main form p:nth-of-type(2n) {
-  margin-bottom: 20px;
-}
-
-main input {
-  width: 271px;
-  height: 20px;
-  border: 1px solid #f0d5d1;
-  padding-left: 5px;
-}
-
-button {
-  font-size: 16px;
-  background-color: #7f5539;
-  width: 200px;
-  height: 48px;
-  display: block;
-  margin: 0 auto;
-  color: #fff;
-  cursor: pointer;
-}
-
-button:hover {
-  transform: translateY(-10px);
-}
-
-.not-input {
+.top-reverse {
   text-align: right;
   margin-top: 24px;
   margin-right: 40px;
@@ -74,9 +42,10 @@ button:hover {
   color: #7f5539;
   text-decoration: underline;
   text-underline-offset: 5px;
+  text-transform: uppercase;
 }
 
-.not-input a {
+.top-reverse a {
   font-size: 12px;
   color: #7f5539;
 }

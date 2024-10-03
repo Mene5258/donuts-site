@@ -24,10 +24,9 @@
     <p class="user">ようこそ ゲスト様</p>
     <p class="border"></p>
     <h2>ログイン</h2>
-
     <form action="login-complete.php" method="post">
       <p>メールアドレス</p>
-      <p><input type="email" id="email" name="email" required></p>
+      <p><input type="email" id="mail" name="mail" required></p>
       <p>パスワード</p>
       <p><input type="password" id="password" name="password" required></p>
       <button class="login" type="submit">ログインする</button>
