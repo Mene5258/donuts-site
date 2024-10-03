@@ -4,13 +4,16 @@ main {
   background-color: #fff;
 }
 
-.border {
+.user {
   font-size: 12px;
   font-weight: 500;
   color: #7F5539;
-  border-bottom: 1px solid #7f5539;
   background-color: #fff;
   padding: 12px 20px;
+}
+
+.border {
+  border-top: 1px solid #7f5539;
 }
 
 h2 {
@@ -80,8 +83,15 @@ button:hover {
 }
 
 @media screen and (min-width:768px) {
-  .border {
-    padding-left: 20.5px;
+  .user {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 0 12px 20.5px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin: 80px auto;
   }
 
 
