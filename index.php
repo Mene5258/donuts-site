@@ -96,17 +96,16 @@ require '../donuts-site/includes/header.php';
       END;
 
       ?>
-      <div class="top-item1">
-        <p>新商品</p>
-        <p>サマーシトラス</p>
-      </div><!-- top-item1-->
+      <a href="#">
+        <div class="top-item1">
+          <p>新商品</p>
+          <p>サマーシトラス</p>
+        </div><!-- top-item1-->
       </a>
 
-      <a href="#">
-        <div class="top-item2">
-          <p>ドーナツのある生活</p>
-        </div><!-- top-item2-->
-      </a>
+      <div class="top-item2">
+        <p>ドーナツのある生活</p>
+      </div><!-- top-item2-->
     </div><!-- top-item-content-->
 
     <a href="product.php">
