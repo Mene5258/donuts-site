@@ -11,6 +11,8 @@ session_start();
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/index.css" rel="stylesheet">
+  <script src="common/js/loading.js"></script>
+  <script src="common/js/drawer.js"></script>
   <title>donuts site</title>
 </head>
 
@@ -20,27 +22,7 @@ require '../donuts-site/includes/header.php';
 <!-- topページ領域 -->
 
 
-<!-- ローディング画面 -->
-<div id="loading" class="loading">
-  <!-- 画像埋め込み -->
-  <div class="content">
-    <img src="common/images/logo.png" alt="logo">
-  </div>
-  <!-- 文字が現れるアニメーション -->
-  <div class="txt">
-    <p>L</p>
-    <p>o</p>
-    <p>a</p>
-    <p>d</p>
-    <p>i</p>
-    <p>n</p>
-    <p>g</p>
-    <p>・</p>
-    <p>・</p>
-    <p>・</p>
-  </div>
 
-</div>
 <!-- ここまで -->
 
 <main class=top-page>
@@ -118,8 +100,14 @@ require '../donuts-site/includes/header.php';
             </p>
             <div class="price-content">
               <p class="price">
-              <a href="detail.php?id={$row['id']}">税込 ￥{$row['price']}</a></p>
-              <a href="">ハート</a>
+              <a href="detail.php?id={$row['id']}">税込 ￥
+END;
+
+          echo number_format($row['price']);
+
+          echo <<<END
+              </a></p>
+              <button class="hearts-btn" type="button">&#9825;</button>
             </div>
 
             <input type="hidden" name="id" value="{$row['id']}">
@@ -128,17 +116,26 @@ require '../donuts-site/includes/header.php';
             <input type="submit" value="カートに入れる">
           </form>
         </li>
-        END;
+END;
         }
         ?>
         </li>
+
+
 
       </ol>
     </div>
   </section>
 
 </main>
+<script>
+  <?php
+  require '../donuts-site/includes/footer.php';
+  ?>
 
-<?php
-require '../donuts-site/includes/footer.php';
-?>
+
+    <
+    /body>
+
+    <
+    /html>
