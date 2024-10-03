@@ -89,19 +89,19 @@ require '../donuts-site/includes/header.php';
 
   <div class="top-item-container">
     <div class="top-item-content">
+
+
       <?php
       require '../donuts-site/includes/database.php';
       echo <<<END
-      <a href="product.php?id=5">
+      <a href="product.php?id=5"
       END;
-
       ?>
-      <a href="#">
-        <div class="top-item1">
-          <p>新商品</p>
-          <p>サマーシトラス</p>
-        </div><!-- top-item1-->
-      </a>
+      class="top-item1">
+      <p>新商品</p>
+      <p>サマーシトラス</p>
+      </a><!-- top-item1-->
+
 
       <div class="top-item2">
         <p>ドーナツのある生活</p>

@@ -196,7 +196,7 @@ input[type="submit"] {
 }
 
 .top-item1 {
-  background: url(../../common/images/product-item5.jpg) no-repeat center / contain;
+  background: url(../../common/images/product-item5.jpg) no-repeat center / cover;
   display: flex;
   justify-content: space-between;
 }
@@ -220,7 +220,7 @@ input[type="submit"] {
 }
 
 .top-item2 {
-  background: url(../../common/images/top_icon.jpg) no-repeat center / contain;
+  background: url(../../common/images/top_icon.jpg) no-repeat center / cover;
   display: flex;
   justify-content: flex-end;
 }
@@ -406,6 +406,28 @@ input[type="submit"] {
 @media screen and (min-width:768px) {
   /* 最大ブレイクポイント1200px */
 
+
+  /* 共通文字サイズ */
+  .top-item1>p,
+  .top-item2>p,
+  .top-image>p {
+    font-size: 36px;
+  }
+
+  .top-item1>p:first-child {
+    font-size: 32px;
+  }
+
+  .top-rank input[type="submit"] {
+    font-size: 20px;
+  }
+
+  .login-text {
+    color: var(--brown-color);
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   .login-text {
     margin-top: 24px;
     margin-bottom: 12px;
@@ -423,8 +445,41 @@ input[type="submit"] {
   }
 
   .top-item-content {
-    max-width: auto;
+    max-width: 1040px;
   }
 
+  .top-item1,
+  .top-item2 {
+    min-width: 500px;
+    min-height: 500px;
+  }
+
+  .top-image {
+    margin-top: 40px;
+    max-width: 1040px;
+    min-height: 257px;
+    background: url(../../common/images/top01.jpg) no-repeat center / cover;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .top-item1 p:first-child {
+    width: 145.83px;
+    height: 145.83px;
+  }
+
+  /* philosopy */
+  .top-bg h1 {
+    font-size: 36px;
+  }
+
+  .top-bg p:nth-child(2) {
+    font-size: 20px;
+  }
+
+  .top-bg p:nth-child(3),
+  .top-bg p:nth-child(4) {
+    font-size: 24px;
+  }
 
 }
