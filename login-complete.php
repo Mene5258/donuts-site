@@ -8,7 +8,7 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link rel="stylesheet" href="common/css/login-complete.css">
-  <title>login-complete</title>
+  <title>ログイン完了 | C.C.Donuts</title>
 </head>
 <?php
 require 'includes/header.php';
@@ -39,7 +39,7 @@ require 'includes/header.php';
   <h2>ログイン完了</h2>
   <p class="login-box">ログインが完了しました。</p>
   <p class="top-reverse">
-    <a href="customer-input.php">topページへ戻る</a>
+    <a href="index.php">topページへ戻る</a>
   </p>
 END;
   } else {
@@ -53,19 +53,11 @@ END;
   パスワードが違います
   </p>
   <p class="top-reverse">
-    <a href="customer-input.php">topページへ戻る</a>
+    <a href="login-input.php">ログインページへ戻る</a>
   </p>
 END;
   }
-
   ?>
-  <p class="user">ようこそ ゲスト様</p>
-  <p class="border"></p>
-  <h2>ログイン完了</h2>
-  <p class="login-box">ログインが完了しました。</p>
-  <p class="top-reverse">
-    <a href="customer-input.php">topページへ戻る</a>
-  </p>
 </main>
 
 <?php

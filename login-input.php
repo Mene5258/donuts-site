@@ -8,8 +8,7 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/login-input.css" rel="stylesheet">
-
-  <title>login-input</title>
+  <title>ログイン入力 | C.C.Donuts</title>
 
 
 </head>
@@ -17,7 +16,7 @@
 <body>
 
   <?php
-  require '../donuts-site/includes/header.php';
+  require 'includes/header.php';
   // header終了タグまで
   ?>
   <main>
@@ -42,5 +41,5 @@
 
   <?php
   //footer開始タグから
-  require '../donuts-site/includes/footer.php';
+  require 'includes/footer.php';
   ?>
