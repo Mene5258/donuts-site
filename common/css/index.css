@@ -164,8 +164,8 @@ input[type="submit"] {
 
 .login-text {
   color: var(--brown-color);
-  margin-top: 12px;
-  margin-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .top-hero {
