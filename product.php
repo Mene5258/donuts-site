@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
+  <link href="common/css/product.css" rel="stylesheet">
 
-  <title>donuts site</title>
+  <title>product</title>
 </head>
 
 <body>
@@ -20,6 +21,12 @@
 
 
   <main>
+    <!-- パンくず↓ -->
+
+    <!--パンくず↑  -->
+    <p class="user">ようこそ ゲスト様</p>
+    <p class="border"></p>
+
 
   </main>
 
