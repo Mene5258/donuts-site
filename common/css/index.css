@@ -155,9 +155,6 @@ main {
 
 /* 共通文字サイズ */
 .login-text,
-.top-item1>p,
-.top-item2>p,
-.top-image>p,
 input[type="submit"] {
   font-size: 12px;
 }
@@ -189,10 +186,18 @@ input[type="submit"] {
   color: var(--white-color);
 }
 
+
+
+.top-item1>p:last-child,
+.top-item2>p,
+.top-image>p {
+  font-size: clamp(0.75rem, -1.917rem + 5.56vw, 2.25rem);
+}
+
 .top-item1,
 .top-item2 {
-  width: 158px;
-  height: 158px;
+  width: clamp(9.875rem, -28.125rem + 79.17vw, 31.25rem);
+  height: clamp(9.875rem, -28.125rem + 79.17vw, 31.25rem);
 }
 
 .top-item1 {
@@ -202,12 +207,13 @@ input[type="submit"] {
 }
 
 .top-item1 p:first-child {
+  font-size: clamp(0.75rem, -1.472rem + 4.63vw, 2rem);
   margin-top: 5px;
   margin-left: 5px;
-  width: 40px;
-  height: 40px;
+  width: clamp(2.5rem, -9.259rem + 24.5vw, 9.114rem);
+  height: clamp(2.5rem, -9.259rem + 24.5vw, 9.114rem);
   border-radius: 50%;
-  line-height: 40px;
+  line-height: clamp(2.5rem, -9.259rem + 24.5vw, 9.114rem);
   text-align: center;
   background-color: #FF8877;
 }
@@ -227,8 +233,10 @@ input[type="submit"] {
 
 .top-image {
   margin: 20px auto 0;
-  max-width: 335px;
-  min-height: 83px;
+  width: clamp(20.938rem, -57.396rem + 163.19vw, 65rem);
+  height: clamp(5.188rem, -14.146rem + 40.28vw, 16.063rem);
+  /* width: 335px;
+  height: 83px; */
   background: url(../../common/images/top01.jpg) no-repeat center / contain;
   display: flex;
   justify-content: flex-end;
@@ -406,20 +414,8 @@ input[type="submit"] {
 @media screen and (min-width:768px) {
   /* 最大ブレイクポイント1200px */
 
-
-  /* 共通文字サイズ */
-  .top-item1>p,
-  .top-item2>p,
-  .top-image>p {
-    font-size: 36px;
-  }
-
-  .top-item1>p:first-child {
-    font-size: 32px;
-  }
-
-  .top-rank input[type="submit"] {
-    font-size: 20px;
+  .mx {
+    margin: 0;
   }
 
   .login-text {
@@ -446,31 +442,28 @@ input[type="submit"] {
 
   .top-item-content {
     max-width: 1040px;
+    justify-content: center;
   }
 
-  .top-item1,
+  .top-item1 {
+    margin-right: 20px;
+  }
+
   .top-item2 {
-    min-width: 500px;
-    min-height: 500px;
+    margin-left: 20px;
   }
 
   .top-image {
     margin-top: 40px;
-    max-width: 1040px;
-    min-height: 257px;
     background: url(../../common/images/top01.jpg) no-repeat center / cover;
     display: flex;
     justify-content: flex-end;
   }
 
-  .top-item1 p:first-child {
-    width: 145.83px;
-    height: 145.83px;
-  }
-
   /* philosopy */
   .top-bg h1 {
     font-size: 36px;
+    padding-top: 200px;
   }
 
   .top-bg p:nth-child(2) {
@@ -482,4 +475,26 @@ input[type="submit"] {
     font-size: 24px;
   }
 
+  .top-bg p:nth-child(3) {
+    margin-top: 40px;
+  }
+
+  .top-bg p:nth-child(4) {
+    margin-top: 20px;
+    padding-bottom: 283px;
+  }
+
+  /* rank */
+  .top-rank h2 {
+    margin-top: 80px;
+    font-size: 32px;
+  }
+
+  .top-rank input[type="submit"] {
+    font-size: 20px;
+  }
+
+  .top-rank-content {
+    max-width: 1080px;
+  }
 }
