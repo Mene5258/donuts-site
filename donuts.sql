@@ -24,8 +24,8 @@ create table product (
 	id int auto_increment primary key unique not null, 
 	name varchar(200) not null, 
 	price int not null,
-	description varchar(1000) not null
-	ranking int,
+	description varchar(1000) not null,
+	ranking int
 );
 
 -- テーブル作成（テーブル名：card）

@@ -58,7 +58,7 @@ require '../donuts-site/includes/header.php';
   // ログインとパスワード両方を合致させる
   $sql = $pdo->prepare('select * from customer where id=? and password=?');
 
-  // SQLに渡す値＋実行(ログイン情報からid、password持ってくる)
+  // SQLに渡す値＋実行(ログイン情報（input-loginとか？）からid、password持ってくる)
   $sql->execute([$_REQUEST['id'], $_REQUEST['password']]);
 
   // 取得したデータをセッションのcustomer変数に保存する
@@ -133,7 +133,7 @@ require '../donuts-site/includes/header.php';
         <?php
         require '../donuts-site/includes/database.php';
         // SQL文準備
-        $sql = $pdo->query('select * from product where ranking is not null and ranking != 0 order by ranking asc');
+        $sql = $pdo->query('select * from product where ranking >= 1 and ranking <= 6 order by ranking asc');
 
         foreach ($sql as $row) {
           echo <<<END
