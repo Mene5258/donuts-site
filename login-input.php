@@ -22,12 +22,15 @@
   ?>
   <main>
     <?php
-
+if(isset($_SESSION['customer'])){
+echo '<p class="border">ようこそ ',$_SESSION['customer']['name'],'様</p>';
+}else{
+echo '<p class="border">ようこそ ゲスト様</p>';
+}
     ?>
+<h2>ログイン</h2>
 
-    <h2>ログイン</h2>
-
-    <form action="#" method="post">
+    <form action="login-complete.php" method="post">
       <p>メールアドレス</p>
       <p><input type="email" id="email" name="email" required></p>
       <p>パスワード</p>
@@ -35,7 +38,7 @@
       <button class="login" type="submit">ログインする</button>
     </form>
 
-    <p class="customer_reg">
+    <p class="not-input">
       <a href="customer-input.php">会員登録がお済みでない方はこちら</a>
     </p>
 
