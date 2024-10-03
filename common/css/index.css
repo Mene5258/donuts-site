@@ -184,7 +184,8 @@ input[type="submit"] {
   max-width: 335px;
 }
 
-.top-item-content a {
+.top-item-content a,
+.top-item2 {
   color: var(--white-color);
 }
 
@@ -399,4 +400,31 @@ input[type="submit"] {
 
 .hearts-btn:hover {
   cursor: pointer;
+}
+
+/* PC以下 */
+@media screen and (min-width:768px) {
+  /* 最大ブレイクポイント1200px */
+
+  .login-text {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    margin-left: 103px;
+  }
+
+  .top-hero>.fluid {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .top-item-container {
+    max-width: 1040px;
+    margin: 80px auto;
+  }
+
+  .top-item-content {
+    max-width: auto;
+  }
+
+
 }
