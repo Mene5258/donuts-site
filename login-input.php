@@ -21,14 +21,8 @@
   // header終了タグまで
   ?>
   <main>
-    <?php
-if(isset($_SESSION['customer'])){
-echo '<p class="border">ようこそ ',$_SESSION['customer']['name'],'様</p>';
-}else{
-echo '<p class="border">ようこそ ゲスト様</p>';
-}
-    ?>
-<h2>ログイン</h2>
+    <p class="border">ようこそ ゲスト様</p>
+    <h2>ログイン</h2>
 
     <form action="login-complete.php" method="post">
       <p>メールアドレス</p>

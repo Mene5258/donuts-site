@@ -79,6 +79,25 @@ button:hover {
   color: #7f5539;
 }
 
-a:hover {
-  text-decoration: underline;
+@media screen and (min-width:768px) {
+  .border {
+    padding-left: 20.5px;
+  }
+
+
+
+
+
+
+
+
+
+
+  .not-input {
+    text-decoration: none;
+  }
+
+  .not-input a:hover {
+    text-decoration: underline;
+  }
 }
