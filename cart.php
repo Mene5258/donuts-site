@@ -15,9 +15,17 @@
 require '../donuts-site/includes/header.php';
 // header終了タグまで
 ?>
-
+<!-- パンくず↓ -->
+<nav aria-label="breadcrumb">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.php">TOP</a></li>
+    <li class="breadcrumb-item active" aria-current="page">カート</li>
+  </ul>
+</nav>
 
 <main class="cart-page">
+
+
   <div class="cart-product">
     <img src="common/images/product-item1.jpg">
     <p>CCドーナツ 当店オリジナル（５個入り）</p>
@@ -28,13 +36,9 @@ require '../donuts-site/includes/header.php';
 
   <div class="cart-total">
     <p>ご注文合計：<span>税込み ￥x,xxx</span></p>
-    <div class="purchase-btn">
-      <input type="submit" value="ご購入確認へ進む">
-    </div>
+    <button class="purchase-btn" type="submit">ご購入へ進む</button>
   </div>
-  <div class="continue-btn">
-    <a href="#">買い物を続ける</a>
-  </div>
+  <button class="continue-btn" type="submit">買い物を続ける</button>
 </main>
 
 <?php

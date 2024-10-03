@@ -64,8 +64,7 @@
   margin-bottom: 38px;
 }
 
-.purchase-btn input,
-.continue-btn {
+.purchase-btn {
   background-color: #bf0000;
   width: 160px;
   height: 36px;
@@ -75,9 +74,70 @@
 }
 
 .continue-btn {
-  margin: auto;
+  font-size: 16px;
+  background-color: #7f5539;
+  width: 160px;
+  height: 36px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #fff;
+  cursor: pointer;
+
 }
 
+/* ぱんくず */
+
+.breadcrumb {
+  padding: 12px 20px;
+  display: flex;
+}
+
+.breadcrumb-item {
+  font-size: 12px;
+}
+
+a {
+  font-size: 12px;
+}
+
+.breadcrumb-item {
+  margin-right: 0.5em;
+
+}
+
+.breadcrumb-item::after {
+  content: "\03e";
+  margin-left: 0.5em;
+}
+
+.breadcrumb-item:last-child::after {
+  content: "";
+  /* 最後の項目には区切りを表示しない */
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+/* ここまで */
+
+/* button {
+  font-size: 16px;
+  background-color: #7f5539;
+  width: 200px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  cursor: pointer;
+} */
 
 @media screen and (min-width:768px) {
 
