@@ -47,33 +47,7 @@ require 'includes/header.php';
 <!-- ここまで -->
 <main class=top-page>
 
-
   <?php
-  // 既存セッション変数の破棄(customerがあれば破棄)
-  unset($_SESSION['customer']);
-
-  // DB接続
-  require 'includes/database.php';
-
-  // ログインとパスワード両方を合致させる
-  $sql = $pdo->prepare('select * from customer where id=? and password=?');
-
-  // SQLに渡す値＋実行(ログイン情報（input-loginとか？）からid、password持ってくる)
-  $sql->execute([$_REQUEST['id'], $_REQUEST['password']]);
-
-  // 取得したデータをセッションのcustomer変数に保存する
-  foreach ($sql as $row) {
-    // セッション変数にsqlで取得した顧客情報を連想配列として保存する
-    $_SESSION['customer'] = [
-      //キー名＝＞値
-      'id' => $row['id'],
-      'name' => $row['name'],
-      'address' => $row['address'],
-      'login' => $row['login'],
-      'password' => $row['password']
-    ];
-  }
-
   // セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
   if (isset($_SESSION['customer'])) {
     // セットされていればtrue
