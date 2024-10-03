@@ -18,7 +18,7 @@ require '../donuts-site/includes/header.php';
 
 
 <main class="cart-page">
-  <div>
+  <div class="cart-product">
     <img src="common/images/product-item1.jpg">
     <p>CCドーナツ 当店オリジナル（５個入り）</p>
     <p>税込 ￥1,500</p>
