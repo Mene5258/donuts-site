@@ -2,6 +2,7 @@
 
 main {
   background-color: var(--white-color);
+  padding-bottom: 80px;
 }
 
 .logo {
@@ -36,6 +37,7 @@ main form p {
 .caution {
   font-size: 8px;
   color: var(--red-color);
+  margin-bottom: 8px;
 }
 
 main input {
@@ -50,17 +52,23 @@ main input {
   width: 120px;
 }
 
+#password {
+  margin-bottom: 40px;
+}
+
 button {
   font-size: 16px;
-  background-color: #7f5539;
+  background-color: var(--brown-color);
   width: 200px;
   height: 48px;
   display: block;
   margin: 0 auto;
-  color: #fff;
+  color: var(--white-color);
   cursor: pointer;
 }
 
 button:hover {
   transform: translateY(-10px);
 }
+
+@media screen and (min-width:768px) {}
