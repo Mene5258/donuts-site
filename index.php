@@ -64,7 +64,6 @@ require 'includes/header.php';
   <div class="top-item-container">
     <div class="top-item-content">
 
-
       <?php
       require 'includes/database.php';
       echo <<<END
@@ -138,7 +137,7 @@ END;
 
             <input type="hidden" name="id" value="{$row['id']}">
             <input type="hidden" name="name" value="{$row['name']}">
-            <input type="hidden" name="price" value="{$row['id']}">
+            <input type="hidden" name="price" value="{$row['price']}">
             <input type="submit" value="カートに入れる">
           </form>
         </li>

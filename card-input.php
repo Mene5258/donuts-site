@@ -11,8 +11,33 @@
 </head>
 <main>
 
+  <?php
+  $id = $_REQUEST['id'];
+  if (!isset($_SESSION['product'])) {
+    $_SESSION['product'] = [];
+  }
+  $count = 0;
+  $_SESSION['product'][$id] = [
+    'name' => $_REQUEST['name'],
+    'price' => $_REQUEST['price'],
+  ];
+  echo '<p>カートに商品を追加しました。</p>';
+
+  //   foreach ($_SESSION['product'] as $id => $product) {
 
 
+
+  //     //ヒアドキュメント２つ目
+  //     echo <<<END
+  // <tr>
+  //   <td>{$id}</td>
+  //   <td><a href="detail.php?id={$id}">{$product['name']}</a></td>
+  //   <td>{$product['price']}</td>
+  // </tr>
+  // END;
+  //   }
+
+  ?>
 </main>
 
 <?php

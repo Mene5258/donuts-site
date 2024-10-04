@@ -16,7 +16,6 @@
   z-index: 9999;
 }
 
-
 .content {
   width: 100%;
   height: auto;
@@ -159,6 +158,7 @@ input[type="submit"] {
   font-size: 12px;
 }
 
+/* ログイン名の表示 */
 .login-text {
   color: var(--brown-color);
   padding-top: 12px;
@@ -418,28 +418,34 @@ input[type="submit"] {
 
   .login-text {
     color: var(--brown-color);
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 0;
+    /* 本当はmarginで24px空けたいけどheaderにマイナス12px入ってしまうのでどこかで見直したい */
+    padding-top: 24px;
+    max-width: 1200px;
+    margin: 12px auto
   }
 
-  .login-text {
-    margin-top: 24px;
-    margin-bottom: 12px;
-    margin-left: 103px;
-  }
 
   .top-hero>.fluid {
     width: 100%;
     object-fit: cover;
   }
 
+  /* nwe product etc */
   .top-item-container {
-    max-width: 1040px;
+    max-width: 1200px;
     margin: 80px auto;
+  }
+
+  /* rank */
+  section {
+    max-width: 1200px;
+    margin: auto;
   }
 
   .top-item-content {
     max-width: 1040px;
+    margin: auto 80px;
     justify-content: center;
   }
 
@@ -499,6 +505,10 @@ input[type="submit"] {
   }
 
   /* 各ランク */
+  .top-rank-content li {
+    flex-basis: 320px;
+  }
+
   .top-rank-content>li>form>.rank {
     margin: 0 auto;
     width: 60px;
@@ -507,29 +517,21 @@ input[type="submit"] {
     line-height: 60px;
   }
 
+  .top-rank-content>li>form>.rank {
+    margin-bottom: 20px;
+  }
 
   .rank a {
-    color: var(--white-color);
     font-size: 24px;
   }
 
-  .product-name {
-    text-align: left;
-    line-height: 1.6;
-    margin: 20px 0 22px;
-    /* medium */
-    font-weight: 500;
-  }
-
-  /* 微調整 */
   .product-name a {
-    color: var(--brown-color);
+    margin: 20px 0 22px;
+    font-size: 24px;
   }
 
   .price-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 22.3px;
+    margin-bottom: 20px;
   }
 
   .price {
@@ -537,15 +539,12 @@ input[type="submit"] {
   }
 
   .price a {
-    color: var(--red-color);
+    font-size: 24px;
   }
 
   input[type="submit"] {
-    width: 100%;
-    text-align: center;
-    background-color: var(--brown-color);
-    color: var(--white-color);
-    padding: 12px 37px;
+    width: 81%;
+    padding: 16px auto;
   }
 
   /* ハートスタイル */

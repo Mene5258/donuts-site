@@ -1,1 +1,43 @@
 @charset "UTF-8";
+
+main {
+    background-color: #fff;
+    width: 100%;
+}
+
+.login-text {
+    color: var(--brown-color);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid var(--brown-color);
+    border-bottom: 1px solid var(--brown-color);
+}
+
+.fluid {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+section h1 {
+    display: inline-block;
+    margin: 32px auto 0;
+    font-size: 20px;
+    border-bottom: 4px solid var(--yellow-color);
+}
+
+.products,
+.set-container {
+    display: flex;
+}
+
+
+
+/* 商品一覧 */
+.product-list {}
+
+
+/* バラエティセット */
+.set-container {}
