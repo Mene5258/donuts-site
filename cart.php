@@ -37,27 +37,27 @@ if (isset($_SESSION['customer'])) {
   echo '<p class="user">ようこそ　ゲスト様</p>';
 }
 ?>
-<p class="booder"></p>
+<p class="border"></p>
 
 
-<main class="cart-page">
+<!-- <main class="cart-page"> -->
 
 
-  <div class="cart-product">
-    <img src="common/images/product-item1.jpg">
-    <div class="product-item-detail">
-      <p>CCドーナツ 当店オリジナル（５個入り）</p>
-      <p>税込 ￥1,500</p>
-      <p>数量 　1 個</p>
-      <a href="#">削除する</a>
-    </div>
+<div class="cart-product">
+  <img src="common/images/product-item1.jpg">
+  <div class="product-item-detail">
+    <p>CCドーナツ 当店オリジナル（５個入り）</p>
+    <p>税込 ￥1,500</p>
+    <p>数量 　1 個</p>
+    <a href="#">削除する</a>
   </div>
+</div>
 
-  <div class="cart-total">
-    <p>ご注文合計：<span>税込み ￥x,xxx</span></p>
-    <button class="purchase-btn" type="submit" onclick="location.href='purchace-complete.php'">ご購入へ進む</button>
-  </div>
-  <button class="continue-btn" type="submit" onclick="location.href='product.php'">買い物を続ける</button>
+<div class="cart-total">
+  <p>ご注文合計：<span>税込み ￥x,xxx</span></p>
+  <button class="purchase-btn" type="submit" onclick="location.href='purchace-complete.php'">ご購入へ進む</button>
+</div>
+<button class="continue-btn" type="submit" onclick="location.href='product.php'">買い物を続ける</button>
 </main>
 
 <?php
