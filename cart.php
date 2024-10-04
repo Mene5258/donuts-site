@@ -48,8 +48,11 @@ require '../donuts-site/includes/header.php';
     <img src="common/images/product-item1.jpg">
     <div class="product-item-detail">
       <p>CCドーナツ 当店オリジナル（５個入り）</p>
-      <p>税込 ￥1,500</p>
-      <p>数量 　1 個</p>
+
+      <div class="detail-block">
+        <p>税込 ￥1,500</p>
+        <p>数量 　1 個</p>
+      </div>
       <a href="#">削除する</a>
     </div>
   </div>
