@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-.detaile {
+.detail {
   background-color: #fff;
-  text-align: center;
+
 }
 
 /* パンくずリスト ここから*/
@@ -43,7 +43,7 @@ a {
 
 /* パンくずリスト ここまで*/
 
-.detaile-main {
+.detail-main img {
   width: 335px;
   height: 335px;
   margin: 20px;
