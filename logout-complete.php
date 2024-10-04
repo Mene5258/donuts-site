@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="common/css/reset.css">
   <link rel="stylesheet" href="common/css/common.css">
   <link rel="stylesheet" href="common/css/logout-complete.css">
+  <script src="common/js/drawer.js"></script>
   <title>ログアウト入力 | C.C.Donuts</title>
 </head>
 <?php
@@ -16,10 +17,10 @@ require 'includes/header.php';
 ?>
 
 <main>
-<?php
-if (isset($_SESSION['customer'])) {
-  unset($_SESSION['customer']);
-  echo <<<END
+  <?php
+  if (isset($_SESSION['customer'])) {
+    unset($_SESSION['customer']);
+    echo <<<END
   <p class="user">ようこそ　ゲスト様</p>
   <p class="border"></p>
   <h2>ログアウト完了</h2>
@@ -28,8 +29,8 @@ if (isset($_SESSION['customer'])) {
     <a href="index.php">topページへ戻る</a>
   </p>
 END;
-} else {
-  echo <<<END
+  } else {
+    echo <<<END
   <p class="user">ようこそ　ゲスト様</p>
   <p class="border"></p>
   <h2>ログアウト中です</h2>
@@ -37,8 +38,8 @@ END;
     <a href="index.php">topページへ戻る</a>
   </p>
   END;
-}
-?>
+  }
+  ?>
 </main>
 
 <?php

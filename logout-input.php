@@ -9,6 +9,7 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/logout-input.css" rel="stylesheet">
+  <script src="common/js/drawer.js"></script>
   <title>ログアウト入力 | C.C.Donuts</title>
 </head>
 <?php

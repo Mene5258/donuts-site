@@ -165,6 +165,14 @@ input[type="submit"] {
   padding-bottom: 12px;
 }
 
+.user {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brown-color);
+  background-color: var(--white-color);
+  padding: 12px 20px;
+}
+
 .top-hero {
   text-align: center;
 }
@@ -414,6 +422,12 @@ input[type="submit"] {
 
   .mx {
     margin: 0;
+  }
+
+  .user {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 0 12px 20.5px;
   }
 
   .login-text {

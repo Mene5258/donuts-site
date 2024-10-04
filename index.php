@@ -51,12 +51,11 @@ require 'includes/header.php';
   // セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
   if (isset($_SESSION['customer'])) {
     // セットされていればtrue
-    echo '<p class="login-text mx">ようこそ　', $_SESSION['customer']['name'], '様</p>';
+    echo '<p class="user">ようこそ　', $_SESSION['customer']['name'], '様</p>';
   } else {
-    echo '<p class="login-text mx">ようこそ　ゲスト様</p>';
+    echo '<p class="user">ようこそ　ゲスト様</p>';
   }
   ?>
-
   <div class="top-hero">
     <img src="common/images/hero-sp.jpg" alt="hero" class="fluid">
   </div>
