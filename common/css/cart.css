@@ -1,8 +1,14 @@
 @charset "utf-8";
 
+main {
+  background-color: #fff;
+  width: 100%;
+}
+
 .cart-page {
   text-align: center;
   font-size: 16px;
+  background-color: #fff;
 }
 
 .cart-product img {
@@ -143,9 +149,10 @@ a {
 
 @media screen and (min-width:768px) {
 
-  /* .cart-page {
-    display: flex;
-  } */
+
+  .user {
+    text-align: left;
+  }
 
   .cart-product {
     display: flex;
