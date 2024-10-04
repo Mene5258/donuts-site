@@ -11,7 +11,11 @@
   <title>会員登録-入力 | C.C.Donuts</title>
 </head>
 <main>
-  <p><a href="index.php"><img src="common/images/logo.svg" alt="logo"></a></p>
+  <p>
+    <a href="index.php">
+      <img src="common/images/logo.svg" alt="logo" class="logo">
+    </a>
+  </p>
   <h2>会員登録</h2>
   <form action="customer-confirm.php" method="post">
     <p>お名前（必須）</p>
@@ -25,6 +29,7 @@
     <p>メールアドレス</p>
     <p><input type="email" id="mail" name="mail" required></p>
     <p>パスワード</p>
+    <p>A-Z、a-z、0-9を少なくとも各1つは含めて8文字以上で入力してください。</p>
     <p><input type="password" id="password" name="password" required></p>
     <button class="confirm" type="submit">ご入力内容を確認する</button>
   </form>
