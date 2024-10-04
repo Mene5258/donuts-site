@@ -29,8 +29,8 @@ h2 {
   text-align: center;
   border: 2px solid #E8C2CA;
   width: 295px;
+  padding: 36px 0;
   color: #a56d55;
-  padding: 36px 72px;
   margin: 0 auto;
 }
 
@@ -62,49 +62,24 @@ h2 {
     margin: 80px 0;
   }
 
-  main form {
+  .login-box {
     font-size: 24px;
     width: 600px;
-    padding: 0;
+    padding: 80px 0;
   }
 
-  main form p {
-    font-size: 24px;
-  }
-
-  main form p:nth-of-type(2n-1) {
-    margin: 40px 0 0 103px;
-  }
-
-  main form p:nth-of-type(2n) {
-    margin-left: 100px;
-  }
-
-  main input {
-    width: 400px;
-    height: 32px;
-  }
-
-  button {
-    font-size: 20px;
-    width: 300px;
-    height: 60px;
-    margin-top: 40px;
-    margin-bottom: 38px;
-  }
-
-  .not-input {
+  .top-reverse {
     max-width: 600px;
     margin: 20px auto 0;
     padding-bottom: 378px;
     text-decoration: none;
   }
 
-  .not-input a {
+  .top-reverse a {
     font-size: 20px;
   }
 
-  .not-input a:hover {
+  .top-reverse a:hover {
     text-decoration: underline;
   }
 }

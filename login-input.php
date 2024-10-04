@@ -20,7 +20,7 @@
   // header終了タグまで
   ?>
   <main>
-    <p class="user">ようこそ ゲスト様</p>
+    <p class="user">ようこそ　ゲスト様</p>
     <p class="border"></p>
     <h2>ログイン</h2>
     <form action="login-complete.php" method="post">

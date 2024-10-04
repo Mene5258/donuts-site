@@ -20,7 +20,7 @@ require 'includes/header.php';
   <?php
   if (isset($_SESSION['customer'])) {
     echo <<<END
-    <p class="user">ようこそ {$_SESSION['customer']['name']}様</p>
+    <p class="user">ようこそ　{$_SESSION['customer']['name']}様</p>
     <p class="border"></p>
     <h2>ログアウト</h2>
     <form action="logout-complete.php" method="post">
@@ -33,9 +33,7 @@ require 'includes/header.php';
       <p class="user">ようこそ ゲスト様</p>
       <p class="border"></p>
       <h2>ログアウト中です</h2>
-      <p class="login-box">
-            </p>
-      <p class="top-reverse">
+      <p class="not-input">
         <a href="login-input.php">ログインページへ戻る</a>
       </p>
       END;

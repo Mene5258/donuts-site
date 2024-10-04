@@ -1,25 +1,26 @@
 @charset "utf-8";
 
 main {
-  background-color: #fff;
+  background-color: var(--white-color);
+  padding-bottom: 80px;
 }
 
 .user {
   font-size: 12px;
   font-weight: 500;
-  color: #7F5539;
-  background-color: #fff;
+  color: var(--brown-color);
+  background-color: var(--white-color);
   padding: 12px 20px;
 }
 
 .border {
-  border-top: 1px solid #7f5539;
+  border-top: 1px solid var(--brown-color);
 }
 
 h2 {
   font-size: 20px;
   font-weight: 400;
-  color: #a56d55;
+  color: var(--brown-color);
   text-align: center;
   margin: 32px 0 60px;
 }
@@ -29,37 +30,23 @@ main form {
   border: 2px solid #E8C2CA;
   width: 295px;
   color: #a56d55;
-  padding: 20px 10px;
   margin: 0 auto;
 }
 
 main form p {
   font-size: 12px;
-}
-
-main form p:nth-of-type(2n-1) {
-  margin-bottom: 8px;
-}
-
-main form p:nth-of-type(2n) {
-  margin-bottom: 20px;
-}
-
-main input {
-  width: 271px;
-  height: 20px;
-  border: 1px solid #f0d5d1;
-  padding-left: 5px;
+  text-align: center;
+  margin: 20px 0;
 }
 
 button {
   font-size: 16px;
-  background-color: #7f5539;
+  background-color: var(--brown-color);
   width: 200px;
   height: 48px;
   display: block;
-  margin: 0 auto;
-  color: #fff;
+  margin: 0 auto 20px;
+  color: var(--white-color);
   cursor: pointer;
 }
 
@@ -97,19 +84,11 @@ button:hover {
   main form {
     font-size: 24px;
     width: 600px;
-    padding: 0;
   }
 
   main form p {
     font-size: 24px;
-  }
-
-  main form p:nth-of-type(2n-1) {
-    margin: 40px 0 0 103px;
-  }
-
-  main form p:nth-of-type(2n) {
-    margin-left: 100px;
+    margin: 80px auto 40px;
   }
 
   main input {
@@ -121,8 +100,7 @@ button:hover {
     font-size: 20px;
     width: 300px;
     height: 60px;
-    margin-top: 40px;
-    margin-bottom: 38px;
+    margin-bottom: 80px;
   }
 
   .not-input {

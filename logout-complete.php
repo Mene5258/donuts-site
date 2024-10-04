@@ -16,48 +16,29 @@ require 'includes/header.php';
 ?>
 
 <main>
-  <?php
+<?php
+if (isset($_SESSION['customer'])) {
   unset($_SESSION['customer']);
-  require 'includes/database.php';
-  $sql = $pdo->prepare('select * from customer where mail=? and password=?');
-  $sql->execute([$_REQUEST['mail'], $_REQUEST['password']]);
-  foreach ($sql as $row) {
-    $_SESSION['customer'] = [
-      'id' => $row['id'],
-      'name' => $row['name'],
-      'kana' => $row['kana'],
-      'post_code' => $row['post_code'],
-      'address' => $row['address'],
-      'mail' => $row['mail'],
-      'password' => $row['password']
-    ];
-  }
-  if (isset($_SESSION['customer'])) {
-    echo <<<END
-  <p class="user">ようこそ {$row['name']}様</p>
+  echo <<<END
+  <p class="user">ようこそ　ゲスト様</p>
   <p class="border"></p>
-  <h2>ログイン完了</h2>
-  <p class="login-box">ログインが完了しました。</p>
+  <h2>ログアウト完了</h2>
+  <p class="login-box">ログアウトが完了しました。</p>
   <p class="top-reverse">
     <a href="index.php">topページへ戻る</a>
   </p>
 END;
-  } else {
-    echo <<<END
-  <p class="user">ようこそ ゲスト様</p>
+} else {
+  echo <<<END
+  <p class="user">ようこそ　ゲスト様</p>
   <p class="border"></p>
-  <h2>ログインできません</h2>
-  <p class="login-box">
-  メールアドレス<br>
-  または<br>
-  パスワードが違います
-  </p>
+  <h2>ログアウト中です</h2>
   <p class="top-reverse">
-    <a href="login-input.php">ログインページへ戻る</a>
+    <a href="index.php">topページへ戻る</a>
   </p>
-END;
-  }
-  ?>
+  END;
+}
+?>
 </main>
 
 <?php

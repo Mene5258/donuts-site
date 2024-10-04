@@ -93,3 +93,6 @@ update product set ranking=9 where id=5;
 update product set ranking=10 where id=10;
 update product set ranking=11 where id=11;
 update product set ranking=12 where id=12;
+
+-- レコード作成（customerテーブル）
+insert into customer values(null, '中央太郎','チュウオウタロウ',2770855,'千葉県柏市南柏１丁目１－２ 富士物産南柏駅前ビル4F・5F','cca@gmail.com','12345678');

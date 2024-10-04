@@ -34,7 +34,7 @@ require 'includes/header.php';
   }
   if (isset($_SESSION['customer'])) {
     echo <<<END
-  <p class="user">ようこそ {$row['name']}様</p>
+  <p class="user">ようこそ　{$row['name']}様</p>
   <p class="border"></p>
   <h2>ログイン完了</h2>
   <p class="login-box">ログインが完了しました。</p>
@@ -44,7 +44,7 @@ require 'includes/header.php';
 END;
   } else {
     echo <<<END
-  <p class="user">ようこそ ゲスト様</p>
+  <p class="user">ようこそ　ゲスト様</p>
   <p class="border"></p>
   <h2>ログインできません</h2>
   <p class="login-box">
