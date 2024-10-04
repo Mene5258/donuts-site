@@ -15,54 +15,48 @@
 </head>
 
 <body>
-
-  <?php
-  require 'includes/header.php';
-  // header終了タグまで
-  ?>
   <main>
-    <p class="user">ようこそ　ゲスト様</p>
-    <p class="border"></p>
+    <p>
+      <a href="index.php">
+        <img src="common/images/logo.svg" alt="logo" class="logo">
+      </a>
+    </p>
 
-    <h1>ご購入確認</h1>
+    <?php
 
-    <div>
-      <h2>ご購入商品</h2>
-
-      <?php
-      // データの箱
-      $id = $_REQUEST['id'];
+    if (isset($_REQUEST['customer'])) {
 
       echo <<<END
-<p>{$id}</p>
+    <h2>ご購入確認</h1>
+      <h3>ご購入商品</h3>
+
+<table>
+  <tr>
+    <th>商品名</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>数量</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>小計</th>
+    <td></td>
+  </tr>
+</table>
 END;
-
-      ?>
-      <form action="purchace-complete.php"></form>
-      <tr>
-        <th>商品名</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th>数量</th>
-      </tr>
-      <tr>
-        <th>税込</th>
-      </tr>
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-
-
-
-    </div>
+    } else {
+      echo <<<END
+  <p>商品を購入するにはログインが必要です。
+  </p>
+  <a href="login-input">ログインはこちら</a>
+  
+  END;
+    }
+    ?>
 
   </main>
+
 
 
 
