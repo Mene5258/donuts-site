@@ -1,3 +1,8 @@
+<?php
+// ログイン確認用セッションスタート
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -7,7 +12,7 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/cart.css" rel="stylesheet">
-
+  <script src="common/js/drawer.js"></script>
   <title>cart</title>
 </head>
 
@@ -23,6 +28,16 @@ require '../donuts-site/includes/header.php';
   </ul>
 </nav>
 
+<?php
+// セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
+if (isset($_SESSION['customer'])) {
+  // セットされていればtrue
+  echo '<p class="login-text mx">ようこそ　', $_SESSION['customer']['name'], '様</p>';
+} else {
+  echo '<p class="login-text mx">ようこそ　ゲスト様</p>';
+}
+?>
+
 <main class="cart-page">
 
 
@@ -36,9 +51,9 @@ require '../donuts-site/includes/header.php';
 
   <div class="cart-total">
     <p>ご注文合計：<span>税込み ￥x,xxx</span></p>
-    <button class="purchase-btn" type="submit">ご購入へ進む</button>
+    <button class="purchase-btn" type="submit" onclick="location.href='purchace-complete.php'">ご購入へ進む</button>
   </div>
-  <button class="continue-btn" type="submit">買い物を続ける</button>
+  <button class="continue-btn" type="submit" onclick="location.href='product.php'">買い物を続ける</button>
 </main>
 
 <?php
