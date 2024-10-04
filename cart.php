@@ -13,7 +13,7 @@ session_start();
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/cart.css" rel="stylesheet">
   <script src="common/js/drawer.js"></script>
-  <title>cart</title>
+  <title>カート-商品一覧 | C.C.Donuts</title>
 </head>
 
 <?php
@@ -32,21 +32,25 @@ require '../donuts-site/includes/header.php';
 // セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
 if (isset($_SESSION['customer'])) {
   // セットされていればtrue
-  echo '<p class="login-text mx">ようこそ　', $_SESSION['customer']['name'], '様</p>';
+  echo '<p class="user">ようこそ　', $_SESSION['customer']['name'], '様</p>';
 } else {
-  echo '<p class="login-text mx">ようこそ　ゲスト様</p>';
+  echo '<p class="user">ようこそ　ゲスト様</p>';
 }
 ?>
+<p class="booder"></p>
+
 
 <main class="cart-page">
 
 
   <div class="cart-product">
     <img src="common/images/product-item1.jpg">
-    <p>CCドーナツ 当店オリジナル（５個入り）</p>
-    <p>税込 ￥1,500</p>
-    <p>数量 　1 個</p>
-    <a href="#">削除する</a>
+    <div class="product-item-detail">
+      <p>CCドーナツ 当店オリジナル（５個入り）</p>
+      <p>税込 ￥1,500</p>
+      <p>数量 　1 個</p>
+      <a href="#">削除する</a>
+    </div>
   </div>
 
   <div class="cart-total">

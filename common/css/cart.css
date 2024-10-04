@@ -145,4 +145,22 @@ a {
     max-width: 1200px;
   }
 
+  .cart-product {
+    display: flex;
+    width: 1040px;
+    height: 335px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .cart-product img {
+    margin: 0;
+    margin-right: 40px;
+  }
+
+  .product-item-detail {
+    width: 100%;
+  }
 }
