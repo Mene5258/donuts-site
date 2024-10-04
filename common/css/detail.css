@@ -1,19 +1,11 @@
 @charset "utf-8";
 
-main {
+.detaile {
   background-color: #fff;
+  text-align: center;
 }
 
-.user {
-  font-size: 12px;
-  font-weight: 500;
-  color: #7F5539;
-  background-color: #fff;
-  padding: 12px 20px;
-  border-bottom: 1px solid #7F5539;
-  border-top: 1px solid #7F5539;
-}
-
+/* パンくずリスト ここから*/
 .breadcrumb {
   padding: 12px 20px;
   display: flex;
@@ -29,7 +21,6 @@ a {
 
 .breadcrumb-item {
   margin-right: 0.5em;
-
 }
 
 .breadcrumb-item::after {
@@ -44,11 +35,18 @@ a {
 
 .breadcrumb-item a {
   text-decoration: none;
-
 }
 
 .breadcrumb-item a:hover {
   text-decoration: underline;
+}
+
+/* パンくずリスト ここまで*/
+
+.detaile-main {
+  width: 335px;
+  height: 335px;
+  margin: 20px;
 }
 
 .explanation {
@@ -59,6 +57,8 @@ a {
 .price {
   color: #BF0000;
 }
+
+
 
 @media screen and (min-width:768px) {
 
