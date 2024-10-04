@@ -26,9 +26,8 @@
     <p><input type="email" id="mail" name="mail" required></p>
     <p>パスワード</p>
     <p><input type="password" id="password" name="password" required></p>
-    <button class="login" type="submit">ご入力内容を確認する</button>
+    <button class="confirm" type="submit">ご入力内容を確認する</button>
   </form>
-
 </main>
 
 <?php
