@@ -10,7 +10,7 @@
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/logout-input.css" rel="stylesheet">
   <script src="common/js/drawer.js"></script>
-  <title>ログアウト入力 | C.C.Donuts</title>
+  <title>ログアウト-入力 | C.C.Donuts</title>
 </head>
 <?php
 require 'includes/header.php';

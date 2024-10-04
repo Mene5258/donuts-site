@@ -9,7 +9,7 @@
   <link href="common/css/common.css" rel="stylesheet">
   <link rel="stylesheet" href="common/css/login-complete.css">
   <script src="common/js/drawer.js"></script>
-  <title>ログイン完了 | C.C.Donuts</title>
+  <title>ログイン-完了 | C.C.Donuts</title>
 </head>
 <?php
 require 'includes/header.php';

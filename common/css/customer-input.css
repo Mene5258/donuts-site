@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+main {
+  background-color: var(--white-color);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #a56d55;
+  text-align: center;
+  margin: 32px 0 60px;
+}
+
+
+main form {
+  width: 295px;
+  color: #a56d55;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+main form p {
+  font-size: 12px;
+}

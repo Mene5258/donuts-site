@@ -14,7 +14,7 @@ session_start();
   <link href="common/css/index.css" rel="stylesheet">
   <script src="common/js/loading.js"></script>
   <script src="common/js/drawer.js"></script>
-  <title>donuts site</title>
+  <title>C.C.Donuts</title>
 </head>
 
 <?php
