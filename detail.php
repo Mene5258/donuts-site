@@ -27,7 +27,7 @@
       <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">TOP</a></li>
         <li class="breadcrumb-item"><a href="product.php">商品一覧</a></li>
-        <li class="breadcrumb-item active" aria-current="page">*現在のページ*</li>
+        <li class="breadcrumb-item active" aria-current="page">CCドーナツ 当店オリジナル（５個入り）</li>
       </ul>
     </nav>
 
