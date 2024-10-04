@@ -164,6 +164,20 @@ header form input[type="search"] {
 /* header spここまで */
 
 
+/* ログイン表示部 ｺｺｶﾗ */
+.user {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brown-color);
+  background-color: var(--white-color);
+  padding: 12px 20px;
+}
+
+.border {
+  border-top: 1px solid var(--brown-color);
+}
+
+/* ログイン表示部 ｺｺﾏﾃﾞ */
 
 /* footer spここから */
 footer {
@@ -359,6 +373,17 @@ footer {
   /* PCメニューここまで */
   /* PCドロワーここまで */
   /* header pcｺｺﾏﾃﾞ */
+
+
+  /* SPログイン表示部 ｺｺｶﾗ */
+  .user {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 0 12px 20.5px;
+  }
+
+  /* SPログイン表示部 ｺｺﾏﾃﾞ */
+
 
   /* footer pcここから */
   footer {
