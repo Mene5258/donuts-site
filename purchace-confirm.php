@@ -49,7 +49,7 @@ END;
       echo <<<END
   <p>商品を購入するにはログインが必要です。
   </p>
-  <a href="login-input">ログインはこちら</a>
+  <a href="login-input.php">ログインはこちら</a>
   
   END;
     }
