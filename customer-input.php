@@ -18,18 +18,18 @@
   </p>
   <h2>会員登録</h2>
   <form action="customer-confirm.php" method="post">
-    <p>お名前（必須）</p>
+    <p class="title">お名前（必須）</p>
     <p><input type="text" id="name" name="name" required></p>
-    <p>お名前（フリガナ）（必須）</p>
+    <p class="title">お名前（フリガナ）（必須）</p>
     <p><input type="text" id="kana" name="kana" required></p>
-    <p>郵便番号（必須）</p>
+    <p class="title">郵便番号（必須）</p>
     <p><input type="text" id="postcode" name="postcode" required></p>
-    <p>住所（必須）</p>
+    <p class="title">住所（必須）</p>
     <p><input type="text" id="address" name="address" required></p>
-    <p>メールアドレス</p>
+    <p class="title">メールアドレス</p>
     <p><input type="email" id="mail" name="mail" required></p>
-    <p>パスワード</p>
-    <p>A-Z、a-z、0-9を少なくとも各1つは含めて8文字以上で入力してください。</p>
+    <p class="title">パスワード</p>
+    <p class="caution">A-Z、a-z、0-9を少なくとも各1つは含めて8文字以上で入力してください。</p>
     <p><input type="password" id="password" name="password" required></p>
     <button class="confirm" type="submit">ご入力内容を確認する</button>
   </form>
