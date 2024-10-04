@@ -8,6 +8,7 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/login-input.css" rel="stylesheet">
+  <script src="common/js/drawer.js"></script>
   <title>ログイン入力 | C.C.Donuts</title>
 
 
