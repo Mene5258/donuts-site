@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -11,6 +13,23 @@
   <title>会員登録-入力 | C.C.Donuts</title>
 </head>
 <main>
+  </php
+    $name=$kana=$postcode=$address=$email=$password='' ;
+    if(isset($_SESSION['customer'])){
+    $name=$_SESSION['customer']['name'];
+    $kana=$_SESSION['customer']['kana'];
+    $postcode=$_SESSION['customer']['postcode'];
+    $address=$_SESSION['customer']['address'];
+    $mail=$_SESSION['customer']['mail'];
+    $password=$_SESSION['customer']['password'];
+    }
+
+
+
+
+
+
+    ?>
   <p>
     <a href="index.php">
       <img src="common/images/logo.svg" alt="logo" class="logo">
