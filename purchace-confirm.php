@@ -90,8 +90,8 @@
   </div>
   END;
 
-        // if (isset($_SESSION['card'])) {
-        echo <<<END
+        if (isset($_SESSION['card'])) {
+          echo <<<END
   <div class="mini-container">
   <h3>お支払い方法</h3>
   <table class="payment">
@@ -113,19 +113,19 @@
   <a href="purchace-complete.php">ご購入を確定する</a>
   </div>
   END;
-        //       } else {
-        //         echo <<<END
-        // <div class="mini-container">
-        // <h3>お支払い方法</h3>
-        // <div class="non-payment">
-        // <p>お支払い情報が登録されていません。</p>
-        // <p>クレジットカード情報を登録してください。</p>
-        // </div>
-        // <div class="payment-btn">
-        // <a href="card-input.php">カード情報を登録する</a>
-        // </div>
-        // END;
-        //       }
+        } else {
+          echo <<<END
+        <div class="mini-container">
+        <h3>お支払い方法</h3>
+        <div class="non-payment">
+        <p>お支払い情報が登録されていません。</p>
+        <p>クレジットカード情報を登録してください。</p>
+        </div>
+        <div class="payment-btn">
+        <a href="card-input.php">カード情報を登録する</a>
+        </div>
+        END;
+        }
       } else {
         echo <<<END
   <p>商品を購入するにはログインが必要です。
