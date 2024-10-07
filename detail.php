@@ -45,23 +45,33 @@
     <section>
       <?php
       require 'includes/database.php';
-      $sql = $pdo->query('select * from product where id');
+      $sql = $pdo->prepare('select * from product where id=?');
 
-      foreach ($sql as $row)
+      $sql->execute([$_REQUEST['id']]);
+
+      foreach ($sql as $row) {
         echo <<<END
-      <div class="detail-main">
-      <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
-        <div class="detail-block">
-          <p>CCドーナツ 当店オリジナル（５個入り）</p>
-          <p class="explanation">当店のオリジナル商品、CCドーナツは、サクサクの食感が特徴のプレーンタイプのドーナツです。素材にこだわり、丁寧に揚げた生地は軽やかでサクッとした食感が楽しめます。一口食べれば、口の中に広がる甘くて香ばしい香りと、口どけの良い食感が感じられます。</p>
-          <p class="price">税込 ￥1,500 <button class="hearts-btn" type="button">&#9825;</button></p>
-
-          <input type="text" size="2" name="kosuu" value="1"><span class="detail-number">個</span><input type="submit" value="カートに入れる">
+  <div class="detail-main">
+  <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
+  <div class="detail-block">
+  <p>{$row['name']}</p>
+  <p class="explanation">{$row['description']}</p>
+  <p class="price">税込 ￥
+  END;
+        echo number_format($row['price']);
+        echo <<<END
+          <button class="hearts-btn" type="button">&#9825;</button></p>
+          <form action="cart-input.php" method="post">
+         <input type="hidden" name="id" value="{$row['id']}">
+         <input type="hidden" name="name" value="{$row['name']}">
+         <input type="hidden" name="price" value="{$row['price']}">
+          <input type="text" size="2" name="count" value="1"><span class="detail-number">個</span><input type="submit" value="カートに入れる">
+          </form>
         </div>
 
       </div>
-    
       END;
+      }
       ?>
     </section>
 
