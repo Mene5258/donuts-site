@@ -10,3 +10,10 @@ window.addEventListener('load', function () {
     });
   })
 });
+
+// 
+document.getElementById('heart').onclick = function () {
+  const hearts = document.getElementById('hearts');
+  hearts.innerHTML = '&#9829;'; // ハートの色を変更
+  hearts.classList.toggle('liked'); // liked クラスをトグル
+};
