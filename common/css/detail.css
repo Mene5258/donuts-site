@@ -8,9 +8,10 @@
 
 /* パンくずリスト ここから*/
 .breadcrumb {
-  padding: 12px 20px;
   display: flex;
-
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 0 12px 20.5px;
 }
 
 .breadcrumb-item {
@@ -26,7 +27,7 @@ a {
 }
 
 .breadcrumb-item::after {
-  content: "/";
+  content: "\03e";
   margin-left: 0.5em;
 }
 
@@ -108,5 +109,66 @@ input[type="submit"] {
 
   .cart-page {
     max-width: 1200px;
+  }
+
+  section {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .detail-main img {
+    width: 540px;
+    height: 540px;
+    padding-right: 44px;
+  }
+
+  .detail-main {
+    display: flex;
+  }
+
+  .detail-block {
+    width: 465px;
+  }
+
+  .detail-block p {
+    font-size: 24px;
+  }
+
+  .detail-main p {
+    padding-top: 4px;
+  }
+
+  p.explanation {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .price {
+    color: #BF0000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  input[name="kosuu"] {
+    width: 80px;
+    height: 52px;
+  }
+
+  .detail-number {
+    display: inline-block;
+    margin: 0 12px 0 4px;
+    transform: translateY(20px);
+    font-size: 24px;
+  }
+
+  input[type="submit"] {
+    width: 260px;
+    height: 52px;
+    text-align: center;
+    background-color: var(--brown-color);
+    color: var(--white-color);
   }
 }
