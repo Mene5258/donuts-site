@@ -11,24 +11,24 @@
   <title>カード情報-入力 | C.C.Donuts</title>
 </head>
 <main>
-<div class="main-inner">
-  <p>
-    <a href="index.php">
-      <img src="common/images/logo.svg" alt="logo" class="logo">
-    </a>
-  </p>
-  <h2>カード情報登録</h2>
-  <?php
-    $card_name = $card_type = $card_no = $card_month = $card_year = $card_security_code = '' ;
-    // if(isset($_SESSION['customer'])){
-    // require 'includes/database.php'; 
-    // if(isset($_SESSION['card'])){ 
-    // $card_name = $_SESSION['card']['card_name'];
-    // $card_type = $_SESSION['card']['card_type'];
-    // $card_no = $_SESSION['card']['card_no'];
-    // $card_month = $_SESSION['card']['card_month'];
-    // $card_year = $_SESSION['card']['card_year'];
-    // $card_security_code = $_SESSION['card']['card_security_code'];
+  <div class="main-inner">
+    <p>
+      <a href="index.php">
+        <img src="common/images/logo.svg" alt="logo" class="logo">
+      </a>
+    </p>
+    <h2>カード情報登録</h2>
+    <?php
+    $card_name = $card_type = $card_no = $card_month = $card_year = $card_security_code = '';
+    // require 'includes/database.php';
+    // if (isset($_SESSION['customer'])) {
+    // if (isset($_REQUEST['card'])) {
+    // $card_name = $_REQUEST['card']['card_name'];
+    // $card_type = $_REQUEST['card']['card_type'];
+    // $card_no = $_REQUEST['card']['card_no'];
+    // $card_month = $_REQUEST['card']['card_month'];
+    // $card_year = $_REQUEST['card']['card_year'];
+    // $card_security_code = $_REQUEST['card']['card_security_code'];
     echo <<<END
     <form action="card-confirm.php" method="post">
     <p class="title">お名前（必須）</p>
@@ -47,12 +47,13 @@
     <button type="submit">ご入力内容を確認する</button>
     </form>
 END;
-  //   }else{
-  //     echo 'ログインしていません。';
-  //   }
-  // }
-?>
- </div>
+    // } else {
+    //   echo 'ログインしていません。';
+    // }
+    //   }
+    // }
+    ?>
+  </div>
 </main>
 
 <?php
