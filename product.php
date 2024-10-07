@@ -25,7 +25,7 @@
     <nav aria-label="breadcrumb">
       <ul class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">TOP</a></li>
-        <li class="breadcrumb-item active" aria-current="page">カート</li>
+        <li class="active" aria-current="page">商品一覧</li>
       </ul>
     </nav>
     <p class="border"></p>
