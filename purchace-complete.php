@@ -20,7 +20,7 @@
       </p>
 
       <?php
-      // 購入したらカート空にする
+      // 購入したらカート空にする10071449
       if (isset($_SESSION['product'])) {
         unset($_SESSION['product']);
       }
