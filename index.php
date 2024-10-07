@@ -137,7 +137,9 @@ END;
             <input type="hidden" name="id" value="{$row['id']}">
             <input type="hidden" name="name" value="{$row['name']}">
             <input type="hidden" name="price" value="{$row['price']}">
+            <input type="hidden" name="count" value="1">
             <input type="submit" value="カートに入れる">
+
           </form>
         </li>
 END;

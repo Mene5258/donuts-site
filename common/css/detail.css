@@ -1,14 +1,16 @@
 @charset "utf-8";
 
-.detail {
+.detaile {
   background-color: #fff;
-
+  padding-bottom: 80px;
+  /* text-align: center; */
 }
 
 /* パンくずリスト ここから*/
 .breadcrumb {
   padding: 12px 20px;
   display: flex;
+
 }
 
 .breadcrumb-item {
@@ -43,21 +45,63 @@ a {
 
 /* パンくずリスト ここまで*/
 
-.detail-main img {
-  width: 335px;
-  height: 335px;
+section {
   margin: 20px;
 }
 
-.explanation {
-  border-bottom: 1px solid #7F5539;
-  border-top: 1px solid #7F5539;
+.detail-main img {
+  width: 335px;
+  height: 335px;
 }
 
-.price {
+.detail-main p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  color: #7f5539;
+}
+
+p.explanation {
+  border-bottom: 1px solid #7F5539;
+  border-top: 1px solid #7F5539;
+  font-weight: 500;
+}
+
+p.price {
   color: #BF0000;
 }
 
+.hearts-btn {
+  background: transparent;
+  color: var(--red-color);
+  font-size: 20px;
+}
+
+.hearts-btn:hover {
+  cursor: pointer;
+}
+
+input[name="kosuu"] {
+  width: 56px;
+  height: 36px;
+  text-align: center;
+  border: #7F5539, solid, 1px;
+}
+
+.detail-number {
+  display: inline-block;
+  /* vertical-align: bottom; */
+  margin: 0 4px 12px;
+  transform: translateY(12px);
+}
+
+input[type="submit"] {
+  width: 160px;
+  height: 36px;
+  text-align: center;
+  background-color: var(--brown-color);
+  color: var(--white-color);
+}
 
 
 @media screen and (min-width:768px) {
