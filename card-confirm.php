@@ -75,6 +75,19 @@
       echo '<p class="login-box">カード番号は<br>数字16桁で入力してください。</p>';
       echo '<p class="reverse"><a href="javascript:void(0);" onclick="goBack()">入力画面に戻る</a></p>';
     }
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      // フォームからのデータを取得
+      $_SESSION['card_name'] = $_POST['card_name'];
+      $_SESSION['card_type'] = $_POST['card_type'];
+      $_SESSION['card_no'] = $_POST['card_no'];
+      $_SESSION['card_month'] = $_POST['card_month'];
+      $_SESSION['card_year'] = $_POST['card_year'];
+      $_SESSION['card_security_code'] = $_POST['card_security_code'];
+
+      // 次のページにリダイレクト
+      header('Location: purchase-confirm.php');
+      exit;
+    }
     ?>
 
     </form>
@@ -83,17 +96,6 @@
   <script>
     function goBack() {
       window.history.back();
-    }
-
-    function sendDataToAnotherPage() {
-      // フォームのデータを収集
-      const formData = new FormData(document.getElementById('card-form'));
-
-      // Ajaxで別のページにデータを送信
-      fetch('purchace-confirm.php', {
-        method: 'POST',
-        body: formData
-      })
     }
   </script>
 
