@@ -95,7 +95,7 @@
   </div>
   END;
 
-        if (isset($card_no)) {
+        if (isset($_REQUEST['POST'])) {
           echo <<<END
   <div class="mini-container">
   <h3>お支払い方法</h3>
