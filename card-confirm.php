@@ -48,7 +48,7 @@
      END;
             }
             echo <<<END
-     <form action="card-complete.php" method="post" id="card-form">  
+     <form action="perchase-confirm.php" method="post" id="card-form">  
      <input type="hidden" name="card_name" value="{$card_name}">
      <input type="hidden" name="card_type" value="{$card_type}">
      <input type="hidden" name="card_no" value="{$card_no}">
@@ -84,6 +84,24 @@
     function goBack() {
       window.history.back();
     }
+
+    function sendDataToAnotherPage() {
+      // フォームのデータを収集
+      const formData = new FormData(document.getElementById('card-form'));
+
+      // Ajaxで別のページにデータを送信
+      fetch('test.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+          console.log('他のページへの送信が完了しました:', result);
+        })
+        .catch(error => {
+          console.error('エラーが発生しました:', error);
+        });
+    }
   </script>
 
 </main>
@@ -92,22 +110,3 @@
 //footer開始タグから
 require '../donuts-site/includes/footer.php';
 ?>
-<script>
-  function sendDataToAnotherPage() {
-    // フォームのデータを収集
-    const formData = new FormData(document.getElementById('card-form'));
-
-    // Ajaxで別のページにデータを送信
-    fetch('purchace-confirm.php', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.text())
-      .then(result => {
-        console.log('他のページへの送信が完了しました:', result);
-      })
-      .catch(error => {
-        console.error('エラーが発生しました:', error);
-      });
-  }
-</script>
