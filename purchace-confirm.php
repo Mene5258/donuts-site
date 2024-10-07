@@ -28,6 +28,11 @@
       // PDO接続
       require 'includes/database.php';
 
+      // $card_type = $_REQUEST['card_type'];
+      // $card_no = $_REQUEST['card_no'];
+      // $card_no_result = substr_replace($card_no, str_repeat('・', 10), 6, 10);
+
+      $total = 0;
       // ログイン判定
       if (isset($_SESSION['customer'])) {
         echo '<h2>ご購入確認</h2>';
@@ -71,7 +76,7 @@
         echo number_format($total);
 
         echo <<<END
-  2,000</td>
+  </td>
   </tr>
   </table>
   </div>
@@ -80,17 +85,17 @@
   <table>
   <tr>
   <th>お名前</th>
-  <td>太郎</td>
+  <td>{$_SESSION['customer']['name']}</td>
   </tr>
   <tr>
   <th>住所</th>
-  <td>てっす</td>
+  <td>{$_SESSION['customer']['address']}</td>
   </tr>
   </table>
   </div>
   END;
 
-        if (isset($_SESSION['card'])) {
+        if (isset($card_no)) {
           echo <<<END
   <div class="mini-container">
   <h3>お支払い方法</h3>
@@ -101,11 +106,12 @@
   </tr>
   <tr>
   <th>カード種類</th>
-  <td>VISA</td>
+  <td>{$card_type}</td>
   </tr>
   <tr>
   <th>カード番号</th>
-  <td>123456・・・・・・・・・・</td>
+  <td>{$card_no_result}
+  </td>
   </tr>
   </table>
   </div>
