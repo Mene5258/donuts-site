@@ -8,7 +8,7 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/product.css" rel="stylesheet">
-
+  <script src="common/js/drawer.js"></script>
   <title>product</title>
 </head>
 
@@ -22,21 +22,28 @@
 
   <main>
     <!-- パンくず↓ -->
-
+    <nav aria-label="breadcrumb">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">TOP</a></li>
+        <li class="breadcrumb-item active" aria-current="page">カート</li>
+      </ul>
+    </nav>
+    <p class="border"></p>
     <!--パンくず↑  -->
 
-  <?php
-  // セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
-  if (isset($_SESSION['customer'])) {
-    // セットされていればtrue
-    echo '<p class="login-text mx">ようこそ　', $_SESSION['customer']['name'], '様</p>';
-  } else {
-    echo '<p class="login-text mx">ようこそ　ゲスト様</p>';
-  }
-  ?>
+    <?php
+    // セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
+    if (isset($_SESSION['customer'])) {
+      // セットされていればtrue
+      echo '<p class="user">ようこそ　', $_SESSION['customer']['name'], '様</p>';
+    } else {
+      echo '<p class="user">ようこそ　ゲスト様</p>';
+    }
+    ?>
+    <p class="border"></p>
 
+    <section class="product-list">
 
-  <section class="product-list">
       <h1>商品一覧</h1>
       <ol class="products">
 
@@ -74,6 +81,7 @@ END;
             <input type="hidden" name="id" value="{$row['id']}">
             <input type="hidden" name="name" value="{$row['name']}">
             <input type="hidden" name="price" value="{$row['price']}">
+            <input type="hidden" name="count" value="1">
             <input type="submit" value="カートに入れる">
           </form>
         </li>
@@ -82,10 +90,10 @@ END;
         ?>
         </li>
       </ol>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section class="set-list">
+    <section class="set-list">
       <h1>バラエティセット</h1>
       <ol class="set-container">
         <?php
@@ -122,7 +130,11 @@ END;
             <input type="hidden" name="id" value="{$row['id']}">
             <input type="hidden" name="name" value="{$row['name']}">
             <input type="hidden" name="price" value="{$row['price']}">
+            <input type="hidden" name="count" value="1">
             <input type="submit" value="カートに入れる">
+            
+           
+
           </form>
         </li>
 END;
@@ -130,8 +142,8 @@ END;
         ?>
         </li>
       </ol>
-    </div>
-  </section>
+      </div>
+    </section>
 
   </main>
 

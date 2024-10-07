@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -16,10 +16,10 @@
 
 <body>
 
-  <?php
-  require 'includes/header.php';
-  // header終了タグまで
-  ?>
+<?php
+require 'includes/header.php';
+ // header終了タグまで
+?>
   <main>
     <p class="user">ようこそ　ゲスト様</p>
     <p class="border"></p>
