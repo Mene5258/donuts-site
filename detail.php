@@ -43,8 +43,14 @@
 
 
     <section>
+      <?php
+      require 'includes/database.php';
+      $sql = $pdo->query('select * from product where id');
+
+      foreach ($sql as $row)
+        echo <<<END
       <div class="detail-main">
-        <img src="common/images/product-item1.jpg">
+      <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
         <div class="detail-block">
           <p>CCドーナツ 当店オリジナル（５個入り）</p>
           <p class="explanation">当店のオリジナル商品、CCドーナツは、サクサクの食感が特徴のプレーンタイプのドーナツです。素材にこだわり、丁寧に揚げた生地は軽やかでサクッとした食感が楽しめます。一口食べれば、口の中に広がる甘くて香ばしい香りと、口どけの良い食感が感じられます。</p>
@@ -54,6 +60,9 @@
         </div>
 
       </div>
+    
+      END;
+      ?>
     </section>
 
   </main>
