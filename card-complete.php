@@ -118,7 +118,18 @@
     <a href="purchace-confirm.php">購入手続きを続ける</a>
     </p>
     </div>
+
     END;
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+      // フォームからのデータを取得
+      $_SESSION['card_name'] = $_POST['card_name'];
+      $_SESSION['card_type'] = $_POST['card_type'];
+      $_SESSION['card_no'] = $_POST['card_no'];
+      $_SESSION['card_month'] = $_POST['card_month'];
+      $_SESSION['card_year'] = $_POST['card_year'];
+      $_SESSION['card_security_code'] = $_POST['card_security_code'];
+    }
+
     // }
     // } else {
     //     echo <<<END
