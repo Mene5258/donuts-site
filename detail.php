@@ -28,15 +28,15 @@
         <li class="breadcrumb-item active" aria-current="page">CCドーナツ 当店オリジナル（５個入り）</li>
       </ul>
     </nav>
-
+    <p class="border"></p>
 
     <?php
     // セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
     if (isset($_SESSION['customer'])) {
       // セットされていればtrue
-      echo '<p class="login-text mx">ようこそ　', $_SESSION['customer']['name'], '様</p>';
+      echo '<p class="user">ようこそ　', $_SESSION['customer']['name'], '様</p>';
     } else {
-      echo '<p class="login-text mx">ようこそ　ゲスト様</p>';
+      echo '<p class="user">ようこそ　ゲスト様</p>';
     }
     ?>
     <p class="border"></p>
@@ -45,12 +45,13 @@
     <section>
       <div class="detail-main">
         <img src="common/images/product-item1.jpg">
-        <p>CCドーナツ 当店オリジナル（５個入り）</p>
-        <p class="explanation">当店のオリジナル商品、CCドーナツは、サクサクの食感が特徴のプレーンタイプのドーナツです。素材にこだわり、丁寧に揚げた生地は軽やかでサクッとした食感が楽しめます。一口食べれば、口の中に広がる甘くて香ばしい香りと、口どけの良い食感が感じられます。</p>
-        <p class="price">税込 ￥1,500 <button class="hearts-btn" type="button">&#9825;</button></p>
+        <div class="detail-block">
+          <p>CCドーナツ 当店オリジナル（５個入り）</p>
+          <p class="explanation">当店のオリジナル商品、CCドーナツは、サクサクの食感が特徴のプレーンタイプのドーナツです。素材にこだわり、丁寧に揚げた生地は軽やかでサクッとした食感が楽しめます。一口食べれば、口の中に広がる甘くて香ばしい香りと、口どけの良い食感が感じられます。</p>
+          <p class="price">税込 ￥1,500 <button class="hearts-btn" type="button">&#9825;</button></p>
 
-        <input type="text" size="2" name="kosuu" value="1"><span class="detail-number">個</span><input type="submit" value="カートに入れる">
-
+          <input type="text" size="2" name="kosuu" value="1"><span class="detail-number">個</span><input type="submit" value="カートに入れる">
+        </div>
 
       </div>
     </section>
