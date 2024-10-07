@@ -131,7 +131,8 @@ END;
 
           echo <<<END
               </a></p>
-              <button class="hearts-btn" type="button">&#9825;</button>
+              <button id="heart" class="hearts-btn" type="button"><span id="hearts">&#9825;</span></button>
+
             </div>
 
             <input type="hidden" name="id" value="{$row['id']}">
@@ -154,7 +155,7 @@ END;
   </section>
 
 </main>
-
+<script src="common/js/drawer.js"></script>
 <?php
 require 'includes/footer.php';
 ?>
