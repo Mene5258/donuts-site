@@ -1,50 +1,69 @@
-<?php
-// ログイン確認用セッションスタート
-session_start();
-?>
-
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="common/css/reset.css" rel="stylesheet">
-  <link href="common/css/common.css" rel="stylesheet">
-  <link href="common/css/cart.css" rel="stylesheet">
-  <script src="common/js/drawer.js"></script>
-  <title>カート-商品一覧 | C.C.Donuts</title>
-</head>
-
-<?php
-require '../donuts-site/includes/header.php';
-// header終了タグまで
-?>
-
-
-
-<main class="cart-page">
-
-  <!-- パンくず↓ -->
-  <nav aria-label="breadcrumb">
-    <ul class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.php">TOP</a></li>
-      <li class="breadcrumb-item active" aria-current="page">カート</li>
-    </ul>
-  </nav>
-
   <?php
-  // セッション変数がセットされているかどうかを判定(セッション情報がちゃんと取得できているかどうかを判断)
-  if (isset($_SESSION['customer'])) {
-    // セットされていればtrue
-    echo '<p class="user">ようこそ　', $_SESSION['customer']['name'], '様</p>';
-  } else {
-    echo '<p class="user">ようこそ　ゲスト様</p>';
+// プロダクト関数入ってたらカート情報表示
+  if(!empty($_SESSION['product'])){
+    // 合計変数金額用の変数
+    $total=0;
+    
+  //カート内の商品情報をHTMLで出力
+  foreach ($_SESSION['product'] as $id => $product) {
+    //小計用の変数定義(価格＊個数)
+    $subtotal = $product['price'] * $product['count'];
+
+    //合計金額の算出
+    $total += $subtotal;
+
+echo<<<END
+<form action="purchace-confirm.php" method="post">
+<div class="cart-product">
+<img src="common/images/product-item{$id}.jpg">
+<div class="product-item-detail">
+<p>{$product['name']}</p>
+<div class="detail-block">
+<p>税込 ￥
+END;
+
+echo number_format($subtotal);
+
+echo<<<END
+</p>
+<p>数量 　{$product['count']}個</p>
+</div>
+<a href="cart-delete.php?id={$id}">削除する</a>
+</div>
+</div>
+END;
+}
+// foreach
+
+// 合計情報
+echo <<<END
+<div class="cart-total">
+<p>ご注文合計：<span>税込み ￥
+END;
+
+echo number_format($total);
+
+echo<<<END
+</span></p>
+<input type="submit" class="purchase-btn" value="ご購入確認へ進む"></form>
+</div>
+<button class="continue-btn" type="submit" onclick="location.href='product.php'">買い物を続ける</button>
+END;
+  }//empty
+  else{
+    echo <<<END
+    <p class="nonproducts">カートに商品がありません。</p>
+    <p class="top-reverse">
+    <a href="index.php">topページへ戻る</a>
+    </p>
+    END;
   }
   ?>
-  <p class="border"></p>
 
-  <div class="cart-product">
+
+  
+<!-- スタイル確認用 -->
+<!-- <div class="cart-product">
     <img src="common/images/product-item1.jpg">
     <div class="product-item-detail">
       <p>CCドーナツ 当店オリジナル（５個入り）</p>
@@ -61,10 +80,5 @@ require '../donuts-site/includes/header.php';
     <p>ご注文合計：<span>税込み ￥x,xxx</span></p>
     <button class="purchase-btn" type="submit" onclick="location.href='purchace-complete.php'">ご購入へ進む</button>
   </div>
-  <button class="continue-btn" type="submit" onclick="location.href='product.php'">買い物を続ける</button>
-</main>
-
-<?php
-//footer開始タグから
-require '../donuts-site/includes/footer.php';
-?>
+  <button class="continue-btn" type="submit" onclick="location.href='product.php'">買い物を続ける</button> -->
+  <!-- スタイルのため上記のこす -->
