@@ -46,8 +46,13 @@ a {
 
 /* パンくずリスト ここまで*/
 
-section {
+/* section {
   margin: 20px;
+  width: 100%;
+} */
+
+.detail-main {
+  padding: 20px;
 }
 
 .detail-main img {
@@ -58,6 +63,7 @@ section {
 .detail-main p {
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: left;
   font-weight: 700;
   color: #7f5539;
 }
