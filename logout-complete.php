@@ -1,15 +1,15 @@
-<?php session_start() ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="common/css/reset.css">
-  <link rel="stylesheet" href="common/css/common.css">
-  <link rel="stylesheet" href="common/css/logout-complete.css">
+  <link href="common/css/reset.css" rel="stylesheet">
+  <link href="common/css/common.css" rel="stylesheet">
+  <link href="common/css/logout-complete.css" rel="stylesheet">
   <script src="common/js/drawer.js"></script>
-  <title>ログアウト-入力 | C.C.Donuts</title>
+  <title>ログアウト-完了 | C.C.Donuts</title>
 </head>
 <?php
 require 'includes/header.php';

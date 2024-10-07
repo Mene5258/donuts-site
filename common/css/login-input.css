@@ -14,8 +14,8 @@ h2 {
 
 
 main form {
-  border: 2px solid #E8C2CA;
   width: 295px;
+  border: 2px solid #e8c2ca;
   color: #a56d55;
   padding: 20px 10px;
   margin: 0 auto;
@@ -42,7 +42,7 @@ main input {
 
 button {
   font-size: 16px;
-  background-color: #7f5539;
+  background-color: var(--brown-color);
   width: 200px;
   height: 48px;
   display: block;
@@ -60,14 +60,14 @@ button:hover {
   margin-top: 24px;
   margin-right: 40px;
   padding-bottom: 84px;
-  color: #7f5539;
+  color: var(--brown-color);
   text-decoration: underline;
   text-underline-offset: 5px;
 }
 
 .not-input a {
   font-size: 12px;
-  color: #7f5539;
+  color: var(--brown-color);
 }
 
 @media screen and (min-width:768px) {
@@ -111,7 +111,6 @@ button:hover {
     max-width: 600px;
     margin: 20px auto 0;
     padding-bottom: 378px;
-    text-decoration: none;
   }
 
   .not-input a {
@@ -119,6 +118,7 @@ button:hover {
   }
 
   .not-input a:hover {
-    text-decoration: underline;
+    background-color: var(--sub-color);
+    color: var(--black-color);
   }
 }
