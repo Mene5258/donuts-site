@@ -57,7 +57,7 @@ require 'includes/header.php';
   }
   ?>
   <div class="top-hero">
-    <img src="common/images/hero-sp.jpg" alt="hero" class="fluid">
+    <img src="common/images/hero-pc.jpg" alt="hero" class="fluid">
   </div>
 
   <div class="top-item-container">

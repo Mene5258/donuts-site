@@ -17,7 +17,7 @@
           echo ' <a href="login-input.php"><img src="common/images/icon-login.svg" alt="login" class="login-icon"></a>';
         }
         ?>
-        <a href="cart.php"><img src="common/images/icon-cart.svg" alt="cart" class="cart-icon"></a>
+        <a href="cart-show.php"><img src="common/images/icon-cart.svg" alt="cart" class="cart-icon"></a>
       </li>
     </ul>
   </div>

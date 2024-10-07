@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
-  <link rel="stylesheet" href="common/css/login-complete.css">
+  <link href="common/css/login-complete.css" rel="stylesheet">
   <script src="common/js/drawer.js"></script>
   <title>ログイン-完了 | C.C.Donuts</title>
 </head>
@@ -39,7 +39,7 @@ require 'includes/header.php';
   <p class="border"></p>
   <h2>ログイン完了</h2>
   <p class="login-box">ログインが完了しました。</p>
-  <p class="top-reverse">
+  <p class="reverse">
     <a href="index.php">topページへ戻る</a>
   </p>
 END;
@@ -47,13 +47,13 @@ END;
     echo <<<END
   <p class="user">ようこそ　ゲスト様</p>
   <p class="border"></p>
-  <h2>ログインできません</h2>
+  <h2>ログインエラー</h2>
   <p class="login-box">
   メールアドレス<br>
   または<br>
   パスワードが違います
   </p>
-  <p class="top-reverse">
+  <p class="reverse">
     <a href="login-input.php">ログインページへ戻る</a>
   </p>
 END;
