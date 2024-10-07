@@ -66,7 +66,7 @@ require 'includes/header.php';
       <?php
       require 'includes/database.php';
       echo <<<END
-      <a href="product.php?id=5"
+      <a href="detail.php?id=5"
       END;
       ?>
       class="top-item1">
