@@ -20,16 +20,14 @@
     <h2>カード情報登録</h2>
     <?php
     $card_name = $card_type = $card_no = $card_month = $card_year = $card_security_code = '';
-    // require 'includes/database.php';
-    // if (isset($_SESSION['customer'])) {
-    // if (isset($_REQUEST['card'])) {
-    // $card_name = $_REQUEST['card']['card_name'];
-    // $card_type = $_REQUEST['card']['card_type'];
-    // $card_no = $_REQUEST['card']['card_no'];
-    // $card_month = $_REQUEST['card']['card_month'];
-    // $card_year = $_REQUEST['card']['card_year'];
-    // $card_security_code = $_REQUEST['card']['card_security_code'];
-    echo <<<END
+    if (isset($_SESSION['customer'])) {
+      $card_name = $_SESSION['card']['card_name'] ?? '';
+      $card_type = $_SESSION['card']['card_type'] ?? '';
+      $card_no = $_SESSION['card']['card_no'] ?? '';
+      $card_month = $_SESSION['card']['card_month'] ?? '';
+      $card_year = $_SESSION['card']['card_year'] ?? '';
+      $card_security_code = $_SESSION['card']['card_security_code'] ?? '';
+      echo <<<END
     <form action="card-confirm.php" method="post">
     <p class="title">お名前（必須）</p>
     <p><input type="text" id="card_name" name="card_name" value="{$card_name}" required></p>
@@ -47,11 +45,9 @@
     <button type="submit">ご入力内容を確認する</button>
     </form>
 END;
-    // } else {
-    //   echo 'ログインしていません。';
-    // }
-    //   }
-    // }
+    } else {
+      echo '<h2>ログインしていません。</h2>';
+    }
     ?>
   </div>
 </main>
