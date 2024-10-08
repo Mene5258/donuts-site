@@ -1,18 +1,18 @@
   <?php
-// プロダクト関数入ってたらカート情報表示
-  if(!empty($_SESSION['product'])){
+  // プロダクト関数入ってたらカート情報表示
+  if (!empty($_SESSION['product'])) {
     // 合計変数金額用の変数
-    $total=0;
-    
-  //カート内の商品情報をHTMLで出力
-  foreach ($_SESSION['product'] as $id => $product) {
-    //小計用の変数定義(価格＊個数)
-    $subtotal = $product['price'] * $product['count'];
+    $total = 0;
 
-    //合計金額の算出
-    $total += $subtotal;
+    //カート内の商品情報をHTMLで出力
+    foreach ($_SESSION['product'] as $id => $product) {
+      //小計用の変数定義(価格＊個数)
+      $subtotal = $product['price'] * $product['count'];
 
-echo<<<END
+      //合計金額の算出
+      $total += $subtotal;
+
+      echo <<<END
 <div class="grid">
 <form action="purchace-confirm.php" method="post">
 <div class="cart-product">
@@ -23,9 +23,9 @@ echo<<<END
 <p>税込 ￥
 END;
 
-echo number_format($subtotal);
+      echo number_format($subtotal);
 
-echo<<<END
+      echo <<<END
 </p>
 <p>数量 　{$product['count']}個</p>
 </div>
@@ -33,25 +33,25 @@ echo<<<END
 </div>
 </div>
 END;
-}
-// foreach
+    }
+    // foreach
 
-// 合計情報
-echo <<<END
+    // 合計情報
+    echo <<<END
 <div class="cart-total">
 <p>ご注文合計：<span>税込み ￥
 END;
 
-echo number_format($total);
+    echo number_format($total);
 
-echo<<<END
+    echo <<<END
 </span></p>
 <input type="submit" class="purchase-btn" value="ご購入確認へ進む"></form>
 </div>
-<button class="continue-btn" type="submit" onclick="location.href='product.php'">買い物を続ける</button>
+<button class="continue-btn" type="button" onclick="location.href='product.php'">買い物を続ける</button>
 END;
-  }//empty
-  else{
+  } //empty
+  else {
     echo <<<END
     <p class="nonproducts">カートに商品がありません。</p>
     <p class="top-reverse">
@@ -63,9 +63,9 @@ END;
   ?>
 
 
-  
-<!-- スタイル確認用 -->
-<!-- <div class="cart-product">
+
+  <!-- スタイル確認用 -->
+  <!-- <div class="cart-product">
     <img src="common/images/product-item1.jpg">
     <div class="product-item-detail">
       <p>CCドーナツ 当店オリジナル（５個入り）</p>
