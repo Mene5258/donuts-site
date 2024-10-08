@@ -149,8 +149,9 @@ main {
 
 /* 画像フルード化 */
 .fluid {
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 200px;
 }
 
 /* 共通文字サイズ */
@@ -428,11 +429,12 @@ input[type="submit"] {
     margin: 12px auto
   }
 
-
-  .top-hero>.fluid {
-    width: 100%;
+  .fluid {
     object-fit: cover;
+    object-position: 0 -85px;
+    height: 593px;
   }
+
 
   /* nwe product etc */
   .top-item-container {
