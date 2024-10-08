@@ -62,6 +62,15 @@ table {
   color: var(--red-color);
 }
 
+.non-payment a {
+  font-size: 12px;
+  color: var(--brown-color);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+
+}
+
+
 th,
 td {
   font-size: 12px;
@@ -180,6 +189,7 @@ td {
   .non-payment {
     width: 720px;
     padding: 20px auto;
+    margin-top: 80px;
   }
 
   .non-payment p {
@@ -188,9 +198,15 @@ td {
     font-size: 20px;
   }
 
-  .non-payment {
-    margin-top: 80px;
+  .non-payment a {
+    font-size: 20px;
   }
+
+  .non-payment a:hover {
+    background-color: var(--sub-color);
+    color: var(--black-color);
+  }
+
 
   .confirm-btn,
   .payment-btn {

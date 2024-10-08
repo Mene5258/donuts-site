@@ -8,11 +8,10 @@
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/purchace-complete.css" rel="stylesheet">
-  <script src="common/js/drawer.js"></script>
   <title>ご購入完了 | C.C.Donuts</title>
 
   <main>
-    <div class="grid">
+    <div class="main-inner">
       <p>
         <a href="index.php">
           <img src="common/images/logo.svg" alt="logo" class="logo">
@@ -23,6 +22,12 @@
       // 購入したらカート空にする10071449
       if (isset($_SESSION['product'])) {
         unset($_SESSION['product']);
+        unset($_SESSION['card_name']);
+        unset($_SESSION['card_type']);
+        unset($_SESSION['card_no']);
+        unset($_SESSION['card_month']);
+        unset($_SESSION['card_year']);
+        unset($_SESSION['card_security_code']);
       }
       ?>
       <h2>ご購入完了</h2>
