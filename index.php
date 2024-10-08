@@ -9,11 +9,13 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="クリスピー・クリーム・ドーナツ・ジャパンの公式ウェブサイト。85年以上続く秘密のレシピが作り出すドーナツ＆ドリンクメニュー、店舗情報、採用情報など様々な情報をご紹介します。" />
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/index.css" rel="stylesheet">
   <script src="common/js/loading.js"></script>
   <script src="common/js/drawer.js"></script>
+  <script src="common/js/favorite.js"></script>
   <title>C.C.Donuts</title>
 </head>
 
@@ -57,7 +59,7 @@ require 'includes/header.php';
   }
   ?>
   <div class="top-hero">
-    <img src="common/images/hero-pc.jpg" alt="hero" class="fluid">
+    <img src="common/images/hero.jpg" alt="hero" class="fluid">
   </div>
 
   <div class="top-item-container">
@@ -160,23 +162,6 @@ END;
     </section>
 
 </main>
-<script>
-  window.addEventListener('load', function() {
-    for (let i = 1; i <= 6; i++) {
-      document.querySelector(`#heart-${i}`).addEventListener('click', function() {
-        const heartElement = document.querySelector(`.heart-${i}`);
-        heartElement.classList.toggle('show');
-
-        // クラス 'show' が付いているかどうかを確認
-        if (heartElement.classList.contains('show')) {
-          heartElement.innerHTML = `&#9829;`; // ハートの表示を変更
-        } else {
-          heartElement.innerHTML = `&#9825;`; // 元に戻す
-        }
-      });
-    }
-  });
-</script>
 <?php
 require 'includes/footer.php';
 ?>
