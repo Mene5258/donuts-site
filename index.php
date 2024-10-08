@@ -116,7 +116,7 @@ require 'includes/header.php';
             </p>
             <p>
             <a href="detail.php?id={$row['id']}">
-            <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
+            <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="product-fluid">
             </a>
             </p>
             <p class="product-name">
