@@ -17,20 +17,6 @@ main {
     width: 100%;
 }
 
-
-.breadcrumb {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 12px 0 12px 20.5px;
-}
-
-.breadcrumb-item::after {
-    content: "\03e";
-    margin-left: 0.5em;
-}
-
-
 section {
     margin: auto;
     text-align: center;
