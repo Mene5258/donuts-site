@@ -116,4 +116,7 @@ form {
         transform: translateY(-10px);
     }
 
+    .show {
+        color: red;
+    }
 }
