@@ -30,7 +30,7 @@ create table product (
 
 -- テーブル作成（テーブル名：card）
 create table card (
-	id int auto_increment primary key unique not null, 
+	id int primary key unique not null, 
 	card_name varchar(100) not null,
 	card_type varchar(100) not null,
 	card_no varchar(22) unique not null,
