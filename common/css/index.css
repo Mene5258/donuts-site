@@ -364,6 +364,10 @@ input[type="submit"]:hover {
   color: var(--white-color);
 }
 
+.product-fluid {
+  width: 158px;
+  height: 158px;
+}
 
 .product-name {
   text-align: left;
@@ -515,6 +519,11 @@ input[type="submit"] {
 
   .rank a {
     font-size: 24px;
+  }
+
+  .product-fluid {
+    width: 320px;
+    height: 320px;
   }
 
   .product-name a {
