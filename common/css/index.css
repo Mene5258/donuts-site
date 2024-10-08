@@ -556,7 +556,23 @@ input[type="submit"] {
     font-size: 20px;
   }
 
-  /* .liked {
-  } */
+  .hearts-btn.active span {
+    color: red;
+    /* ハートが赤くなる */
+  }
+}
 
+.show {
+  display: block;
+  /* 例 */
+  color: red;
+  /* 例 */
+
+}
+
+.show {
+  color: red;
+  /* 例: 色を赤に変更 */
+  font-weight: bold;
+  /* 例: 太字にする */
 }

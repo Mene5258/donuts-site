@@ -131,7 +131,12 @@ END;
 
           echo <<<END
               </a></p>
-              <button id="heart" class="hearts-btn" type="button"><span id="hearts">&#9825;</span></button>
+            
+
+                <button id="heart-{$row['id']}" class="hearts-btn" type="button">
+                    <span class="heart-{$row['id']}">&#9825;</span>
+                </button>
+                
 
             </div>
 
@@ -155,7 +160,24 @@ END;
   </section>
 
 </main>
-<script src="common/js/drawer.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    document.querySelector('#heart-<?php echo $row['id']; ?>').addEventListener('click', function() {
+      document.querySelector('.heart-<?php echo $row['id']; ?>').classList.toggle('show');
+    });
+  });
+
+  window.addEventListener('load', function() {
+    for (let i = 1; i <= 11; i++) {
+      document.querySelector(`#heart-${i}`).addEventListener('click', function() {
+        document.querySelector(`.heart-${i}`).classList.toggle('show');
+      });
+    }
+
+    console.log(document.querySelector('#heart-12'));
+    console.log(document.querySelector('.heart-12'));
+  });
+</script>
 <?php
 require 'includes/footer.php';
 ?>
