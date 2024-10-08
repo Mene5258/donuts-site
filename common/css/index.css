@@ -149,7 +149,8 @@ main {
 
 /* 画像フルード化 */
 .fluid {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 /* 共通文字サイズ */
