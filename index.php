@@ -66,7 +66,7 @@ require 'includes/header.php';
       <?php
       require 'includes/database.php';
       echo <<<END
-      <a href="detail.php?id=5"
+      <a href="product.php?id=5"
       END;
       ?>
       class="top-item1">
@@ -131,8 +131,7 @@ END;
 
           echo <<<END
               </a></p>
-              <button id="heart" class="hearts-btn" type="button"><span id="hearts">&#9825;</span></button>
-
+              <button class="hearts-btn" type="button">&#9825;</button>
             </div>
 
             <input type="hidden" name="id" value="{$row['id']}">
@@ -155,7 +154,7 @@ END;
   </section>
 
 </main>
-<script src="common/js/drawer.js"></script>
+
 <?php
 require 'includes/footer.php';
 ?>
