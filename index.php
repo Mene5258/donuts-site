@@ -9,7 +9,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="クリスピー・クリーム・ドーナツ・ジャパンの公式ウェブサイト。85年以上続く秘密のレシピが作り出すドーナツ＆ドリンクメニュー、店舗情報、採用情報など様々な情報をご紹介します。" />
+  <meta name="description" content="C.C.ドーナツの公式ウェブサイト。中国4000年以上続く秘密のレシピが作り出すドーナツの情報をご紹介します。" />
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/index.css" rel="stylesheet">
