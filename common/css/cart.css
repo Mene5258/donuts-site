@@ -7,13 +7,14 @@ main {
   padding-bottom: 100px;
 }
 
-/* 
-このクラス存在してないみたいですけどなんですか？
+
+
+/* このクラス存在してないみたいですけどなんですか？ */
 .cart-page {
   text-align: center;
   font-size: 16px;
   background-color: var(--white-color);
-} */
+}
 
 /* ログインユーザ名 */
 .user {
@@ -133,15 +134,7 @@ main {
 
 .breadcrumb-item {
   font-size: 12px;
-}
-
-a {
-  font-size: 12px;
-}
-
-.breadcrumb-item {
   margin-right: 0.5em;
-
 }
 
 .breadcrumb-item::after {
@@ -155,8 +148,8 @@ a {
 }
 
 .breadcrumb-item a {
+  font-size: 12px;
   text-decoration: none;
-
 }
 
 .breadcrumb-item a:hover {
@@ -181,10 +174,10 @@ a {
 
 /* 追加削除の文言スタイル */
 /* カートに商品ない時のスタイル */
-.cart-action,
+
 .nonproducts {
   text-align: left;
-  padding: 20px 20px 4px;
+  margin: 20px 0 20px 20px;
 }
 
 /* PCここから */
@@ -328,4 +321,10 @@ a {
     font-weight: 600;
   }
 
+  .nonproducts {
+    font-size: 24px;
+    max-width: 600px;
+    text-align: center;
+    margin: 40px auto;
+  }
 }
