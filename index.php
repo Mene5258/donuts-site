@@ -133,8 +133,8 @@ END;
               </a></p>
             
 
-                <button id="heart-{$row['id']}" class="hearts-btn" type="button">
-                    <span class="heart-{$row['id']}">&#9825;</span>
+                <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
+                    <span class="heart-{$row['ranking']}">&#9825;</span>
                 </button>
                 
 
@@ -162,13 +162,13 @@ END;
 </main>
 <script>
   window.addEventListener('load', function() {
-    document.querySelector('#heart-<?php echo $row['id']; ?>').addEventListener('click', function() {
-      document.querySelector('.heart-<?php echo $row['id']; ?>').classList.toggle('show');
+    document.querySelector('#heart-<?php echo $row['ranking']; ?>').addEventListener('click', function() {
+      document.querySelector('.heart-<?php echo $row['ranking']; ?>').classList.toggle('show');
     });
   });
 
   window.addEventListener('load', function() {
-    for (let i = 1; i <= 11; i++) {
+    for (let i = 1; i <= 5; i++) {
       document.querySelector(`#heart-${i}`).addEventListener('click', function() {
         document.querySelector(`.heart-${i}`).classList.toggle('show');
       });
