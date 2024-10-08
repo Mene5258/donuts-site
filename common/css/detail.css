@@ -1,94 +1,67 @@
 @charset "utf-8";
 
-.detaile {
+main {
   background-color: #fff;
   padding-bottom: 80px;
-  /* text-align: center; */
 }
-
-/* パンくずリスト ここから*/
-.breadcrumb {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 12px 0 12px 20.5px;
-}
-
-.breadcrumb-item {
-  font-size: 12px;
-}
-
-a {
-  font-size: 12px;
-}
-
-.breadcrumb-item {
-  margin-right: 0.5em;
-}
-
-.breadcrumb-item::after {
-  content: "\03e";
-  margin-left: 0.5em;
-}
-
-.breadcrumb-item:last-child::after {
-  content: "";
-  /* 最後の項目には区切りを表示しない */
-}
-
-.breadcrumb-item a {
-  text-decoration: none;
-}
-
-.breadcrumb-item a:hover {
-  text-decoration: underline;
-}
-
-/* パンくずリスト ここまで*/
-
-/* section {
-  margin: 20px;
-  width: 100%;
-} */
 
 .detail-main {
-  padding: 20px;
+  max-width: 335px;
+  margin: 0 auto;
 }
 
-.detail-main img {
-  width: 335px;
-  height: 335px;
+.fluid {
+  max-width: 335px;
+  max-height: 335px;
+  margin-top: 20px;
 }
 
 .detail-main p {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: left;
+  color: var(--brown-color);
+}
+
+.detail-border {
+  border-top: 1px solid var(--main-color);
+
+}
+
+.name {
   font-weight: 700;
-  color: #7f5539;
+  color: var(--brown-color);
+  margin: 20px 0;
 }
 
-p.explanation {
-  border-bottom: 1px solid #7F5539;
-  border-top: 1px solid #7F5539;
+.explanation {
   font-weight: 500;
+  padding: 20px 0;
+  line-height: 1.6;
+  text-align: justify;
 }
 
-p.price {
+.price {
+  font-weight: 400;
   color: #BF0000;
+  text-align: left;
+  margin: 20px 0 24px;
 }
 
 .hearts-btn {
   background: transparent;
   color: var(--red-color);
   font-size: 20px;
+  margin-left: 20px;
 }
 
 .hearts-btn:hover {
   cursor: pointer;
 }
 
-input[name="kosuu"] {
+.flex {
+  display: flex;
+  align-items: flex-end;
+}
+
+input[name="count"] {
   width: 56px;
   height: 36px;
   text-align: center;
@@ -96,15 +69,14 @@ input[name="kosuu"] {
 }
 
 .detail-number {
-  display: inline-block;
-  /* vertical-align: bottom; */
-  margin: 0 4px 12px;
-  transform: translateY(12px);
+  font-weight: 500;
+  height: 18px;
+  margin: 0 12px 0 4px;
 }
 
 input[type="submit"] {
-  width: 160px;
-  height: 36px;
+  font-size: 12px;
+  padding: 12px 38px;
   text-align: center;
   background-color: var(--brown-color);
   color: var(--white-color);
@@ -112,69 +84,64 @@ input[type="submit"] {
 
 
 @media screen and (min-width:768px) {
-
-  .cart-page {
-    max-width: 1200px;
-  }
-
-  section {
-    max-width: 1040px;
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-
-  .detail-main img {
-    width: 540px;
-    height: 540px;
-    padding-right: 44px;
+  main {
+    padding-bottom: 282px;
   }
 
   .detail-main {
     display: flex;
+    justify-content: space-between;
+    max-width: 1040px;
+    margin: 80px auto 0;
   }
 
-  .detail-block {
-    width: 465px;
+  .fluid {
+    max-width: 540px;
+    max-height: 540px;
+    margin: 0;
   }
 
-  .detail-block p {
+  .name {
     font-size: 24px;
+    margin-top: 0;
   }
 
-  .detail-main p {
-    padding-top: 4px;
-  }
-
-  p.explanation {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  .explanation {
+    max-width: 435px;
+    font-size: 24px;
+    padding: 40px 0;
+    margin: 0 auto;
   }
 
   .price {
-    color: #BF0000;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin: 40px 0;
+  }
+
+  .hearts-btn {
+    font-size: 24px;
+    margin-left: 12px;
   }
 
 
-  input[name="kosuu"] {
+  input[name="count"] {
     width: 80px;
     height: 52px;
   }
 
   .detail-number {
-    display: inline-block;
-    margin: 0 12px 0 4px;
-    transform: translateY(20px);
+    margin: 0 20px 0 8px;
     font-size: 24px;
+    height: 26px;
   }
 
   input[type="submit"] {
-    width: 260px;
-    height: 52px;
-    text-align: center;
-    background-color: var(--brown-color);
-    color: var(--white-color);
+    font-size: 20px;
+    padding: 16px 60px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    transform: translateY(-10px);
   }
 }

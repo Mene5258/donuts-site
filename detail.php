@@ -18,7 +18,7 @@
   require 'includes/header.php';
   // header終了タグまで
   ?>
-  <main class="detaile">
+  <main>
 
     <!-- パンくず↓ -->
     <nav aria-label="breadcrumb">
@@ -41,39 +41,41 @@
     ?>
     <p class="border"></p>
 
+    <?php
+    require 'includes/database.php';
+    $sql = $pdo->prepare('select * from product where id=?');
 
-    <section>
-      <?php
-      require 'includes/database.php';
-      $sql = $pdo->prepare('select * from product where id=?');
+    $sql->execute([$_REQUEST['id']]);
 
-      $sql->execute([$_REQUEST['id']]);
-
-      foreach ($sql as $row) {
-        echo <<<END
+    foreach ($sql as $row) {
+      echo <<<END
   <div class="detail-main">
   <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
   <div class="detail-block">
-  <p>{$row['name']}</p>
+  <p class="name">{$row['name']}</p>
+  <p class="detail-border"></p>
   <p class="explanation">{$row['description']}</p>
-  <p class="price">税込 ￥
+  <p class="detail-border"></p>
+  <p class="price">税込　&#0165;
   END;
-        echo number_format($row['price']);
-        echo <<<END
+      echo number_format($row['price']);
+      echo <<<END
           <button class="hearts-btn" type="button">&#9825;</button></p>
           <form action="cart-input.php" method="post">
          <input type="hidden" name="id" value="{$row['id']}">
          <input type="hidden" name="name" value="{$row['name']}">
-         <input type="hidden" name="price" value="{$row['price']}">
-          <input type="text" size="2" name="count" value="1"><span class="detail-number">個</span><input type="submit" value="カートに入れる">
+         <input type="hidden" name="price" class="price" value="{$row['price']}">
+          <ul class="flex">
+          <li><input type="text" size="2" name="count" value="1"></li>
+          <li class="detail-number">個</li>
+          <li><input type="submit" value="カートに入れる"></li>
           </form>
         </div>
 
       </div>
       END;
-      }
-      ?>
-    </section>
+    }
+    ?>
 
   </main>
 
