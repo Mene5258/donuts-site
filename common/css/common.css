@@ -504,3 +504,14 @@ small {
   /* footer pcここまで */
 
 }
+
+/* ハートスタイル */
+.hearts-btn {
+  background: transparent;
+  color: var(--red-color);
+  font-size: 20px;
+}
+
+.show {
+  color: red;
+}

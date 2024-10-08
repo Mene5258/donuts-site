@@ -398,19 +398,6 @@ input[type="submit"] {
   padding: 12px 37px;
 }
 
-
-
-/* ハートスタイル */
-.hearts-btn {
-  background: transparent;
-  color: var(--red-color);
-  font-size: 20px;
-}
-
-.hearts-btn:hover {
-  cursor: pointer;
-}
-
 /* PC以下 */
 @media screen and (min-width:768px) {
   /* 最大ブレイクポイント1200px */
@@ -550,14 +537,4 @@ input[type="submit"] {
     padding: 16px auto;
   }
 
-  /* ハートスタイル */
-  .hearts-btn {
-    background: transparent;
-    color: var(--red-color);
-    font-size: 20px;
-  }
-}
-
-.show {
-  color: red;
 }
