@@ -69,44 +69,44 @@ require 'includes/header.php';
       <a href="detail.php?id=5"
       END;
       ?>
-      class="top-item1">
-      <p>新商品</p>
-      <p>サマーシトラス</p>
-      </a><!-- top-item1-->
+      <div class="top-item1">
+        <p>新商品</p>
+        <p>サマーシトラス</p>
+        </a><!-- top-item1-->
 
 
-      <div class="top-item2">
-        <p>ドーナツのある生活</p>
-      </div><!-- top-item2-->
-    </div><!-- top-item-content-->
+        <div class="top-item2">
+          <p>ドーナツのある生活</p>
+        </div><!-- top-item2-->
+      </div><!-- top-item-content-->
 
-    <a href="product.php">
-      <div class="top-image">
-        <p>商品一覧</p>
-      </div>
-    </a>
+      <a href="product.php">
+        <div class="top-image">
+          <p>商品一覧</p>
+        </div>
+      </a>
 
-  </div>
+    </div>
 
-  <div class="top-bg">
-    <h1>Philosophy</h1>
-    <p>私たちの信念</p>
-    <p>"Creating Connections"</p>
-    <p>ドーナツでつながる</p>
-  </div>
+    <div class="top-bg">
+      <h1>Philosophy</h1>
+      <p>私たちの信念</p>
+      <p>"Creating Connections"</p>
+      <p>ドーナツでつながる</p>
+    </div>
 
-  <section>
-    <div class="top-rank">
-      <h2>人気ランキング</h2>
-      <ol class="top-rank-content mx">
+    <section>
+      <div class="top-rank">
+        <h2>人気ランキング</h2>
+        <ol class="top-rank-content mx">
 
-        <?php
-        require 'includes/database.php';
-        // SQL文準備
-        $sql = $pdo->query('select * from product where ranking >= 1 and ranking <= 6 order by ranking asc');
+          <?php
+          require 'includes/database.php';
+          // SQL文準備
+          $sql = $pdo->query('select * from product where ranking >= 1 and ranking <= 6 order by ranking asc');
 
-        foreach ($sql as $row) {
-          echo <<<END
+          foreach ($sql as $row) {
+            echo <<<END
         <li>
           <form action="cart-input.php" method="post">
             <p class="rank">
@@ -127,11 +127,17 @@ require 'includes/header.php';
               <a href="detail.php?id={$row['id']}">税込 ￥
 END;
 
-          echo number_format($row['price']);
+            echo number_format($row['price']);
 
-          echo <<<END
+            echo <<<END
               </a></p>
-              <button class="hearts-btn" type="button">&#9825;</button>
+            
+
+                <button id="heart-{$row['id']}" class="hearts-btn" type="button">
+                    <span class="heart-{$row['id']}">&#9825;</span>
+                </button>
+                
+
             </div>
 
             <input type="hidden" name="id" value="{$row['id']}">
@@ -143,18 +149,35 @@ END;
           </form>
         </li>
 END;
-        }
-        ?>
-        </li>
+          }
+          ?>
+          </li>
 
 
 
-      </ol>
-    </div>
-  </section>
+        </ol>
+      </div>
+    </section>
 
 </main>
+<script>
+  window.addEventListener('load', function() {
+    document.querySelector('#heart-<?php echo $row['id']; ?>').addEventListener('click', function() {
+      document.querySelector('.heart-<?php echo $row['id']; ?>').classList.toggle('show');
+    });
+  });
 
+  window.addEventListener('load', function() {
+    for (let i = 1; i <= 11; i++) {
+      document.querySelector(`#heart-${i}`).addEventListener('click', function() {
+        document.querySelector(`.heart-${i}`).classList.toggle('show');
+      });
+    }
+
+    console.log(document.querySelector('#heart-12'));
+    console.log(document.querySelector('.heart-12'));
+  });
+</script>
 <?php
 require 'includes/footer.php';
 ?>
