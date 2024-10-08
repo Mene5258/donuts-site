@@ -13,6 +13,7 @@
     $total += $subtotal;
 
 echo<<<END
+<div class="grid">
 <form action="purchace-confirm.php" method="post">
 <div class="cart-product">
 <img src="common/images/product-item{$id}.jpg">
@@ -56,6 +57,7 @@ END;
     <p class="top-reverse">
     <a href="index.php">topページへ戻る</a>
     </p>
+    </div>
     END;
   }
   ?>

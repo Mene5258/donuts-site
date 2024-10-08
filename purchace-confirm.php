@@ -151,9 +151,10 @@
         }
       } else {
         echo <<<END
-  <p>商品を購入するにはログインが必要です。
-  </p>
-  <a href="login-input.php">ログインはこちら</a>
+        <div class="non-payment">
+        <p>商品を購入するにはログインが必要です。</p>
+        <p><a href="login-input.php">ログインはこちら</a></p>
+        </div>
   END;
       }
 
