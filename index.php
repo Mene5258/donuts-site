@@ -9,6 +9,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="C.C.ドーナツの公式ウェブサイト。中国4000年以上続く秘密のレシピが作り出すドーナツの情報をご紹介します。" />
   <link href="common/css/reset.css" rel="stylesheet">
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/index.css" rel="stylesheet">
@@ -58,7 +59,7 @@ require 'includes/header.php';
   }
   ?>
   <div class="top-hero">
-    <img src="common/images/hero-pc.jpg" alt="hero" class="fluid">
+    <img src="common/images/hero.jpg" alt="hero" class="fluid">
   </div>
 
   <div class="top-item-container">
@@ -115,7 +116,7 @@ require 'includes/header.php';
             </p>
             <p>
             <a href="detail.php?id={$row['id']}">
-            <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="fluid">
+            <img src="common/images/product-item{$row['id']}.jpg" alt="image" class="product-fluid">
             </a>
             </p>
             <p class="product-name">
