@@ -19,11 +19,9 @@
     </p>
 
     <?php
-    // データベース接続
     require 'includes/database.php';
-
+//card-confirmからpostされたデータをセッションに入力
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-      // フォームからのデータを取得
       $_SESSION['card_name'] = $_POST['card_name'];
       $_SESSION['card_type'] = $_POST['card_type'];
       $_SESSION['card_no'] = $_POST['card_no'];
@@ -32,93 +30,93 @@
       $_SESSION['card_security_code'] = $_POST['card_security_code'];
     }
     // ログイン中かチェック
-    if (isset($_SESSION['customer'])) {
+    // if (isset($_SESSION['customer'])) {
       // セットされている場合true
       // ログイン中
       // データチェック
       // ログイン中のユーザのIDを変数に代入
-      $id = $_SESSION['customer']['id'];
+      // $id = $_SESSION['customer']['id'];
       // SQL文の準備
-      // 異なるID、同じログイン名を持つほかのユーザーが存在するか
-      $sql = $pdo->prepare('select * from card where id!=?');
+      // 異なるID、同じメールアドレスを持つ他のユーザーが存在するか
+      // $sql = $pdo->prepare('select * from customer where id!=? and mail=?');
       // SQL文を実行
-      // $sql->execute([
-      //   $id,
-      //   $_REQUEST['customer']['id']
-      // ]);
-    } else {
+    //   $sql->execute([
+    //     $id,
+    //     $_REQUEST['customer']['mail']
+    //   ]);
+    // } else {
       // セットされていない場合false
       // ログアウト中
       // 入力チェック
-      // 同じログイン名を持つユーザーがcustomerテーブルに存在するか
+      // 同じメールアドレスを持つユーザーがcustomerテーブルに存在するか
       // SQL文の準備
-      $sql = $pdo->prepare('select * from card where id=?');
-      // SQL文の実行
-      $sql->execute([
-        $_REQUEST['card']
-      ]);
-    }
-
-    // 変数にSQL文の実行結果を全て受けとり、代入
-    $sqlResults = $sql->fetchAll();
+    //   $sql = $pdo->prepare('select * from customer where mail=?');
+    //   // SQL文の実行
+    //   $sql->execute(
+    //     $_REQUEST['mail']
+    //   );
+    // }
+// 変数にSQL文の実行結果を全て受け取り、代入
+    // $sqlResults = $sql->fetchAll();
 
     // 変数が空かどうかチェック
-    if (empty($sqlResults)) {
+    // if (empty($sqlResults)) {
       // 空の場合true array(0)
       // 一致するレコードなし
       // 更新、新規追加可能
       // ログイン中かチェック
-      if (isset($_SESSION['customer'])) {
-        // セットされている場合true
-        // ログイン中、更新処理
-        // データベース更新
-        // SQL文の準備
-        $sql = $pdo->prepare('update card set card_name=?,card_type=?,card_no=?,card_month=?,card_year=?,card_security_code=? where id=?');
-        // SQL文の実行
-        $sql->execute([
-          $_SESSION['card_name'],
-          $_SESSION['card_type'],
-          $_SESSION['card_no'],
-          $_SESSION['card_month'],
-          $_SESSION['card_year'],
-          $_SESSION['card_security_code'],
-          $id
-        ]);
+      // if (isset($_SESSION['customer'])) {
+    //     // セットされている場合true
+    //     // ログイン中、更新処理
+    //     // データベース更新
+    //     // SQL文の準備
+    //     $sql = $pdo->prepare('update card set card_name=?,card_type=?,card_no=?,card_month=?,card_year=?,card_security_code=? where id=?');
+    //     // SQL文の実行
+    //     $sql->execute([
+    //       $_SESSION['card_name'],
+    //       $_SESSION['card_type'],
+    //       $_SESSION['card_no'],
+    //       $_SESSION['card_month'],
+    //       $_SESSION['card_year'],
+    //       $_SESSION['card_security_code'],
+    //       $id
+    //     ]);
 
-        // セッションの更新
-        $_SESSION['card'] = [
-          'id' => $id,
-          'card_name' => $_SESSION['card_name'],
-          'card_type' => $_SESSION['card_type'],
-          'card_no' => $_SESSION['card_no'],
-          'card_month' => $_SESSION['card_month'],
-          'card_year' => $_SESSION['card_year'],
-          'card_security_code' => $_SESSION['card_security_code']
-        ];
-        // 完了メッセージ表示
-        echo <<<END
-    <h2>カード情報登録更新</h2>
-    <div class="page-box">
-    <p>クレジットカード情報を更新しました。</p>
-    <p class="reverse">
-    <a href="purchace-confirm.php">購入手続きを続ける</a>
-    </p>
-    </div>
-    END;
-      } else {
+    //      // セッションの更新
+    //     $_SESSION['card'] = [
+    //       'id' => $id,
+    //       'card_name' => $_SESSION['card_name'],
+    //       'card_type' => $_SESSION['card_type'],
+    //       'card_no' => $_SESSION['card_no'],
+    //       'card_month' => $_SESSION['card_month'],
+    //       'card_year' => $_SESSION['card_year'],
+    //       'card_security_code' => $_SESSION['card_security_code']
+    //     ];
+    //     // 完了メッセージ
+    //     echo <<<END
+    // <h2>カード情報登録更新</h2>
+    // <div class="page-box">
+    // <p>クレジットカード情報を更新しました。</p>
+    // <p class="reverse">
+    // <a href="purchace-confirm.php">購入手続きを続ける</a>
+    // </p>
+    // </div>
+    // END;
+    //   } else {
         // セットされていない場合false
         // ログアウト中、新規追加処理
         // SQL文の準備
-        $sql = $pdo->prepare('insert into card values(null,?,?,?,?,?,?)');
+        // $sql = $pdo->prepare('insert into card (customer_id, card_name, card_type, card_no, card_month, card_year, card_security_code) values(?,?,?,?,?,?,?)');
         // SQL文の実行
-        $sql->execute([
-          $_SESSION['card_name'],
-          $_SESSION['card_type'],
-          $_SESSION['card_no'],
-          $_SESSION['card_month'],
-          $_SESSION['card_year'],
-          $_SESSION['card_security_code']
-        ]);
+        // $sql->execute([
+        //   $_SESSION['customer']['id'],
+        //   $_SESSION['card_name'],
+        //   $_SESSION['card_type'],
+        //   $_SESSION['card_no'],
+        //   $_SESSION['card_month'],
+        //   $_SESSION['card_year'],
+        //   $_SESSION['card_security_code']
+        // ]);
         // 完了メッセージ表示
         echo <<<END
     <h2>カード情報登録完了</h2>
@@ -128,21 +126,24 @@
     <a href="purchace-confirm.php">購入手続きを続ける</a>
     </p>
     </div>
-
     END;
-      }
-    } else {
-      echo <<<END
-      <h2>カード登録エラー</h2>
-      <div class="page-box">
-      <p>このクレジットカードは登録されています。</p>
-      <p class="page-box-2">他のクレジットカードを登録してください。</p>
-      <p class="reverse">
-        <a href="card-input.php">カード登録入力画面へ戻る</a>
-      </p>
-    </div>
-    END;
-    }
+      // }
+    // } else {
+      // 空でない場合false array(1)
+      // 一致するレコードあり
+      // データ重複あり 更新、新規追加、不可
+      // エラーメッセージ表示
+    //   echo <<<END
+    //   <h2>カード登録エラー</h2>
+    //   <div class="page-box">
+    //   <p>このクレジットカードは登録されています。</p>
+    //   <p class="page-box-2">他のクレジットカードを登録してください。</p>
+    //   <p class="reverse">
+    //     <a href="card-input.php">カード登録入力画面へ戻る</a>
+    //   </p>
+    // </div>
+    // END;
+    // }
     ?>
   </div>
 </main>
