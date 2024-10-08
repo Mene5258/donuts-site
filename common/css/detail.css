@@ -45,17 +45,6 @@ main {
   margin: 20px 0 24px;
 }
 
-.hearts-btn {
-  background: transparent;
-  color: var(--red-color);
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-.hearts-btn:hover {
-  cursor: pointer;
-}
-
 .flex {
   display: flex;
   align-items: flex-end;

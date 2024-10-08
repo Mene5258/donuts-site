@@ -9,6 +9,7 @@
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/detail.css" rel="stylesheet">
   <script src="common/js/drawer.js"></script>
+  <script src="common/js/favorite.js"></script>
   <title>商品詳細 | C.C.Donuts</title>
 </head>
 
@@ -60,7 +61,9 @@
   END;
       echo number_format($row['price']);
       echo <<<END
-          <button class="hearts-btn" type="button">&#9825;</button></p>
+          <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
+                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                </button></p>
           <form action="cart-input.php" method="post">
          <input type="hidden" name="id" value="{$row['id']}">
          <input type="hidden" name="name" value="{$row['name']}">

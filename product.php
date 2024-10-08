@@ -9,6 +9,7 @@
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/product.css" rel="stylesheet">
   <script src="common/js/drawer.js"></script>
+  <script src="common/js/favorite.js"></script>
   <title>product</title>
 </head>
 
@@ -75,7 +76,9 @@ END;
 
           echo <<<END
               </a></p>
-              <button class="hearts-btn" type="button">&#9825;</button>
+              <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
+                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                </button>
             </div>
 
             <input type="hidden" name="id" value="{$row['id']}">
@@ -124,9 +127,10 @@ END;
 
           echo <<<END
               </a></p>
-              <button class="hearts-btn" type="button">&#9825;</button>
-            </div>
-
+              <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
+                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                </button>
+</div>
             <input type="hidden" name="id" value="{$row['id']}">
             <input type="hidden" name="name" value="{$row['name']}">
             <input type="hidden" name="price" value="{$row['price']}">
@@ -146,7 +150,6 @@ END;
     </section>
 
   </main>
-
   <?php
   //footer開始タグから
   require '../donuts-site/includes/footer.php';
