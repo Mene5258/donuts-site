@@ -20,6 +20,7 @@
   }
   echo <<<END
   ">
+  \n
 END;
   ?>
   <link href="common/css/reset.css" rel="stylesheet">
