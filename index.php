@@ -16,7 +16,6 @@ session_start();
   <script src="common/js/loading.js"></script>
   <script src="common/js/drawer.js"></script>
   <script src="common/js/favorite.js"></script>
-  <script src="common/js/alert.js"></script>
   <title>C.C.Donuts</title>
 </head>
 
