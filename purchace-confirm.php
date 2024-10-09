@@ -25,6 +25,7 @@
 
 
       <?php
+
       // PDO接続
       require 'includes/database.php';
 
@@ -32,7 +33,9 @@
       // $card_no = $_REQUEST['card_no'];
       // $card_no_result = substr_replace($card_no, str_repeat('・', 10), 6, 10);
 
+      // $total初期値を指定
       $total = 0;
+
       // ログイン判定
       if (isset($_SESSION['customer'])) {
         echo '<h2>ご購入確認</h2>';
@@ -40,38 +43,39 @@
         echo '<h3>ご購入商品</h3>';
         foreach ($_SESSION['product'] as $id => $product) {
           $subtotal = $product['price'] * $product['count'];
-
           //合計金額の算出
           $total += $subtotal;
 
           echo <<<END
-  <table>
-  <tr>
-  <th>商品名</th>
-  <td>{$product['name']}</td>
-  </tr>
-  <tr>
-  <th>数量</th>
-  <td>{$product['count']}個</td>
-  </tr>
-  <tr>
-  <th>小計</th>
-  <td>税込　¥
-  END;
+            <table>
+            <tr>
+            <th>商品名</th>
+           <td>{$product['name']}</td>
+           </tr>
+           <tr>
+           <th>数量</th>
+           <td>{$product['count']}個</td>
+           </tr>
+           <tr>
+           <th>小計</th>
+            <td>税込　¥
+           END;
 
           echo number_format($subtotal);
 
           echo <<<END
-  </td>
-  </tr>
-  </table>
-  END;
+           </td>
+           </tr>
+           </table>
+           END;
         } //foreach
 
         echo <<<END
-  <table class="total-row"><tr><th>合計</th>
-  <td>税込　¥
-  END;
+<table class="total-row">
+<tr>
+<th>合計</th>
+<td>税込　¥
+END;
 
         echo number_format($total);
 
@@ -136,7 +140,9 @@
           // <p>{$card_no}</p>
           // <p>{$card_name}</p>
           // END;
-        } else {
+        } //isset($_SESSION['card_no'])
+        else {
+          // $_SESSION['card_no']がなかったら
           echo <<<END
         <div class="mini-container">
         <h3>お支払い方法</h3>
@@ -157,6 +163,7 @@
         </div>
   END;
       }
+
 
 
 
