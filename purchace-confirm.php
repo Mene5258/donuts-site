@@ -99,7 +99,7 @@ END;
   </div>
   END;
 
-        if (isset($_SESSION['card_no'])) {
+        if (isset($_SESSION['card']['card_no'])) {
           echo <<<END
   <div class="mini-container">
   <h3>お支払い方法</h3>
@@ -110,14 +110,14 @@ END;
   </tr>
   <tr>
   <th>カード種類</th>
-  <td>{$_SESSION['card_type']}</td>
+  <td>{$_SESSION['card']['card_type']}</td>
   </tr>
   <tr>
   <th>カード番号</th>
   <td>
   END;
 
-          echo substr_replace($_SESSION['card_no'], str_repeat('・', 10), 6, 10);
+          echo substr_replace($_SESSION['card']['card_no'], str_repeat('・', 10), 6, 10);
 
           echo <<<END
   </td>
@@ -128,14 +128,14 @@ END;
   <a href="purchace-complete.php">ご購入を確定する</a>
   </div>
   END;
-          $card_name = $_SESSION['card_name'];
-          $card_type = $_SESSION['card_type'];
-          $card_no = $_SESSION['card_no'];
-          $card_month = $_SESSION['card_month'];
-          $card_year = $_SESSION['card_year'];
-          $card_security_code = $_SESSION['card_security_code'];
+          // $card_name = $_SESSION['card']['card_name'];
+          // $card_type = $_SESSION['card']['card_type'];
+          // $card_no = $_SESSION['card']['card_no'];
+          // $card_month = $_SESSION['card']['card_month'];
+          // $card_year = $_SESSION['card']['card_year'];
+          // $card_security_code = $_SESSION['card']['card_security_code'];
 
-          //           echo <<<END
+          // echo <<<END
           // <p>{$card_type}</p>
           // <p>{$card_no}</p>
           // <p>{$card_name}</p>
