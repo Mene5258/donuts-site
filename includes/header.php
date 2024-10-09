@@ -44,11 +44,10 @@
     <ul class="menu-list">
       <li><a href="index.php">TOP</a></li>
       <li><a href="product.php">商品一覧</a></li>
-      <li><a href="#">よくある質問</a></li>
-      <li><a href="#">問い合わせ</a></li>
-      <li><a href="#">当サイトのポリシー</a></li>
+      <li><a href="#" class="create">よくある質問</a></li>
+      <li><a href="#" class="create">問い合わせ</a></li>
+      <li><a href="#" class="create">当サイトのポリシー</a></li>
     </ul>
   </nav>
 </header>
-
 <!-- header部 ｺｺﾏﾃﾞ -->
