@@ -7,6 +7,14 @@ main {
   padding-bottom: 100px;
 }
 
+.cart-action {
+  max-width: 1200px;
+  text-align: left;
+  margin-top: 24px;
+  margin-left: 19.5px;
+  font-size: 12px;
+  font-weight: 500;
+}
 
 
 /* このクラス存在してないみたいですけどなんですか？ */
@@ -110,6 +118,28 @@ main {
   font-size: 12px;
 }
 
+.purchase-btn:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: ripple 1.5s infinite;
+  color: #fff;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 #bf0000;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(27 133 251 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(27 133 251 / 0%);
+  }
+}
+
 .continue-btn {
   font-size: 12px;
   background-color: var(--brown-color);
@@ -120,7 +150,28 @@ main {
   margin-top: 40px;
   color: var(--white-color);
   cursor: pointer;
+}
 
+.continue-btn:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: ripple 1.5s infinite;
+  color: #fff;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 var(--brown-color);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(27 133 251 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(27 133 251 / 0%);
+  }
 }
 
 .top-reverse {
@@ -188,7 +239,10 @@ main {
   }
 
   .cart-action {
-    padding-top: 24px;
+    max-width: 1200px;
+    text-align: left;
+    margin-top: 24px;
+    margin-left: 19.5px;
   }
 
   .cart-product {
