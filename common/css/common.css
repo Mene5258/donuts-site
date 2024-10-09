@@ -398,7 +398,7 @@ small {
   #close-btn {
     width: 54px;
     height: 54px;
-    margin-right: 12px;
+    cursor: pointer;
   }
 
   .menu-list {
@@ -421,6 +421,10 @@ small {
   .menu-list li a {
     color: var(--white-color);
     padding-left: 12px;
+  }
+
+  .menu-list li:hover {
+    background-color: #c0c0c0;
   }
 
   /* PCメニューここまで */
@@ -481,7 +485,7 @@ small {
   }
 
   .footer-link p a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #53ff5d;
   }
 
   .footer-icon {
