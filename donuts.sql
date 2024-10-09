@@ -30,7 +30,7 @@ create table product (
 
 -- テーブル作成（テーブル名：card）
 create table card (
-	id int auto_increment primary key unique not null, 
+	id int primary key unique not null, 
 	card_name varchar(100) not null,
 	card_type varchar(100) not null,
 	card_no varchar(22) unique not null,
@@ -39,6 +39,7 @@ create table card (
 	card_security_code int not null,
 	foreign key(id) references customer(id)
 );
+
 
 -- テーブル作成（テーブル名：purchase）
 create table purchase (
@@ -95,4 +96,4 @@ update product set ranking=11 where id=11;
 update product set ranking=12 where id=12;
 
 -- レコード作成（customerテーブル）
-insert into customer values(null, '中央太郎','チュウオウタロウ',2770855,'千葉県柏市南柏１丁目１－２ 富士物産南柏駅前ビル4F・5F','cca@gmail.com','12345678');
+insert into customer values(null, '中央太郎','チュウオウタロウ',2770855,'千葉県柏市南柏１丁目１－２ 富士物産南柏駅前ビル4F・5F','cca@gmail.com','Cca12345');

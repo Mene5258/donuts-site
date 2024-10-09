@@ -276,6 +276,17 @@ small {
 }
 
 /* footer spここまで */
+.hearts-btn {
+  background: transparent;
+  color: var(--red-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show {
+  color: red;
+  font-size: 20px;
+}
 
 
 
@@ -502,23 +513,19 @@ small {
   }
 
   /* footer pcここまで */
+  /* ハートスタイル */
+  .hearts-btn {
+    font-size: 24px;
+  }
 
-}
+  .show {
+    color: red;
+    font-size: 24px;
+  }
 
-/* ハートスタイル */
-.hearts-btn {
-  background: transparent;
-  color: var(--red-color);
-  font-size: 20px;
-}
+  /* 以下ゲーミングハート */
 
-.show {
-  color: red;
-}
-
-/* 以下ゲーミングハート */
-
-/* .show {
+  /* .show {
   animation: rainbow 3s infinite;
   -webkit-animation: rainbow 3s infinite;
 }
@@ -590,3 +597,4 @@ small {
     color: #ff53bd;
   }
 } */
+}

@@ -136,7 +136,7 @@ END;
             
 
                 <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
-                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                    <span class="hearts-btn heart-{$row['ranking']}">&#9825;</span>
                 </button>
                 
 

@@ -62,7 +62,7 @@
       echo number_format($row['price']);
       echo <<<END
           <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
-                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                    <span class="hearts-btn heart-{$row['ranking']}">&#9825;</span>
                 </button></p>
           <form action="cart-input.php" method="post">
          <input type="hidden" name="id" value="{$row['id']}">

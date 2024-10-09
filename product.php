@@ -43,9 +43,9 @@
     ?>
     <p class="border"></p>
 
-    <section class="product-list">
+    <section>
 
-      <h1>商品一覧</h1>
+      <h2>商品一覧</h2>
       <ol class="products">
 
         <?php
@@ -77,7 +77,7 @@ END;
           echo <<<END
               </a></p>
               <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
-                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                    <span class="hearts-btn heart-{$row['ranking']}">&#9825;</span>
                 </button>
             </div>
 
@@ -96,8 +96,8 @@ END;
       </div>
     </section>
 
-    <section class="set-list">
-      <h1>バラエティセット</h1>
+    <section>
+      <h3>バラエティセット</h3>
       <ol class="set-container">
         <?php
         require 'includes/database.php';
@@ -128,7 +128,7 @@ END;
           echo <<<END
               </a></p>
               <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
-                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                    <span class="hearts-btn heart-{$row['ranking']}">&#9825;</span>
                 </button>
 </div>
             <input type="hidden" name="id" value="{$row['id']}">

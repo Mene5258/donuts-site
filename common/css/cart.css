@@ -123,39 +123,6 @@ main {
 
 }
 
-/* ぱんくず */
-
-.breadcrumb {
-  padding: 12px 20px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.breadcrumb-item {
-  font-size: 12px;
-  margin-right: 0.5em;
-}
-
-.breadcrumb-item::after {
-  content: "\03e";
-  margin-left: 0.5em;
-}
-
-.breadcrumb-item:last-child::after {
-  content: "";
-  /* 最後の項目には区切りを表示しない */
-}
-
-.breadcrumb-item a {
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.breadcrumb-item a:hover {
-  text-decoration: underline;
-}
-
 .top-reverse {
   text-align: right;
   margin-top: 24px;
@@ -186,6 +153,12 @@ main {
   .grid {
     max-width: 1200px;
     margin: auto;
+  }
+
+  .logo {
+    width: 80px;
+    height: 67px;
+    margin: 20px 0 0 20px;
   }
 
   .cart-action {

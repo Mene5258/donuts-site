@@ -141,6 +141,12 @@ td {
     margin: auto;
   }
 
+  .logo {
+    width: 80px;
+    height: 67px;
+    margin: 20px 0 0 20px;
+  }
+
   h2 {
     font-size: 32px;
     margin-top: 73.33px;
