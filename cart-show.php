@@ -18,7 +18,7 @@ require 'includes/header.php';
 // header終了タグまで
 ?>
 
-<main class="cart-page">
+<main>
 
 
   <!-- パンくず↓ -->
