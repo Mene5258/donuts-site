@@ -155,6 +155,7 @@ header form input[type="search"] {
 .menu-list li a {
   color: var(--white-color);
   padding-left: 12px;
+  display: block;
 }
 
 /* メニューここまで */
