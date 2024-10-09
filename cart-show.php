@@ -9,8 +9,6 @@
   <link href="common/css/common.css" rel="stylesheet">
   <link href="common/css/cart.css" rel="stylesheet">
   </link>
-  <link href="common/css/cart-show.css" rel="stylesheet">
-  </link>
   <script src="common/js/drawer.js"></script>
 
   <title>カート-商品一覧| C.C.Donut</title>

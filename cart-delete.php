@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -6,11 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="common/css/reset.css" rel="stylesheet">
-  <link href="common/css/common.css" 
-  rel="stylesheet">
-  <link href="common/css/cart.css" rel="stylesheet"></link>
-  <link href="common/css/cart-show.css" rel="stylesheet"></link>
-  <title>cart-delete</title>
+  <link href="common/css/common.css"
+    rel="stylesheet">
+  <link href="common/css/cart.css" rel="stylesheet">
+  </link>
   <script src="common/js/drawer.js"></script>
   <title>カート-商品一覧| C.C.Donuts</title>
 </head>
@@ -21,7 +20,7 @@ require 'includes/header.php';
 ?>
 
 
-<main class="cart-page">
+<main>
 
   <!-- パンくず↓ -->
   <nav aria-label="breadcrumb">
@@ -47,19 +46,19 @@ require 'includes/header.php';
   <!-- /ログイン情報ここまで -->
 
   <div class="grid">
-  <?php
-unset($_SESSION['product'][$_REQUEST['id']]);
+    <?php
+    unset($_SESSION['product'][$_REQUEST['id']]);
 
-echo '<p class="cart-action">カートから商品を削除しました。</p>'
+    echo '<p class="cart-action">カートから商品を削除しました。</p>'
 
-  ?>
+    ?>
 
-<!-- カート情報の出力 -->
-<?php
-require 'cart.php';
-?>
+    <!-- カート情報の出力 -->
+    <?php
+    require 'cart.php';
+    ?>
 
-</div><!-- /grid -->
+  </div><!-- /grid -->
 </main>
 
 <?php
