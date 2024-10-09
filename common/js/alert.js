@@ -7,7 +7,7 @@ window.addEventListener('load', function () {
   createButtons.forEach(function (button) {
     button.addEventListener('click', function (event) {
       event.preventDefault(); // デフォルトのリンク動作を防ぐ
-      window.alert('現在制作中です');
+      window.alert('準備中です');
     });
   });
 });
