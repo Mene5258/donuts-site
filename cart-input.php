@@ -7,7 +7,7 @@
 // echo '</pre>';
 // エラー確認用
 // error_reporting(E_ALL);ini_set('display_errors,1');
- ?>
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -38,9 +38,9 @@ require 'includes/header.php';
   <p class="border"></p>
   <!-- /パンくずここまで -->
 
-    <!-- ログイン情報ここから -->
-    <?php
-    require 'includes/database.php';
+  <!-- ログイン情報ここから -->
+  <?php
+  require 'includes/database.php';
   if (isset($_SESSION['customer'])) {
     // セットされていればtrue
     echo '<p class="user">ようこそ　', $_SESSION['customer']['name'], '様</p>';
@@ -52,40 +52,68 @@ require 'includes/header.php';
   <!-- /ログイン情報ここまで -->
 
   <div class="grid">
-  <?php
-  // 追加した商品のID取得
-  $id = $_REQUEST['id'];
+    <?php
+    if (!empty($_POST['count'])) {
+      // if (preg_match('/^(?=.*[0-9])[0-9]{2}$/', $_POST['count']) && $_POST['count'] > 0) {
+      // 追加した商品のID取得
+      $id = $_REQUEST['id'];
 
-  if (!isset($_SESSION['product'])) {
-    $_SESSION['product'] = [];
-  }
+      if (!isset($_SESSION['product'])) {
+        $_SESSION['product'] = [];
+      }
 
-  //商品の個数カウント
-  $count = 0;
+      //商品の個数カウント
+      $count = 0;
 
-  //選択した商品が既にカートに入っているかどうか判定
-  if (isset($_SESSION['product'][$id])) {
-    //選択した商品と同じidの商品がカートに入っている場合true
-    //$countの変数に商品の個数を代入(productというセッションが持つidのcountを$countに代入)
-    $count = $_SESSION['product'][$id]['count'];
-  }
+      //選択した商品が既にカートに入っているかどうか判定
+      if (isset($_SESSION['product'][$id])) {
+        //選択した商品と同じidの商品がカートに入っている場合true
+        //$countの変数に商品の個数を代入(productというセッションが持つidのcountを$countに代入)
+        $count = $_SESSION['product'][$id]['count'];
+      }
 
-  //product変数に追加したいカートの情報を保存する
-  $_SESSION['product'][$id] = [
-    'name' => $_REQUEST['name'],
-    'price' => $_REQUEST['price'],
-    //もともとの個数＋追加した個数(なかったら指定1)
-    'count' => $count + ($_REQUEST['count'])
-  ];
+      //product変数に追加したいカートの情報を保存する
+      $_SESSION['product'][$id] = [
+        'name' => $_REQUEST['name'],
+        'price' => $_REQUEST['price'],
+        //もともとの個数＋追加した個数(なかったら指定1)
+        'count' => $count + ($_REQUEST['count'])
+      ];
 
-  //完了メッセージ
-  echo '<p class="cart-action">カートに商品を追加しました。</p>';
+      //完了メッセージ
+      echo '<p class="cart-action">カートに商品を追加しました。</p>';
 
-  //カート情報の出力
-  require 'cart.php';
-  ?>
 
-</div>
+      //カート情報の出力
+      require 'cart.php';
+      // } 
+      // else {
+      //   // 個数０以下
+      //   echo <<<END
+      //   <div class="login-box">
+      //   <p>個数は1以上を入力してください。</p>
+      //   <p class="reverse"><a href="javascript:void(0);" onclick="goBack()">ひとつ前の画面に戻る</a></p>
+      //   </div>
+      //   END;
+      // }
+    } else {
+      // 個数空
+      echo <<<END
+       <div class="login-box">
+        <p>個数が入力されていないか、<br>0が指定されています。<br>個数は1以上を入力してください。</p>
+        <p class="reverse"><a href="javascript:void(0);" onclick="goBack()">ひとつ前の画面に戻る</a></p>
+        </div>
+ END;
+    }
+    ?>
+
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </main>
 
 <?php

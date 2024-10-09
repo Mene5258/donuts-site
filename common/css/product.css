@@ -20,20 +20,32 @@ main {
 section {
     margin: auto;
     text-align: center;
-    margin-top: 32px;
 }
 
-section h1 {
-    display: inline;
+h2 {
+    width: 80px;
     font-size: 20px;
+    font-weight: 400;
+    color: var(--black-color);
     border-bottom: 4px solid var(--yellow-color);
+    margin: 32px auto 0;
+}
+
+h3 {
+    width: 160px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: var(--brown-color);
+    border-bottom: 4px solid var(--yellow-color);
+    margin: 0 auto;
 }
 
 .products,
 .set-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 40px 20px 0;
 }
 
 .products li,
@@ -53,13 +65,13 @@ ol {
 .price-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 22.3px;
+    margin-bottom: 20px;
 }
 
 .product-name {
-    text-align: left;
+    text-align: justify;
     line-height: 1.6;
-    margin: 20px 0 22px;
+    margin: 20px 0;
     font-weight: 500;
 }
 
@@ -71,22 +83,13 @@ ol {
     color: var(--red-color);
 }
 
-.hearts-btn {
-    background: transparent;
-    color: var(--red-color);
-    font-size: 20px;
-}
-
 input[type="submit"] {
+    font-size: 12px;
     width: 100%;
     text-align: center;
     background-color: var(--brown-color);
     color: var(--white-color);
     padding: 12px 37px;
-}
-
-input[type="submit"] {
-    font-size: 12px;
 }
 
 form {
@@ -96,9 +99,30 @@ form {
 /* PC以下 */
 @media screen and (min-width:768px) {
 
+    main {
+        padding-bottom: 80px;
+    }
+
     /* 最大ブレイクポイント1200px */
     section {
         max-width: 1200px;
+    }
+
+    h2 {
+        width: 200px;
+        font-size: 32px;
+        margin-top: 79px;
+    }
+
+    h3 {
+        width: 240px;
+        font-size: 24px;
+        margin-top: 120px;
+    }
+
+    .products,
+    .set-container {
+        margin: 80px 60px 0;
     }
 
     .products li,
@@ -107,8 +131,14 @@ form {
         width: 320px;
     }
 
+    .product-name a,
+    .price a {
+        font-size: 24px;
+    }
+
     input[type="submit"] {
         width: 260px;
+        font-size: 20px;
         cursor: pointer;
     }
 

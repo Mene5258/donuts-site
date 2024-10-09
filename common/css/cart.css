@@ -123,39 +123,6 @@ main {
 
 }
 
-/* ぱんくず */
-
-.breadcrumb {
-  padding: 12px 20px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.breadcrumb-item {
-  font-size: 12px;
-  margin-right: 0.5em;
-}
-
-.breadcrumb-item::after {
-  content: "\03e";
-  margin-left: 0.5em;
-}
-
-.breadcrumb-item:last-child::after {
-  content: "";
-  /* 最後の項目には区切りを表示しない */
-}
-
-.breadcrumb-item a {
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.breadcrumb-item a:hover {
-  text-decoration: underline;
-}
-
 .top-reverse {
   text-align: right;
   margin-top: 24px;
@@ -180,12 +147,44 @@ main {
   margin: 20px 0 20px 20px;
 }
 
+.login-box {
+  font-size: 12px;
+  text-align: center;
+  border: 2px solid #e8c2ca;
+  width: 295px;
+  color: #a56d55;
+  padding: 36px 0;
+  margin: 20px auto 0;
+}
+
+.reverse {
+  text-align: right;
+  margin-top: 24px;
+  margin-right: 40px;
+  padding-bottom: 20px;
+  color: var(--brown-color);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-transform: uppercase;
+}
+
+.reverse a {
+  font-size: 12px;
+  color: var(--brown-color);
+}
+
 /* PCここから */
 
 @media screen and (min-width:768px) {
   .grid {
     max-width: 1200px;
     margin: auto;
+  }
+
+  .logo {
+    width: 80px;
+    height: 67px;
+    margin: 20px 0 0 20px;
   }
 
   .cart-action {
@@ -326,5 +325,30 @@ main {
     max-width: 600px;
     text-align: center;
     margin: 40px auto;
+  }
+
+  .login-box {
+    margin-top: 40px;
+    width: 400px;
+  }
+
+  .login-box p {
+    font-size: 20px;
+  }
+
+  .reverse {
+    text-align: right;
+    max-width: 300px;
+    margin: 24px auto 0;
+    padding: 0;
+  }
+
+  .reverse a {
+    font-size: 16px;
+  }
+
+  .reverse a:hover {
+    background-color: var(--sub-color);
+    color: var(--black-color);
   }
 }

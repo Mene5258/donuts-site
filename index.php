@@ -16,6 +16,7 @@ session_start();
   <script src="common/js/loading.js"></script>
   <script src="common/js/drawer.js"></script>
   <script src="common/js/favorite.js"></script>
+  <script src="common/js/alert.js"></script>
   <title>C.C.Donuts</title>
 </head>
 
@@ -136,7 +137,7 @@ END;
             
 
                 <button id="heart-{$row['ranking']}" class="hearts-btn" type="button">
-                    <span class="heart-{$row['ranking']}">&#9825;</span>
+                    <span class="hearts-btn heart-{$row['ranking']}">&#9825;</span>
                 </button>
                 
 

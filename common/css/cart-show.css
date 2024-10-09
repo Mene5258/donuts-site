@@ -13,39 +13,6 @@ main {
   background-color: var(--white-color);
 }
 
-/* ぱんくず */
-
-.breadcrumb {
-  padding: 12px 20px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.breadcrumb-item {
-  font-size: 12px;
-  margin-right: 0.5em;
-}
-
-.breadcrumb-item::after {
-  content: "\03e";
-  margin-left: 0.5em;
-}
-
-.breadcrumb-item:last-child::after {
-  content: "";
-  /* 最後の項目には区切りを表示しない */
-}
-
-.breadcrumb-item a {
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.breadcrumb-item a:hover {
-  text-decoration: underline;
-}
-
 /* PCここから */
 
 @media screen and (min-width:768px) {

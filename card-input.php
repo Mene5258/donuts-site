@@ -21,7 +21,7 @@
     <?php
     $card_name = $card_type = $card_no = $card_month = $card_year = $card_security_code = '';
     if (isset($_SESSION['customer'])) {
-      $card_name = $_SESSION['card']['card_name'] ?? '';
+      $card_name = $_SESSION['customer']['name'] ?? '';
       $card_type = $_SESSION['card']['card_type'] ?? '';
       $card_no = $_SESSION['card']['card_no'] ?? '';
       $card_month = $_SESSION['card']['card_month'] ?? '';
