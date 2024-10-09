@@ -99,7 +99,7 @@ END;
   </div>
   END;
 
-        if (isset($_SESSION['card_no'])) {
+        if (isset($_SESSION['card']['card_no'])) {
           echo <<<END
   <div class="mini-container">
   <h3>お支払い方法</h3>
@@ -135,11 +135,11 @@ END;
           $card_year = $_SESSION['card_year'];
           $card_security_code = $_SESSION['card_security_code'];
 
-          //           echo <<<END
-          // <p>{$card_type}</p>
-          // <p>{$card_no}</p>
-          // <p>{$card_name}</p>
-          // END;
+          echo <<<END
+          <p>{$card_type}</p>
+          <p>{$card_no}</p>
+          <p>{$card_name}</p>
+          END;
         } //isset($_SESSION['card_no'])
         else {
           // $_SESSION['card_no']がなかったら
